@@ -1,0 +1,141 @@
+<mxfile host="app.diagrams.net" pages="2">
+  <diagram name="Trang-1" id="qgdZvI8KBAizU6YmLiP_">
+    <mxGraphModel dx="1227" dy="659" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="nD6Im_foXLV7sroGImHA" name="Trang-2">
+    <mxGraphModel dx="1187" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lane_btv" parent="1" style="swimlane;html=1;startSize=30;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontStyle=1;fontSize=13;" value="Biên tập viên (Tác giả)" vertex="1">
+          <mxGeometry height="680" width="280" x="80" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="lane_btv" style="ellipse;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="26" width="26" x="125" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="btv_soan" parent="lane_btv" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#76c7f0;strokeColor=#222222;fontColor=#000000;fontSize=12;" value="Soạn thảo bài viết mới" vertex="1">
+          <mxGeometry height="44" width="146" x="65" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="btv_guiduyet" parent="lane_btv" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#76c7f0;strokeColor=#222222;fontColor=#000000;fontSize=12;" value="Chọn gửi duyệt bài" vertex="1">
+          <mxGeometry height="44" width="146" x="65" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="btv_sua" parent="lane_btv" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#76c7f0;strokeColor=#222222;fontColor=#000000;fontSize=12;" value="Chỉnh sửa lại bài viết" vertex="1">
+          <mxGeometry height="44" width="146" x="65" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="lane_btv" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#000000;" target="btv_soan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="lane_btv" source="btv_sua" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#000000;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="btv_guiduyet">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_sys" parent="1" style="swimlane;html=1;startSize=30;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontStyle=1;fontSize=13;" value="Hệ thống" vertex="1">
+          <mxGeometry height="680" width="300" x="360" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sys_nhap" parent="lane_sys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#76c7f0;strokeColor=#222222;fontColor=#000000;fontSize=12;" value="Lưu bài viết ở dạng&#xa;&quot;Bản nháp&quot;" vertex="1">
+          <mxGeometry height="44" width="150" x="75" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="sys_choduyet" parent="lane_sys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#76c7f0;strokeColor=#222222;fontColor=#000000;fontSize=12;" value="Cập nhật trạng thái&#xa;&quot;Chờ duyệt&quot; &amp; Lưu lịch sử" vertex="1">
+          <mxGeometry height="44" width="150" x="75" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="sys_tuchoi" parent="lane_sys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#76c7f0;strokeColor=#222222;fontColor=#000000;fontSize=12;" value="Cập nhật trạng thái&#xa;&quot;Từ chối&quot;" vertex="1">
+          <mxGeometry height="44" width="150" x="75" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="sys_yeucausua" parent="lane_sys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#76c7f0;strokeColor=#222222;fontColor=#000000;fontSize=12;" value="Trả về trạng thái&#xa;&quot;Bản nháp&quot;" vertex="1">
+          <mxGeometry height="44" width="150" x="75" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="sys_xuatban" parent="lane_sys" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#76c7f0;strokeColor=#222222;fontColor=#000000;fontSize=12;" value="Cập nhật &quot;Đã xuất bản&quot;&#xa;&amp; Lưu lịch sử duyệt" vertex="1">
+          <mxGeometry height="44" width="150" x="75" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="merge_end" parent="lane_sys" style="rhombus;whiteSpace=wrap;html=1;fillColor=#76c7f0;strokeColor=#222222;" value="" vertex="1">
+          <mxGeometry height="30" width="50" x="125" y="595" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="lane_sys" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="26" width="26" x="137" y="642" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="lane_sys" source="sys_xuatban" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#000000;" target="merge_end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="lane_sys" source="sys_tuchoi" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#000000;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" target="merge_end">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="40" y="392" />
+              <mxPoint x="40" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="lane_sys" source="merge_end" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#000000;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lane_cb" parent="1" style="swimlane;html=1;startSize=30;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;fontStyle=1;fontSize=13;" value="Chủ biên (Người duyệt)" vertex="1">
+          <mxGeometry height="680" width="300" x="660" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cb_xem" parent="lane_cb" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#76c7f0;strokeColor=#222222;fontColor=#000000;fontSize=12;" value="Xem bài viết&#xa;&quot;Chờ duyệt&quot;" vertex="1">
+          <mxGeometry height="44" width="150" x="75" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="cb_danhgia" parent="lane_cb" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#76c7f0;strokeColor=#222222;fontColor=#000000;fontSize=12;" value="Kiểm tra nội dung" vertex="1">
+          <mxGeometry height="44" width="150" x="75" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="dec_duyet" parent="lane_cb" style="rhombus;whiteSpace=wrap;html=1;fillColor=#76c7f0;strokeColor=#222222;" value="" vertex="1">
+          <mxGeometry height="40" width="40" x="130" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="cb_tuchoi" parent="lane_cb" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#76c7f0;strokeColor=#222222;fontColor=#000000;fontSize=12;" value="Ghi chú lý do &amp;&#xa;Từ chối" vertex="1">
+          <mxGeometry height="44" width="135" x="30" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="cb_sua" parent="lane_cb" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#76c7f0;strokeColor=#222222;fontColor=#000000;fontSize=12;" value="Ghi chú yêu cầu&#xa;chỉnh sửa" vertex="1">
+          <mxGeometry height="44" width="135" x="30" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="cb_pheduyet" parent="lane_cb" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#76c7f0;strokeColor=#222222;fontColor=#000000;fontSize=12;" value="Phê duyệt &amp;&#xa;Xuất bản bài viết" vertex="1">
+          <mxGeometry height="44" width="135" x="145" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="lane_cb" source="cb_xem" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#000000;" target="cb_danhgia">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="lane_cb" source="cb_danhgia" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#000000;" target="dec_duyet">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="lane_cb" source="dec_duyet" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#000000;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" target="cb_tuchoi" value="Từ chối">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="lane_cb" source="dec_duyet" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#000000;exitX=0.5;exitY=1;entryX=1;entryY=0.5;" target="cb_sua" value="Yêu cầu sửa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="lane_cb" source="dec_duyet" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#000000;exitX=1;exitY=0.5;entryX=0.75;entryY=0;" target="cb_pheduyet" value="Phê duyệt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="btv_soan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#000000;" target="sys_nhap">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="sys_nhap" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#000000;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="btv_guiduyet">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="btv_guiduyet" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#000000;" target="sys_choduyet">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="sys_choduyet" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#000000;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="cb_xem">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="585" y="222" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="cb_tuchoi" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#000000;" target="sys_tuchoi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="cb_sua" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#000000;" target="sys_yeucausua">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="sys_yeucausua" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#000000;" target="btv_sua">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="cb_pheduyet" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#000000;" target="sys_xuatban">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
