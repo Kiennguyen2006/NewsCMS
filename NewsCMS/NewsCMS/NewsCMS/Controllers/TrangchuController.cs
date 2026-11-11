@@ -24,7 +24,7 @@ namespace NewsCMS.Controllers
             _configuration = configuration;
         }
 
-        public IActionResult Trangdau(string timkiem, int trang = 1)
+        public IActionResult Trangdau(string timkiem, int trang = 1, int? maDanhMuc = null)
         {
             int sodongmuonhienthi = 10;
             ViewBag.sodongmuonhienthi = sodongmuonhienthi;
@@ -37,11 +37,15 @@ namespace NewsCMS.Controllers
             ViewBag.tongsotrang = tongsotrang;
             var bangdanhmuc = _context.DanhMuc.Where(x => x.TrangThai == true).ToList();
             ViewBag.bangdanhmuc = bangdanhmuc;
-            var bang = bangchuacacbaivietdadcduyet;
+            IQueryable<BaiVietModel> bang = bangchuacacbaivietdadcduyet;
             if (!string.IsNullOrEmpty(timkiem))
             {
                 bang = bang.Where(x => x.TieuDe.Contains(timkiem))
                            .OrderByDescending(x => x.NgayTao);
+            }
+            if (maDanhMuc != null)
+            {
+                bang = bang.Where(x => x.MaDanhMuc == maDanhMuc);
             }
             ViewBag.bang = bang.Skip((trang - 1) * sodongmuonhienthi).Take(sodongmuonhienthi).ToList();
             return View();

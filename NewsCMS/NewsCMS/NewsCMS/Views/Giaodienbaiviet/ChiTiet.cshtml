@@ -1,0 +1,927 @@
+﻿@using NewsCMS.Models
+
+@{
+    ViewData["Title"] = "Chi tiết bài viết";
+
+    var baiviet = ViewBag.dongbaiviet as BaiVietModel;
+    var danhsachbinhluan = ViewBag.binhluan as List<BinhluanModel>;
+}
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<style>
+    /* =========================
+           1. TỔNG THỂ TRANG
+        ========================= */
+
+    body {
+        background: #f1f5fa;
+        color: #263449;
+    }
+
+    .news-page {
+        width: 100%;
+        max-width: 1540px;
+        margin: 35px auto 60px;
+        padding: 0 22px;
+    }
+
+    .news-page-layout {
+        display: grid;
+        grid-template-columns: 170px minmax(0, 1050px) 170px;
+        justify-content: center;
+        align-items: start;
+        gap: 22px;
+    }
+
+    /* =========================
+           2. QUẢNG CÁO HAI BÊN
+        ========================= */
+
+    .side-ad {
+        position: sticky;
+        top: 25px;
+        min-height: 510px;
+        padding: 16px 12px;
+        border-radius: 16px;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(24, 48, 85, .08);
+        animation: fadeUp .8s ease both;
+    }
+
+    .side-ad-left {
+        background: linear-gradient(160deg, #dcecff, #ffffff 75%);
+        border: 1px solid #d4e4f7;
+    }
+
+    .side-ad-right {
+        background: linear-gradient(160deg, #dff6ff, #ffffff 75%);
+        border: 1px solid #ccebf5;
+        animation-delay: .2s;
+    }
+
+    .ad-label {
+        display: inline-block;
+        padding: 5px 12px;
+        border-radius: 30px;
+        background: rgba(255,255,255,.8);
+        color: #64748b;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 1.3px;
+    }
+
+    .ad-visual {
+        width: 105px;
+        height: 105px;
+        margin: 30px auto 23px;
+        border-radius: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 43px;
+        color: white;
+        animation: floatAd 3s ease-in-out infinite;
+    }
+
+    .ad-blue {
+        background: linear-gradient(135deg, #1769aa, #55a6ed);
+        box-shadow: 0 12px 25px rgba(23,105,170,.25);
+    }
+
+    .ad-purple {
+        background: linear-gradient(135deg, #6546c8, #a18af5);
+        box-shadow: 0 12px 25px rgba(101,70,200,.22);
+    }
+
+    .ad-title {
+        font-size: 19px;
+        line-height: 1.5;
+        font-weight: 800;
+        color: #173c68;
+        margin-bottom: 12px;
+    }
+
+    .ad-description {
+        font-size: 13px;
+        line-height: 1.8;
+        color: #68778b;
+        margin-bottom: 22px;
+    }
+
+    .ad-list {
+        text-align: left;
+        padding: 0;
+        list-style: none;
+        margin: 20px 0;
+    }
+
+        .ad-list li {
+            font-size: 12px;
+            color: #53647b;
+            margin-bottom: 12px;
+        }
+
+        .ad-list i {
+            color: #2586c8;
+            margin-right: 6px;
+        }
+
+    .ad-button {
+        display: block;
+        padding: 11px 8px;
+        background: linear-gradient(100deg, #1769aa, #378fd0);
+        color: white;
+        border-radius: 8px;
+        font-size: 12px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: .3s;
+    }
+
+        .ad-button:hover {
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 7px 18px rgba(23,105,170,.25);
+        }
+
+    .ad-decoration {
+        position: absolute;
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        background: rgba(255,255,255,.35);
+        bottom: -55px;
+        right: -45px;
+        pointer-events: none;
+    }
+
+    /* =========================
+           3. NỘI DUNG CHÍNH
+        ========================= */
+
+    .news-main {
+        min-width: 0;
+    }
+
+    .breadcrumb-news {
+        font-size: 13px;
+        color: #8793a4;
+        margin-bottom: 20px;
+        animation: fadeUp .5s ease both;
+    }
+
+        .breadcrumb-news a {
+            color: #1769aa;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+            .breadcrumb-news a:hover {
+                color: #0c4778;
+                text-decoration: underline;
+            }
+
+    .news-card,
+    .comment-area {
+        background: #ffffff;
+        border: 1px solid #e9eef5;
+        border-radius: 16px;
+        box-shadow: 0 12px 35px rgba(25, 50, 85, .06);
+        transition: box-shadow .3s ease;
+        animation: fadeUp .7s ease both;
+    }
+
+    .news-card {
+        padding: 42px 48px;
+    }
+
+        .news-card:hover,
+        .comment-area:hover {
+            box-shadow: 0 17px 42px rgba(25, 50, 85, .10);
+        }
+
+    .news-category {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: #eaf3fc;
+        color: #1769aa;
+        padding: 7px 14px;
+        border-radius: 30px;
+        font-size: 12px;
+        font-weight: 800;
+        margin-bottom: 18px;
+        letter-spacing: .3px;
+    }
+
+    .news-title {
+        font-size: 35px;
+        line-height: 1.4;
+        font-weight: 800;
+        letter-spacing: -.5px;
+        background: linear-gradient(90deg, #123b68, #2686c8);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        margin-bottom: 20px;
+    }
+
+    .news-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        color: #8995a5;
+        font-size: 13px;
+        padding-bottom: 22px;
+        border-bottom: 1px solid #edf0f4;
+        margin-bottom: 26px;
+    }
+
+        .news-meta i {
+            color: #2586c8;
+            margin-right: 6px;
+        }
+
+    .news-cover-wrapper {
+        position: relative;
+        overflow: hidden;
+        border-radius: 13px;
+        margin-bottom: 28px;
+    }
+
+    .news-cover {
+        display: block;
+        width: 100%;
+        max-height: 500px;
+        object-fit: cover;
+        transition: transform .6s ease, filter .6s ease;
+    }
+
+    .news-cover-wrapper:hover .news-cover {
+        transform: scale(1.035);
+        filter: brightness(1.05);
+    }
+
+    .news-summary {
+        padding: 20px 23px;
+        border-left: 5px solid #2785c5;
+        border-radius: 7px;
+        background: linear-gradient(110deg, #eef6ff, #f8fbff);
+        color: #47566b;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 1.85;
+        margin-bottom: 32px;
+        box-shadow: 0 5px 15px rgba(37,99,235,.04);
+    }
+
+    /* Nội dung HTML được lấy nguyên từ CSDL */
+
+    .news-content {
+        color: #364253;
+        font-size: 16px;
+        line-height: 1.95;
+        overflow-wrap: anywhere;
+    }
+
+        .news-content p {
+            margin-bottom: 20px;
+        }
+
+        .news-content h1,
+        .news-content h2,
+        .news-content h3,
+        .news-content h4 {
+            color: #183b61;
+            font-weight: 750;
+            line-height: 1.5;
+            margin-top: 30px;
+            margin-bottom: 16px;
+        }
+
+        .news-content img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 24px auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 22px rgba(0,0,0,.08);
+        }
+
+        .news-content blockquote {
+            border-left: 4px solid #2785c5;
+            background: #f3f7fc;
+            border-radius: 5px;
+            padding: 17px 22px;
+            color: #637187;
+            margin: 22px 0;
+        }
+
+        .news-content ul,
+        .news-content ol {
+            padding-left: 28px;
+            margin-bottom: 20px;
+        }
+
+        .news-content li {
+            margin-bottom: 8px;
+        }
+
+        .news-content a {
+            color: #1769aa;
+            text-decoration: none;
+        }
+
+            .news-content a:hover {
+                text-decoration: underline;
+            }
+
+        .news-content pre {
+            padding: 18px;
+            border-radius: 10px;
+            background: #1e293b;
+            color: #ffffff;
+            overflow-x: auto;
+        }
+
+        .news-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 22px 0;
+        }
+
+        .news-content th,
+        .news-content td {
+            border: 1px solid #dce3eb;
+            padding: 10px;
+        }
+
+        .news-content th {
+            background: #edf4fc;
+        }
+
+    .news-divider {
+        height: 1px;
+        background: linear-gradient(90deg, #dce8f5, transparent);
+        margin: 35px 0;
+    }
+
+    /* =========================
+           4. KHU VỰC BÌNH LUẬN
+        ========================= */
+
+    .comment-area {
+        margin-top: 25px;
+        padding: 35px 42px;
+        animation-delay: .15s;
+    }
+
+    .comment-heading {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 25px;
+        color: #183b61;
+        font-weight: 800;
+        margin-bottom: 8px;
+    }
+
+    .comment-count {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 29px;
+        height: 29px;
+        padding: 0 9px;
+        border-radius: 30px;
+        background: #eaf3fc;
+        color: #1769aa;
+        font-size: 13px;
+    }
+
+    .comment-description {
+        color: #929dad;
+        font-size: 13px;
+        margin-bottom: 25px;
+    }
+
+    .comment-form textarea {
+        display: block;
+        width: 100%;
+        min-height: 125px;
+        resize: vertical;
+        border: 1px solid #dfe6ef;
+        border-radius: 11px;
+        padding: 16px 18px;
+        font-size: 15px;
+        color: #344054;
+        outline: none;
+        background: #fafcff;
+        transition: .25s;
+    }
+
+        .comment-form textarea:focus {
+            background: #ffffff;
+            border-color: #3187c7;
+            box-shadow: 0 0 0 4px rgba(49,135,199,.10);
+        }
+
+        .comment-form textarea::placeholder {
+            color: #a3adbb;
+        }
+
+    .comment-submit {
+        margin-top: 14px;
+        border: none;
+        border-radius: 9px;
+        padding: 12px 23px;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 700;
+        background: linear-gradient(110deg, #1769aa, #378fd0);
+        box-shadow: 0 5px 15px rgba(23,105,170,.2);
+        transition: all .25s ease;
+    }
+
+        .comment-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 9px 22px rgba(23,105,170,.3);
+            background: linear-gradient(110deg, #105387, #1769aa);
+        }
+
+        .comment-submit:active {
+            transform: scale(.97);
+        }
+
+    .comment-list {
+        margin-top: 30px;
+    }
+
+    .comment-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 22px 12px;
+        border-bottom: 1px solid #edf0f4;
+        border-radius: 9px;
+        animation: fadeUp .5s ease both;
+        transition: background .25s ease, transform .25s ease;
+    }
+
+        .comment-item:hover {
+            background: #f6faff;
+            transform: translateX(4px);
+        }
+
+    .comment-avatar {
+        width: 46px;
+        height: 46px;
+        min-width: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #dcecff, #eef6ff);
+        color: #1769aa;
+        font-size: 17px;
+        transition: transform .3s;
+    }
+
+    .comment-item:hover .comment-avatar {
+        transform: rotate(-8deg) scale(1.08);
+    }
+
+    .comment-user {
+        color: #25354b;
+        font-weight: 750;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .comment-time {
+        color: #a0aaba;
+        font-size: 12px;
+        margin-bottom: 9px;
+    }
+
+    .comment-text {
+        color: #526075;
+        font-size: 14px;
+        line-height: 1.8;
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+    }
+
+    .empty-comment {
+        text-align: center;
+        padding: 45px 10px;
+        color: #9aa5b4;
+    }
+
+        .empty-comment i {
+            font-size: 43px;
+            margin-bottom: 15px;
+            color: #b4c9df;
+        }
+
+        .empty-comment p {
+            margin: 4px 0;
+            font-size: 14px;
+        }
+
+    /* =========================
+           5. ANIMATION
+        ========================= */
+
+    @@keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(22px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @@keyframes floatAd {
+        0%, 100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-9px);
+        }
+    }
+
+    /* =========================
+           6. RESPONSIVE
+        ========================= */
+
+    @@media (max-width: 1250px) {
+        .news-page-layout {
+            grid-template-columns: minmax(0, 950px);
+        }
+
+        .side-ad {
+            display: none;
+        }
+    }
+
+    @@media (max-width: 768px) {
+        .news-page {
+            margin: 20px auto 35px;
+            padding: 0 12px;
+        }
+
+        .news-card {
+            padding: 25px 18px;
+        }
+
+        .news-title {
+            font-size: 27px;
+        }
+
+        .news-meta {
+            gap: 12px;
+        }
+
+        .news-summary {
+            font-size: 15px;
+            padding: 15px;
+        }
+
+        .news-content {
+            font-size: 15px;
+        }
+
+        .comment-area {
+            padding: 25px 17px;
+        }
+
+        .comment-heading {
+            font-size: 22px;
+        }
+    }
+
+    @@media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: .01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: .01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+</style>
+
+<div class="news-page">
+
+    <div class="news-page-layout">
+
+        <!-- =========================
+             QUẢNG CÁO BÊN TRÁI
+        ========================== -->
+
+        <aside class="side-ad side-ad-left">
+
+            <span class="ad-label">QUẢNG CÁO</span>
+
+            <div class="ad-visual ad-blue">
+                <i class="fa-solid fa-laptop-code"></i>
+            </div>
+
+            <h3 class="ad-title">
+                Công nghệ cho tương lai
+            </h3>
+
+            <p class="ad-description">
+                Khám phá những xu hướng công nghệ, kiến thức lập trình và giải pháp số mới nhất.
+            </p>
+
+            <ul class="ad-list">
+                <li>
+                    <i class="fa-solid fa-check-circle"></i>
+                    Kiến thức công nghệ
+                </li>
+                <li>
+                    <i class="fa-solid fa-check-circle"></i>
+                    Lập trình và phát triển
+                </li>
+                <li>
+                    <i class="fa-solid fa-check-circle"></i>
+                    Xu hướng AI
+                </li>
+            </ul>
+
+            <a href="#" class="ad-button">
+                KHÁM PHÁ NGAY
+                <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+
+            <div class="ad-decoration"></div>
+
+        </aside>
+
+        <!-- =========================
+             NỘI DUNG CHÍNH
+        ========================== -->
+
+        <main class="news-main">
+
+            @if (baiviet != null)
+            {
+                <!-- Đường dẫn -->
+                <div class="breadcrumb-news">
+                    <a asp-controller="Trangchu" asp-action="Trangdau">
+                        <i class="fa-solid fa-house"></i>
+                        Trang chủ
+                    </a>
+
+                    <span class="mx-2">/</span>
+
+                    <span>Chi tiết bài viết</span>
+                </div>
+
+                <!-- BÀI VIẾT -->
+                <article class="news-card">
+
+                    <div class="news-category">
+                        <i class="fa-solid fa-newspaper"></i>
+                        TIN TỨC
+                    </div>
+
+                    <h1 class="news-title">
+                        @baiviet.TieuDe
+                    </h1>
+
+                    <div class="news-meta">
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            @baiviet.NgayTao.ToString("dd/MM/yyyy HH:mm")
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-user"></i>
+                            Tin tức tổng hợp
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-comments"></i>
+                            @(danhsachbinhluan?.Count ?? 0) bình luận
+                        </span>
+
+                    </div>
+
+                    @if (!string.IsNullOrEmpty(baiviet.AnhDaiDien))
+                    {
+                        <div class="news-cover-wrapper">
+                            <img class="news-cover"
+                                 src="~/images/@baiviet.AnhDaiDien"
+                                 alt="@baiviet.TieuDe" />
+                        </div>
+                    }
+
+                    @if (!string.IsNullOrWhiteSpace(baiviet.TomTat))
+                    {
+                        <div class="news-summary">
+                            @baiviet.TomTat
+                        </div>
+                    }
+
+                    <!-- Lấy nguyên HTML được lưu trong CSDL -->
+                    <div class="news-content">
+                        @Html.Raw(baiviet.NoiDung)
+                    </div>
+
+                    <div class="news-divider"></div>
+
+                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                        <span style="font-size:13px;color:#8793a4;">
+                            <i class="fa-solid fa-book-open me-1"></i>
+                            Cảm ơn bạn đã đọc bài viết.
+                        </span>
+
+                        <a asp-controller="Trangchu"
+                           asp-action="Trangdau"
+                           style="color:#1769aa;text-decoration:none;font-size:13px;font-weight:700;">
+                            <i class="fa-solid fa-arrow-left me-1"></i>
+                            Quay lại trang chủ
+                        </a>
+                    </div>
+
+                </article>
+
+                <!-- =========================
+                     KHU VỰC BÌNH LUẬN
+                ========================== -->
+
+                <section class="comment-area">
+
+                    <h2 class="comment-heading">
+                        <i class="fa-regular fa-comments"
+                           style="color:#2785c5;"></i>
+
+                        Thảo luận
+
+                        <span class="comment-count">
+                            @(danhsachbinhluan?.Count ?? 0)
+                        </span>
+                    </h2>
+
+                    <p class="comment-description">
+                        Hãy chia sẻ ý kiến và góc nhìn của bạn về bài viết này.
+                    </p>
+
+                    <!-- FORM BÌNH LUẬN -->
+                    <form asp-controller="Giaodienbaiviet"
+                          asp-action="ChiTiet"
+                          method="get"
+                          class="comment-form">
+
+                        <input type="hidden"
+                               name="id"
+                               value="@baiviet.MaBaiViet" />
+
+                        <textarea name="binhluanthem"
+                                  placeholder="Bạn nghĩ gì về bài viết này? Hãy viết bình luận tại đây..."
+                                  maxlength="2000"
+                                  required></textarea>
+
+                        <div class="text-end">
+
+                            <button type="submit" class="comment-submit">
+                                <i class="fa-regular fa-paper-plane me-2"></i>
+                                Gửi bình luận
+                            </button>
+
+                        </div>
+                    </form>
+
+                    <!-- DANH SÁCH BÌNH LUẬN -->
+                    <div class="comment-list">
+
+                        @if (danhsachbinhluan != null && danhsachbinhluan.Count > 0)
+                        {
+                            foreach (var bl in danhsachbinhluan.OrderByDescending(x => x.NgayBinhLuan))
+                            {
+                                <div class="comment-item">
+
+                                    <div class="comment-avatar">
+                                        <i class="fa-solid fa-user"></i>
+                                    </div>
+
+                                    <div class="flex-grow-1">
+
+                                        <div class="comment-user">
+                                            Độc giả #@bl.MaDocGia
+                                        </div>
+
+                                        <div class="comment-time">
+                                            <i class="fa-regular fa-clock me-1"></i>
+                                            @bl.NgayBinhLuan.ToString("dd/MM/yyyy HH:mm")
+                                        </div>
+
+                                        <div class="comment-text">
+                                            @bl.NoiDung
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <div class="empty-comment">
+
+                                <i class="fa-regular fa-comments"></i>
+
+                                <p><strong>Chưa có bình luận nào!</strong></p>
+
+                                <p>Hãy là người đầu tiên chia sẻ ý kiến của bạn.</p>
+
+                            </div>
+                        }
+
+                    </div>
+
+                </section>
+            }
+            else
+            {
+                <div class="news-card text-center py-5">
+                    <i class="fa-solid fa-circle-exclamation fa-3x text-secondary mb-3"></i>
+                    <h3>Không tìm thấy bài viết</h3>
+                    <a asp-controller="Trangchu"
+                       asp-action="Trangdau"
+                       class="btn btn-primary mt-3">
+                        Quay lại trang chủ
+                    </a>
+                </div>
+            }
+
+        </main>
+
+        <!-- =========================
+             QUẢNG CÁO BÊN PHẢI
+        ========================== -->
+
+        <aside class="side-ad side-ad-right">
+
+            <span class="ad-label">QUẢNG CÁO</span>
+
+            <div class="ad-visual ad-purple">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <h3 class="ad-title">
+                Học tập và phát triển
+            </h3>
+
+            <p class="ad-description">
+                Cập nhật kiến thức, nâng cao kỹ năng và khám phá những cơ hội học tập mới.
+            </p>
+
+            <ul class="ad-list">
+                <li>
+                    <i class="fa-solid fa-check-circle"></i>
+                    Tài liệu học tập
+                </li>
+                <li>
+                    <i class="fa-solid fa-check-circle"></i>
+                    Kỹ năng chuyên môn
+                </li>
+                <li>
+                    <i class="fa-solid fa-check-circle"></i>
+                    Kiến thức mới
+                </li>
+            </ul>
+
+            <a href="#" class="ad-button"
+               style="background:linear-gradient(100deg,#6546c8,#9679ec);">
+                TÌM HIỂU THÊM
+                <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+
+            <div class="ad-decoration"></div>
+
+        </aside>
+
+    </div>
+</div>
+
+<!-- THÔNG BÁO TỪ CONTROLLER -->
+@if (ViewBag.ThongBao != null)
+{
+    <script>
+        alert(@Html.Raw(System.Text.Json.JsonSerializer.Serialize(
+                                    (string)ViewBag.ThongBao)));
+    </script>
+}

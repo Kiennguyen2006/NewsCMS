@@ -1,0 +1,181 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLTELayout.cshtml";
+    ViewData["Title"] = "Quản lý bình luận";
+    var bang = ViewBag.bang as IEnumerable<NewsCMS.Models.BinhluanModel>;
+}
+
+<style>
+    .comment-cell {
+        max-width: 300px;
+        min-width: 220px;
+        text-align: left;
+    }
+
+    .comment-preview {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        line-height: 1.5;
+    }
+
+    .comment-details summary {
+        cursor: pointer;
+        color: #007bff;
+        font-size: 13px;
+        margin-top: 4px;
+        list-style: none;
+    }
+
+        .comment-details summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .comment-details summary::after {
+            content: "Xem thêm";
+            font-weight: 600;
+        }
+
+    .comment-details[open] summary::after {
+        content: "Thu gọn";
+    }
+
+    .comment-full {
+        margin-top: 8px;
+        padding: 8px 10px;
+        background: #f8f9fa;
+        border-left: 3px solid #007bff;
+        border-radius: 4px;
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+        line-height: 1.5;
+    }
+
+    .comment-table {
+        table-layout: fixed;
+        width: 100%;
+    }
+
+        .comment-table th,
+        .comment-table td {
+            vertical-align: middle;
+        }
+</style>
+
+<div class="container-fluid">
+    <div class="card card-primary card-outline">
+        <div class="card-header">
+            <h3 class="card-title">
+                <i class="fas fa-comments mr-2"></i>
+                Danh sách bình luận
+            </h3>
+        </div>
+
+        <div class="card-body">
+            <form asp-controller="Binhluan"
+                  asp-action="Binhluan"
+                  method="get"
+                  class="mb-4">
+
+                <div class="input-group">
+                    <input type="text"
+                           name="tk"
+                           class="form-control"
+                           placeholder="Nhập nội dung bình luận cần tìm..."
+                           value="@Context.Request.Query["tk"]" />
+
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-search mr-1"></i>
+                            Tìm kiếm
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover text-center comment-table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th style="width: 100px;">Mã bình luận</th>
+                            <th style="width: 100px;">Mã bài viết</th>
+                            <th style="width: 100px;">Mã độc giả</th>
+                            <th>Nội dung bình luận</th>
+                            <th style="width: 150px;">Ngày bình luận</th>
+                            <th style="width: 90px;">Thao tác</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @if (bang != null && bang.Any())
+                        {
+                            foreach (var bl in bang)
+                            {
+                                <tr>
+                                    <td>@bl.MaBinhLuan</td>
+                                    <td>@bl.MaBaiViet</td>
+                                    <td>@bl.MaDocGia</td>
+
+                                    <td class="comment-cell">
+                                        @if (!string.IsNullOrEmpty(bl.NoiDung) && bl.NoiDung.Length > 100)
+                                        {
+                                            <details class="comment-details">
+                                                <summary>
+                                                    <span class="comment-preview">
+                                                        @bl.NoiDung
+                                                    </span>
+                                                </summary>
+
+                                                <div class="comment-full">
+                                                    @bl.NoiDung
+                                                </div>
+                                            </details>
+                                        }
+                                        else
+                                        {
+                                            <div class="comment-preview">
+                                                @bl.NoiDung
+                                            </div>
+                                        }
+                                    </td>
+
+                                    <td>
+                                        @bl.NgayBinhLuan.ToString("dd/MM/yyyy HH:mm")
+                                    </td>
+
+                                    <td>
+                                        <a asp-controller="Binhluan"
+                                           asp-action="Xacnhanxoa"
+                                           asp-route-ma="@bl.MaBinhLuan"
+                                           class="btn btn-danger btn-sm">
+                                            <i class="fas fa-trash-alt mr-1"></i>
+                                            Xóa
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="6" class="text-muted py-4">
+                                    <i class="fas fa-info-circle mr-1"></i>
+                                    Không tìm thấy bình luận nào.
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <span class="text-muted">
+                Tổng số bình luận:
+                <strong>@(bang?.Count() ?? 0)</strong>
+            </span>
+        </div>
+    </div>
+</div>

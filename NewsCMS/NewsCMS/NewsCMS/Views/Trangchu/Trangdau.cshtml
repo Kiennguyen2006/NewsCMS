@@ -395,7 +395,6 @@
                     </span>
 
                 </div>
-
                 <div class="news-article-list">
 
                     @if (soLuongBaiViet > 0)
@@ -404,7 +403,7 @@
                         {
                             <article class="news-article">
 
-                                <a asp-controller="BaiViet"
+                                <a asp-controller="Giaodienbaiviet"
                                    asp-action="ChiTiet"
                                    asp-route-id="@item.MaBaiViet"
                                    class="article-image-link">
@@ -433,7 +432,7 @@
 
                                     <h3 class="article-title">
 
-                                        <a asp-controller="BaiViet"
+                                        <a asp-controller="Giaodienbaiviet"
                                            asp-action="ChiTiet"
                                            asp-route-id="@item.MaBaiViet">
 
@@ -456,7 +455,7 @@
                                             ◷ @item.NgayTao.ToString("dd/MM/yyyy")
                                         </span>
 
-                                        <a asp-controller="BaiViet"
+                                        <a asp-controller="Giaodienbaiviet"
                                            asp-action="ChiTiet"
                                            asp-route-id="@item.MaBaiViet"
                                            class="article-read-more">

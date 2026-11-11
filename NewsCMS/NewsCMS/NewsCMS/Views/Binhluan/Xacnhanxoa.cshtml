@@ -1,0 +1,86 @@
+﻿@using NewsCMS.Models
+
+@{
+    Layout = "~/Views/Shared/_AdminLTELayout.cshtml";
+    ViewData["Title"] = "Xác nhận xóa bình luận";
+    var dongxoa = ViewBag.dongxoa as BinhluanModel;
+}
+
+<div class="container-fluid">
+    <div class="card card-danger card-outline">
+        <div class="card-header">
+            <h3 class="card-title">
+                <i class="fas fa-trash-alt mr-2"></i>
+                Xác nhận xóa bình luận
+            </h3>
+        </div>
+
+        <div class="card-body">
+            @if (dongxoa != null)
+            {
+                <div class="alert alert-warning">
+                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                    Bạn có chắc chắn muốn xóa bình luận này không?
+                    Thao tác này không thể hoàn tác.
+                </div>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <th style="width: 180px;">Mã bình luận</th>
+                        <td>@dongxoa.MaBinhLuan</td>
+                    </tr>
+                    <tr>
+                        <th>Mã bài viết</th>
+                        <td>@dongxoa.MaBaiViet</td>
+                    </tr>
+                    <tr>
+                        <th>Mã độc giả</th>
+                        <td>@dongxoa.MaDocGia</td>
+                    </tr>
+                    <tr>
+                        <th>Nội dung</th>
+                        <td style="white-space: pre-wrap; overflow-wrap:anywhere;">@dongxoa.NoiDung</td>
+                    </tr>
+                    <tr>
+                        <th>Ngày bình luận</th>
+                        <td>@dongxoa.NgayBinhLuan.ToString("dd/MM/yyyy HH:mm:ss")</td>
+                    </tr>
+                </table>
+
+                <div class="mt-4">
+                    <form asp-controller="Binhluan"
+                          asp-action="Xoa"
+                          asp-route-ma="@dongxoa.MaBinhLuan"
+                          method="post"
+                          class="d-inline">
+                        @Html.AntiForgeryToken()
+
+                        <button type="submit" class="btn btn-danger">
+                            <i class="fas fa-trash-alt mr-1"></i>
+                            Xác nhận xóa
+                        </button>
+                    </form>
+
+                    <a asp-controller="Binhluan"
+                       asp-action="Binhluan"
+                       class="btn btn-secondary ml-2">
+                        <i class="fas fa-arrow-left mr-1"></i>
+                        Quay lại
+                    </a>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-danger">
+                    Không tìm thấy bình luận cần xóa.
+                </div>
+
+                <a asp-controller="Binhluan"
+                   asp-action="Binhluan"
+                   class="btn btn-secondary">
+                    Quay lại
+                </a>
+            }
+        </div>
+    </div>
+</div>

@@ -35,6 +35,14 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/kienthuccntt/Documents/thực tập chuyên đề đồ án 2/NewsCMS/NewsCMS/NewsCMS/Views/Binhluan/Binhluan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmluaGx1YW5cQmluaGx1YW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kienthuccntt/Documents/thực tập chuyên đề đồ án 2/NewsCMS/NewsCMS/NewsCMS/Views/Binhluan/Xacnhanxoa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmluaGx1YW5cWGFjbmhhbnhvYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/kienthuccntt/Documents/thực tập chuyên đề đồ án 2/NewsCMS/NewsCMS/NewsCMS/Views/Danhmuc/Danhmuc.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFuaG11Y1xEYW5obXVjLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -45,6 +53,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/kienthuccntt/Documents/thực tập chuyên đề đồ án 2/NewsCMS/NewsCMS/NewsCMS/Views/Danhmuc/Themdanhmuc.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFuaG11Y1xUaGVtZGFuaG11Yy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kienthuccntt/Documents/thực tập chuyên đề đồ án 2/NewsCMS/NewsCMS/NewsCMS/Views/Giaodienbaiviet/ChiTiet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lhb2RpZW5iYWl2aWV0XENoaVRpZXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/kienthuccntt/Documents/thực tập chuyên đề đồ án 2/NewsCMS/NewsCMS/NewsCMS/Views/Home/Index.cshtml]
