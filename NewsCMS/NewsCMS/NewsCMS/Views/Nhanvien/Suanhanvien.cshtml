@@ -1,0 +1,147 @@
+﻿@model NewsCMS.Models.NhanVienModel
+@{
+    Layout = "~/Views/Shared/_AdminLTELayout.cshtml";
+}
+@{
+    ViewData["Title"] = "Sửa nhân viên";
+
+    var nv = ViewBag.bangthongtincu as NewsCMS.Models.NhanVienModel;
+    var bangtk = ViewBag.bangtk;
+    var maTaiKhoanHienTai = nv?.MaTaiKhoan ?? Model?.MaTaiKhoan;
+
+    var hoTen = Model?.HoTen ?? nv?.HoTen;
+    var soDienThoai = Model?.SoDienThoai ?? nv?.SoDienThoai;
+    var maNhanVien = Model?.MaNhanVien ?? nv?.MaNhanVien;
+
+    var ngayVaoLam = Model?.NgayVaoLam ?? nv?.NgayVaoLam;
+}
+
+<div class="container py-4">
+
+    <div class="mb-4">
+        <a asp-controller="Nhanvien" asp-action="Nhanvien"
+           class="btn btn-outline-secondary">
+            <i class="fa-solid fa-arrow-left me-1"></i>
+            Quay lại danh sách nhân viên
+        </a>
+    </div>
+
+    <div class="card shadow-sm border-0 mx-auto" style="max-width: 750px;">
+
+        <div class="card-header bg-warning py-3">
+            <h4 class="mb-0 text-dark">
+                <i class="fa-solid fa-user-pen me-2"></i>
+                Sửa thông tin nhân viên
+            </h4>
+        </div>
+
+        <div class="card-body p-4">
+
+            @if (ViewBag.thongbao != null)
+            {
+                <div class="alert alert-danger">
+                    @ViewBag.thongbao
+                </div>
+            }
+
+            <form asp-controller="Nhanvien" asp-action="Suanv" method="post">
+
+                @Html.AntiForgeryToken()
+
+                <input type="hidden" name="MaNhanVien"
+                       value="@maNhanVien" />
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">
+                        Tài khoản đang sử dụng
+                    </label>
+
+                    <select name="MaTaiKhoan" id="MaTaiKhoan"
+                            class="form-select">
+
+                        @if (maTaiKhoanHienTai != null)
+                        {
+                            <option value="@maTaiKhoanHienTai" selected>
+                                TK-@maTaiKhoanHienTai (Đang sử dụng)
+                            </option>
+                        }
+
+                        @if (bangtk != null)
+                        {
+                            foreach (var tk in bangtk)
+                            {
+                                <option value="@tk.MaTaiKhoan">
+                                    TK-@tk.MaTaiKhoan
+                                </option>
+                            }
+                        }
+
+                    </select>
+
+                    <small class="text-muted">
+                        Tài khoản đang sử dụng được hiển thị ở dòng đầu tiên.
+                        Bạn có thể chọn tài khoản khác bên dưới.
+                    </small>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">
+                        Họ tên nhân viên
+                    </label>
+
+                    <input type="text" name="HoTen"
+                           class="form-control"
+                           value="@hoTen"
+                           placeholder="Nhập họ tên nhân viên" />
+
+                    <span asp-validation-for="HoTen"
+                          class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">
+                        Số điện thoại
+                    </label>
+
+                    <input type="text" name="SoDienThoai"
+                           class="form-control"
+                           value="@soDienThoai"
+                           placeholder="Nhập số điện thoại" />
+
+                    <span asp-validation-for="SoDienThoai"
+                          class="text-danger"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label fw-semibold">
+                        Ngày vào làm
+                    </label>
+
+                    <input type="date" name="NgayVaoLam"
+                           class="form-control"
+                           value="@(ngayVaoLam?.ToString("yyyy-MM-dd"))" />
+
+                    <span asp-validation-for="NgayVaoLam"
+                          class="text-danger"></span>
+                </div>
+
+                <div class="d-flex justify-content-end gap-2">
+                    <a asp-controller="Nhanvien" asp-action="Nhanvien"
+                       class="btn btn-secondary">
+                        Hủy
+                    </a>
+
+                    <button type="submit" class="btn btn-warning">
+                        <i class="fa-solid fa-floppy-disk me-1"></i>
+                        Lưu thay đổi
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

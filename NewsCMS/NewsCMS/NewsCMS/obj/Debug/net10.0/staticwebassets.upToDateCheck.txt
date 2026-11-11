@@ -1,0 +1,464 @@
+wwwroot\admin-lte-v4.10.1\dist\assets\img\AdminLTEFullLogo.png
+wwwroot\admin-lte-v4.10.1\dist\assets\img\AdminLTELogo.png
+wwwroot\admin-lte-v4.10.1\dist\assets\img\avatar.png
+wwwroot\admin-lte-v4.10.1\dist\assets\img\avatar2.png
+wwwroot\admin-lte-v4.10.1\dist\assets\img\avatar3.png
+wwwroot\admin-lte-v4.10.1\dist\assets\img\avatar4.png
+wwwroot\admin-lte-v4.10.1\dist\assets\img\avatar5.png
+wwwroot\admin-lte-v4.10.1\dist\assets\img\boxed-bg.jpg
+wwwroot\admin-lte-v4.10.1\dist\assets\img\boxed-bg.png
+wwwroot\admin-lte-v4.10.1\dist\assets\img\credit\american-express.png
+wwwroot\admin-lte-v4.10.1\dist\assets\img\credit\cirrus.png
+wwwroot\admin-lte-v4.10.1\dist\assets\img\credit\mastercard.png
+wwwroot\admin-lte-v4.10.1\dist\assets\img\credit\paypal.png
+wwwroot\admin-lte-v4.10.1\dist\assets\img\credit\paypal2.png
+wwwroot\admin-lte-v4.10.1\dist\assets\img\credit\visa.png
+wwwroot\admin-lte-v4.10.1\dist\assets\img\default-150x150.png
+wwwroot\admin-lte-v4.10.1\dist\assets\img\icons.png
+wwwroot\admin-lte-v4.10.1\dist\assets\img\photo1.png
+wwwroot\admin-lte-v4.10.1\dist\assets\img\photo2.png
+wwwroot\admin-lte-v4.10.1\dist\assets\img\photo3.jpg
+wwwroot\admin-lte-v4.10.1\dist\assets\img\photo4.jpg
+wwwroot\admin-lte-v4.10.1\dist\assets\img\prod-1.jpg
+wwwroot\admin-lte-v4.10.1\dist\assets\img\prod-2.jpg
+wwwroot\admin-lte-v4.10.1\dist\assets\img\prod-3.jpg
+wwwroot\admin-lte-v4.10.1\dist\assets\img\prod-4.jpg
+wwwroot\admin-lte-v4.10.1\dist\assets\img\prod-5.jpg
+wwwroot\admin-lte-v4.10.1\dist\assets\img\user1-128x128.jpg
+wwwroot\admin-lte-v4.10.1\dist\assets\img\user2-160x160.jpg
+wwwroot\admin-lte-v4.10.1\dist\assets\img\user3-128x128.jpg
+wwwroot\admin-lte-v4.10.1\dist\assets\img\user4-128x128.jpg
+wwwroot\admin-lte-v4.10.1\dist\assets\img\user5-128x128.jpg
+wwwroot\admin-lte-v4.10.1\dist\assets\img\user6-128x128.jpg
+wwwroot\admin-lte-v4.10.1\dist\assets\img\user7-128x128.jpg
+wwwroot\admin-lte-v4.10.1\dist\assets\img\user8-128x128.jpg
+wwwroot\admin-lte-v4.10.1\dist\charts\apexcharts.html
+wwwroot\admin-lte-v4.10.1\dist\charts\chartjs.html
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors-v3.css
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors-v3.css.map
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors-v3.min.css
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors-v3.min.css.map
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors-v3.rtl.css
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors-v3.rtl.css.map
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors-v3.rtl.min.css
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors-v3.rtl.min.css.map
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors.css
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors.css.map
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors.min.css
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors.min.css.map
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors.rtl.css
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors.rtl.css.map
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors.rtl.min.css
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors.rtl.min.css.map
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-docs.css
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-docs.css.map
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-docs.min.css
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-docs.min.css.map
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-docs.rtl.css
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-docs.rtl.css.map
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-docs.rtl.min.css
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-docs.rtl.min.css.map
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-select2.css
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-select2.css.map
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-select2.min.css
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-select2.min.css.map
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-select2.rtl.css
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-select2.rtl.css.map
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-select2.rtl.min.css
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte-select2.rtl.min.css.map
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte.css
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte.css.map
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte.min.css
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte.min.css.map
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte.rtl.css
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte.rtl.css.map
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte.rtl.min.css
+wwwroot\admin-lte-v4.10.1\dist\css\adminlte.rtl.min.css.map
+wwwroot\admin-lte-v4.10.1\dist\docs\browser-support.html
+wwwroot\admin-lte-v4.10.1\dist\docs\color-mode.html
+wwwroot\admin-lte-v4.10.1\dist\docs\colors.html
+wwwroot\admin-lte-v4.10.1\dist\docs\components\card.html
+wwwroot\admin-lte-v4.10.1\dist\docs\components\main-header.html
+wwwroot\admin-lte-v4.10.1\dist\docs\components\main-sidebar.html
+wwwroot\admin-lte-v4.10.1\dist\docs\components\miscellaneous.html
+wwwroot\admin-lte-v4.10.1\dist\docs\customization.html
+wwwroot\admin-lte-v4.10.1\dist\docs\deployment.html
+wwwroot\admin-lte-v4.10.1\dist\docs\faq.html
+wwwroot\admin-lte-v4.10.1\dist\docs\getting-started.html
+wwwroot\admin-lte-v4.10.1\dist\docs\how-to-contribute.html
+wwwroot\admin-lte-v4.10.1\dist\docs\index.html
+wwwroot\admin-lte-v4.10.1\dist\docs\integrations.html
+wwwroot\admin-lte-v4.10.1\dist\docs\introduction.html
+wwwroot\admin-lte-v4.10.1\dist\docs\javascript\accessibility.html
+wwwroot\admin-lte-v4.10.1\dist\docs\javascript\card-widget.html
+wwwroot\admin-lte-v4.10.1\dist\docs\javascript\direct-chat.html
+wwwroot\admin-lte-v4.10.1\dist\docs\javascript\fullscreen.html
+wwwroot\admin-lte-v4.10.1\dist\docs\javascript\layout.html
+wwwroot\admin-lte-v4.10.1\dist\docs\javascript\plugins-overview.html
+wwwroot\admin-lte-v4.10.1\dist\docs\javascript\pushmenu.html
+wwwroot\admin-lte-v4.10.1\dist\docs\javascript\sidebar-search.html
+wwwroot\admin-lte-v4.10.1\dist\docs\javascript\treeview.html
+wwwroot\admin-lte-v4.10.1\dist\docs\layout-blueprint.html
+wwwroot\admin-lte-v4.10.1\dist\docs\layout.html
+wwwroot\admin-lte-v4.10.1\dist\docs\license.html
+wwwroot\admin-lte-v4.10.1\dist\docs\migration.html
+wwwroot\admin-lte-v4.10.1\dist\docs\recipes.html
+wwwroot\admin-lte-v4.10.1\dist\docs\rtl.html
+wwwroot\admin-lte-v4.10.1\dist\examples\forgot-password.html
+wwwroot\admin-lte-v4.10.1\dist\examples\lockscreen.html
+wwwroot\admin-lte-v4.10.1\dist\examples\login-v2.html
+wwwroot\admin-lte-v4.10.1\dist\examples\login.html
+wwwroot\admin-lte-v4.10.1\dist\examples\register-v2.html
+wwwroot\admin-lte-v4.10.1\dist\examples\register.html
+wwwroot\admin-lte-v4.10.1\dist\forms\advanced.html
+wwwroot\admin-lte-v4.10.1\dist\forms\editors.html
+wwwroot\admin-lte-v4.10.1\dist\forms\elements.html
+wwwroot\admin-lte-v4.10.1\dist\forms\layout.html
+wwwroot\admin-lte-v4.10.1\dist\forms\validation.html
+wwwroot\admin-lte-v4.10.1\dist\forms\wizard.html
+wwwroot\admin-lte-v4.10.1\dist\generate\theme.html
+wwwroot\admin-lte-v4.10.1\dist\index.html
+wwwroot\admin-lte-v4.10.1\dist\index2.html
+wwwroot\admin-lte-v4.10.1\dist\index3.html
+wwwroot\admin-lte-v4.10.1\dist\js\adminlte.esm.js
+wwwroot\admin-lte-v4.10.1\dist\js\adminlte.esm.js.map
+wwwroot\admin-lte-v4.10.1\dist\js\adminlte.esm.min.js
+wwwroot\admin-lte-v4.10.1\dist\js\adminlte.esm.min.js.map
+wwwroot\admin-lte-v4.10.1\dist\js\adminlte.js
+wwwroot\admin-lte-v4.10.1\dist\js\adminlte.js.map
+wwwroot\admin-lte-v4.10.1\dist\js\adminlte.min.js
+wwwroot\admin-lte-v4.10.1\dist\js\adminlte.min.js.map
+wwwroot\admin-lte-v4.10.1\dist\js\types\accessibility.d.ts
+wwwroot\admin-lte-v4.10.1\dist\js\types\adminlte.d.ts
+wwwroot\admin-lte-v4.10.1\dist\js\types\base-component.d.ts
+wwwroot\admin-lte-v4.10.1\dist\js\types\card-widget.d.ts
+wwwroot\admin-lte-v4.10.1\dist\js\types\color-mode.d.ts
+wwwroot\admin-lte-v4.10.1\dist\js\types\direct-chat.d.ts
+wwwroot\admin-lte-v4.10.1\dist\js\types\fullscreen.d.ts
+wwwroot\admin-lte-v4.10.1\dist\js\types\layout.d.ts
+wwwroot\admin-lte-v4.10.1\dist\js\types\push-menu.d.ts
+wwwroot\admin-lte-v4.10.1\dist\js\types\sidebar-search.d.ts
+wwwroot\admin-lte-v4.10.1\dist\js\types\treeview.d.ts
+wwwroot\admin-lte-v4.10.1\dist\js\types\util\index.d.ts
+wwwroot\admin-lte-v4.10.1\dist\layout\collapsed-sidebar-without-hover.html
+wwwroot\admin-lte-v4.10.1\dist\layout\collapsed-sidebar.html
+wwwroot\admin-lte-v4.10.1\dist\layout\fixed-complete.html
+wwwroot\admin-lte-v4.10.1\dist\layout\fixed-footer.html
+wwwroot\admin-lte-v4.10.1\dist\layout\fixed-header.html
+wwwroot\admin-lte-v4.10.1\dist\layout\fixed-sidebar.html
+wwwroot\admin-lte-v4.10.1\dist\layout\layout-custom-area.html
+wwwroot\admin-lte-v4.10.1\dist\layout\layout-rtl.html
+wwwroot\admin-lte-v4.10.1\dist\layout\logo-switch.html
+wwwroot\admin-lte-v4.10.1\dist\layout\sidebar-mini.html
+wwwroot\admin-lte-v4.10.1\dist\layout\top-nav.html
+wwwroot\admin-lte-v4.10.1\dist\layout\unfixed-sidebar.html
+wwwroot\admin-lte-v4.10.1\dist\mailbox\compose.html
+wwwroot\admin-lte-v4.10.1\dist\mailbox\inbox.html
+wwwroot\admin-lte-v4.10.1\dist\mailbox\read.html
+wwwroot\admin-lte-v4.10.1\dist\pages\404.html
+wwwroot\admin-lte-v4.10.1\dist\pages\500.html
+wwwroot\admin-lte-v4.10.1\dist\pages\calendar.html
+wwwroot\admin-lte-v4.10.1\dist\pages\chat.html
+wwwroot\admin-lte-v4.10.1\dist\pages\faq.html
+wwwroot\admin-lte-v4.10.1\dist\pages\file-manager.html
+wwwroot\admin-lte-v4.10.1\dist\pages\gallery.html
+wwwroot\admin-lte-v4.10.1\dist\pages\invoice.html
+wwwroot\admin-lte-v4.10.1\dist\pages\kanban.html
+wwwroot\admin-lte-v4.10.1\dist\pages\maintenance.html
+wwwroot\admin-lte-v4.10.1\dist\pages\pricing.html
+wwwroot\admin-lte-v4.10.1\dist\pages\profile.html
+wwwroot\admin-lte-v4.10.1\dist\pages\projects.html
+wwwroot\admin-lte-v4.10.1\dist\pages\search-results.html
+wwwroot\admin-lte-v4.10.1\dist\pages\settings.html
+wwwroot\admin-lte-v4.10.1\dist\starter.html
+wwwroot\admin-lte-v4.10.1\dist\tables\data.html
+wwwroot\admin-lte-v4.10.1\dist\tables\simple.html
+wwwroot\admin-lte-v4.10.1\dist\UI\colors.html
+wwwroot\admin-lte-v4.10.1\dist\UI\general.html
+wwwroot\admin-lte-v4.10.1\dist\UI\icons.html
+wwwroot\admin-lte-v4.10.1\dist\UI\ribbons.html
+wwwroot\admin-lte-v4.10.1\dist\UI\timeline.html
+wwwroot\admin-lte-v4.10.1\dist\users.html
+wwwroot\admin-lte-v4.10.1\dist\widgets\cards.html
+wwwroot\admin-lte-v4.10.1\dist\widgets\info-box.html
+wwwroot\admin-lte-v4.10.1\dist\widgets\small-box.html
+wwwroot\admin-lte-v4.10.1\dist\widgets\social.html
+wwwroot\css\site.css
+wwwroot\css\Trangdau.css
+wwwroot\favicon.ico
+wwwroot\images\05604c87-2f9a-4f78-8dea-56297574b6d0.webp
+wwwroot\images\07ebcdee-406c-4d9b-b710-4f68dc088364.webp
+wwwroot\images\0d53bceb-c989-4cf5-b30c-e56464c76f03.jpg
+wwwroot\images\26cf6144-ce84-4b81-95ff-0150a78a7d5e.jpg
+wwwroot\images\453f780a-4b8f-4e0c-b417-96fad0c3f166.webp
+wwwroot\images\51478381-2198-44da-bf6c-97028217dbe2.webp
+wwwroot\images\7e5dd654-6411-442d-aadc-37ac8683591c.jpg
+wwwroot\images\93b75908-bbcb-498a-b009-a811f65475fc.webp
+wwwroot\images\b4cb344a-0013-4c76-b70e-99513808a06c.webp
+wwwroot\images\b4e9cf18-2338-4b5e-9c80-da6c55b51252.webp
+wwwroot\images\baaa37a9-bf12-4199-840a-c8dea35adede.jpg
+wwwroot\images\e426ac05-674c-4e8e-ace9-71b766e73c41.webp
+wwwroot\images\edb611f4-4694-4747-b682-36b8521bfdcd.webp
+wwwroot\js\site.js
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+wwwroot\lib\bootstrap\LICENSE
+wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
+wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
+wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\lib\jquery-validation\dist\additional-methods.js
+wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.js
+wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+wwwroot\lib\jquery-validation\LICENSE.md
+wwwroot\lib\jquery\dist\jquery.js
+wwwroot\lib\jquery\dist\jquery.min.js
+wwwroot\lib\jquery\dist\jquery.min.map
+wwwroot\lib\jquery\dist\jquery.slim.js
+wwwroot\lib\jquery\dist\jquery.slim.min.js
+wwwroot\lib\jquery\dist\jquery.slim.min.map
+wwwroot\lib\jquery\LICENSE.txt
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\js\site.js
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\jquery-validation\dist\additional-methods.js
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\jquery-validation\LICENSE.md
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\jquery\dist\jquery.js
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\jquery\dist\jquery.min.js
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\jquery\dist\jquery.min.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\jquery\dist\jquery.slim.js
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\jquery\dist\jquery.slim.min.js
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\jquery\dist\jquery.slim.min.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\lib\jquery\LICENSE.txt
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\favicon.ico
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\css\site.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\css\Trangdau.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\charts\apexcharts.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\charts\chartjs.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors-v3.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors-v3.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors-v3.min.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors-v3.min.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors-v3.rtl.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors-v3.rtl.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors-v3.rtl.min.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors-v3.rtl.min.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors.min.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors.min.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors.rtl.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors.rtl.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors.rtl.min.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-colors.rtl.min.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-docs.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-docs.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-docs.min.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-docs.min.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-docs.rtl.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-docs.rtl.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-docs.rtl.min.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-docs.rtl.min.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-select2.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-select2.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-select2.min.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-select2.min.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-select2.rtl.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-select2.rtl.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-select2.rtl.min.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte-select2.rtl.min.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte.min.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte.min.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte.rtl.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte.rtl.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte.rtl.min.css
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\css\adminlte.rtl.min.css.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\browser-support.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\color-mode.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\colors.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\components\card.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\components\main-header.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\components\main-sidebar.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\components\miscellaneous.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\customization.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\deployment.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\faq.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\getting-started.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\how-to-contribute.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\index.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\integrations.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\introduction.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\javascript\accessibility.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\javascript\card-widget.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\javascript\direct-chat.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\javascript\fullscreen.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\javascript\layout.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\javascript\plugins-overview.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\javascript\pushmenu.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\javascript\sidebar-search.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\javascript\treeview.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\layout-blueprint.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\layout.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\license.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\migration.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\recipes.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\docs\rtl.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\examples\forgot-password.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\examples\lockscreen.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\examples\login-v2.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\examples\login.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\examples\register-v2.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\examples\register.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\forms\advanced.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\forms\editors.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\forms\elements.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\forms\layout.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\forms\validation.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\forms\wizard.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\generate\theme.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\index.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\index2.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\index3.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\js\adminlte.esm.js
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\js\adminlte.esm.js.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\js\adminlte.esm.min.js
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\js\adminlte.esm.min.js.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\js\adminlte.js
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\js\adminlte.js.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\js\adminlte.min.js
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\js\adminlte.min.js.map
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\layout\collapsed-sidebar-without-hover.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\layout\collapsed-sidebar.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\layout\fixed-complete.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\layout\fixed-footer.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\layout\fixed-header.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\layout\fixed-sidebar.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\layout\layout-custom-area.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\layout\layout-rtl.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\layout\logo-switch.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\layout\sidebar-mini.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\layout\top-nav.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\layout\unfixed-sidebar.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\mailbox\compose.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\mailbox\inbox.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\mailbox\read.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\pages\404.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\pages\500.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\pages\calendar.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\pages\chat.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\pages\faq.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\pages\file-manager.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\pages\gallery.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\pages\invoice.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\pages\kanban.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\pages\maintenance.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\pages\pricing.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\pages\profile.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\pages\projects.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\pages\search-results.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\pages\settings.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\starter.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\tables\data.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\tables\simple.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\UI\colors.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\UI\general.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\UI\icons.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\UI\ribbons.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\UI\timeline.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\users.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\widgets\cards.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\widgets\info-box.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\widgets\small-box.html
+D:\kienthuccntt\Documents\thực tập chuyên đề đồ án 2\NewsCMS\NewsCMS\NewsCMS\wwwroot\admin-lte-v4.10.1\dist\widgets\social.html

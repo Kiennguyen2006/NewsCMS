@@ -1,0 +1,209 @@
+﻿@{
+    ViewData["Title"] = "Xác nhận mã OTP";
+}
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #0f172a, #1e40af, #6366f1);
+    }
+
+    .otp-page {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+    }
+
+    .otp-card {
+        width: 100%;
+        max-width: 430px;
+        padding: 42px 38px;
+        background: rgba(255,255,255,0.96);
+        border-radius: 22px;
+        box-shadow: 0 25px 70px rgba(0,0,0,0.25);
+        animation: appear 0.7s ease;
+    }
+
+    .otp-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .otp-logo {
+        width: 65px;
+        height: 65px;
+        margin: 0 auto 18px;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #2563eb, #6366f1);
+        color: white;
+        font-size: 27px;
+        font-weight: bold;
+    }
+
+    .otp-header h2 {
+        color: #172554;
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .otp-header p {
+        color: #64748b;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .form-group {
+        margin-bottom: 22px;
+    }
+
+        .form-group label {
+            display: block;
+            color: #334155;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 9px;
+        }
+
+    .otp-input {
+        width: 100%;
+        height: 55px;
+        padding: 0 15px;
+        border: 1.5px solid #dbe3ef;
+        border-radius: 11px;
+        outline: none;
+        font-size: 22px;
+        letter-spacing: 8px;
+        text-align: center;
+        color: #1e293b;
+        background: #f8fafc;
+        transition: all 0.3s ease;
+    }
+
+        .otp-input:focus {
+            border-color: #3b82f6;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(59,130,246,0.12);
+        }
+
+    .otp-message {
+        padding: 12px;
+        margin-bottom: 20px;
+        border-radius: 9px;
+        background: #fee2e2;
+        border: 1px solid #fecaca;
+        color: #b91c1c;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .otp-button {
+        width: 100%;
+        height: 51px;
+        border: none;
+        border-radius: 11px;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        background: linear-gradient(135deg, #2563eb, #6366f1);
+        box-shadow: 0 8px 18px rgba(37,99,235,0.25);
+        transition: all 0.3s ease;
+    }
+
+        .otp-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(37,99,235,0.35);
+        }
+
+    .otp-footer {
+        text-align: center;
+        margin-top: 25px;
+        color: #94a3b8;
+        font-size: 12px;
+    }
+
+    @@keyframes appear {
+        from {
+            opacity: 0;
+            transform: translateY(25px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @@media (max-width: 480px) {
+        .otp-card {
+            padding: 32px 23px;
+        }
+    }
+</style>
+
+<div class="otp-page">
+
+    <div class="otp-card">
+
+        <div class="otp-header">
+            <div class="otp-logo">N</div>
+
+            <h2>Xác nhận mã OTP</h2>
+
+            <p>
+                Vui lòng nhập mã xác nhận gồm 6 chữ số
+                đã được gửi đến email của bạn.
+            </p>
+        </div>
+
+        <form method="post"
+              asp-controller="Trangchu"
+              asp-action="Nhapma">
+
+            @if (ViewBag.thongbao != null)
+            {
+                <div class="otp-message">
+                    @ViewBag.thongbao
+                </div>
+            }
+
+            <div class="form-group">
+                <label for="ma">Mã xác nhận OTP</label>
+
+                <input type="text"
+                       id="ma"
+                       name="ma"
+                       class="otp-input"
+                       placeholder="------"
+                       maxlength="6"
+                       minlength="6"
+                       pattern="[0-9]{6}"
+                       inputmode="numeric"
+                       autocomplete="one-time-code"
+                       required />
+            </div>
+
+            <button type="submit" class="otp-button">
+                Xác nhận mã
+            </button>
+
+        </form>
+
+        <div class="otp-footer">
+            © 2026 NewsCMS. All rights reserved.
+        </div>
+
+    </div>
+</div>

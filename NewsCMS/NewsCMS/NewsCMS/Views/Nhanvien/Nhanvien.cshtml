@@ -1,0 +1,382 @@
+﻿@{
+    ViewData["Title"] = "Quản lý nhân viên";
+    var bang = ViewBag.bang as IEnumerable<NewsCMS.Models.NhanVienModel>;
+}
+@{
+    Layout = "~/Views/Shared/_AdminLTELayout.cshtml";
+}
+<!-- Nhập thêm Font Inter và Google Fonts để chữ sắc nét, hiện đại -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    .admin-wrapper {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8fafc;
+        min-height: 85vh;
+        padding: 30px 20px;
+        border-radius: 16px;
+    }
+
+    /* Header Top Bar */
+    .admin-topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .btn-custom-back {
+        background: #ffffff;
+        color: #475569;
+        border: 1px solid #e2e8f0;
+        padding: 10px 18px;
+        border-radius: 10px;
+        font-weight: 500;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        transition: all 0.2s ease;
+        text-decoration: none;
+    }
+
+        .btn-custom-back:hover {
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+    .btn-custom-add {
+        background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+        transition: all 0.2s ease;
+        text-decoration: none;
+    }
+
+        .btn-custom-add:hover {
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+        }
+
+    /* Main Card Container */
+    .admin-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+    }
+
+    .admin-card-header {
+        padding: 24px 30px;
+        border-bottom: 1px solid #f1f5f9;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        background: #ffffff;
+    }
+
+    .admin-title h4 {
+        font-weight: 700;
+        color: #0f172a;
+        margin: 0 0 4px 0;
+        font-size: 20px;
+    }
+
+    .admin-title p {
+        color: #64748b;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    /* Search Box */
+    .search-group {
+        display: flex;
+        max-width: 380px;
+        width: 100%;
+        background: #f8fafc;
+        border: 1px solid #cbd5e1;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all 0.2s;
+    }
+
+        .search-group:focus-within {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+            background: #fff;
+        }
+
+        .search-group input {
+            border: none;
+            background: transparent;
+            padding: 10px 14px;
+            font-size: 14px;
+            box-shadow: none !important;
+        }
+
+        .search-group button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 0 16px;
+            font-weight: 500;
+        }
+
+        .search-group .btn-refresh {
+            background: #e2e8f0;
+            color: #475569;
+            border: none;
+            padding: 0 14px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+            .search-group .btn-refresh:hover {
+                background: #cbd5e1;
+            }
+
+    /* Modern Table Styling */
+    .table-custom {
+        margin-bottom: 0;
+    }
+
+        .table-custom th {
+            background: #f8fafc;
+            color: #475569;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 14px 20px;
+            border-bottom: 1px solid #e2e8f0;
+            border-top: none;
+        }
+
+        .table-custom td {
+            padding: 16px 20px;
+            vertical-align: middle;
+            color: #334155;
+            font-size: 14px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .table-custom tbody tr {
+            transition: background-color 0.15s ease;
+        }
+
+            .table-custom tbody tr:hover {
+                background-color: #f8fafc;
+            }
+
+    /* Badges & Icons */
+    .badge-code {
+        font-family: monospace;
+        font-weight: 600;
+        color: #2563eb;
+        background: #eff6ff;
+        padding: 6px 10px;
+        border-radius: 6px;
+        border: 1px solid #dbeafe;
+    }
+
+    .badge-account {
+        background: #f1f5f9;
+        color: #334155;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 12px;
+        border: 1px solid #e2e8f0;
+    }
+
+    .staff-avatar {
+        width: 36px;
+        height: 36px;
+        background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+        color: white;
+        font-weight: 600;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+        font-size: 14px;
+    }
+
+    /* Action Buttons */
+    .btn-action {
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        transition: all 0.2s;
+        margin: 0 2px;
+    }
+
+        .btn-action.btn-edit {
+            background: #fff7ed;
+            color: #ea580c;
+            border: 1px solid #ffedd5;
+        }
+
+            .btn-action.btn-edit:hover {
+                background: #ffedd5;
+                color: #c2410c;
+            }
+
+        .btn-action.btn-delete {
+            background: #fef2f2;
+            color: #dc2626;
+            border: 1px solid #fee2e2;
+        }
+
+            .btn-action.btn-delete:hover {
+                background: #fee2e2;
+                color: #b91c1c;
+            }
+
+    /* Card Footer */
+    .admin-card-footer {
+        padding: 16px 30px;
+        background: #f8fafc;
+        border-top: 1px solid #f1f5f9;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #64748b;
+        font-size: 13px;
+    }
+
+    .total-badge {
+        font-weight: 600;
+        color: #1e293b;
+        background: #ffffff;
+        padding: 6px 14px;
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
+    }
+</style>
+
+<div class="admin-wrapper">
+
+    <!-- Thanh điều hướng đầu trang -->
+    <div class="admin-topbar">
+        <a asp-controller="Trangchu" asp-action="Trangdau" class="btn-custom-back">
+            <i class="fa-solid fa-arrow-left me-2"></i> Về trang chủ
+        </a>
+        <a asp-controller="Nhanvien" asp-action="Themnhanvien" class="btn-custom-add">
+            <i class="fa-solid fa-user-plus me-2"></i> Thêm nhân viên mới
+        </a>
+    </div>
+
+    <!-- Khung chính -->
+    <div class="admin-card">
+
+        <!-- Header danh sách & Tìm kiếm -->
+        <div class="admin-card-header">
+            <div class="admin-title">
+                <h4>Quản lý nhân viên</h4>
+                <p>Danh sách toàn bộ nhân sự đang làm việc trong hệ thống NewsCMS.</p>
+            </div>
+
+            <form asp-controller="Nhanvien" asp-action="Nhanvien" method="get">
+                <div class="search-group">
+                    <input type="text" name="tk" class="form-control" placeholder="Tìm theo tên hoặc SĐT..." value="@Context.Request.Query["tk"]" />
+                    <button type="submit"><i class="fa-solid fa-search"></i></button>
+                    @if (!string.IsNullOrEmpty(Context.Request.Query["tk"]))
+                    {
+                        <a asp-controller="Nhanvien" asp-action="Nhanvien" class="btn-refresh" title="Làm mới">
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </a>
+                    }
+                </div>
+            </form>
+        </div>
+
+        <!-- Bảng hiển thị dữ liệu -->
+        <div class="table-responsive">
+            <table class="table table-custom align-middle">
+                <thead>
+                    <tr>
+                        <th class="text-center" style="width: 10%;">Mã NV</th>
+                        <th style="width: 28%;">Họ và tên</th>
+                        <th style="width: 20%;">Số điện thoại</th>
+                        <th class="text-center" style="width: 15%;">Mã tài khoản</th>
+                        <th style="width: 15%;">Ngày vào làm</th>
+                        <th class="text-center" style="width: 12%;">Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (bang != null && bang.Any())
+                    {
+                        foreach (var nv in bang)
+                        {
+                            <tr>
+                                <td class="text-center">
+                                    <span class="badge-code">NV-@nv.MaNhanVien</span>
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="staff-avatar">
+                                            @nv.HoTen.Substring(0, 1).ToUpper()
+                                        </div>
+                                        <span class="fw-semibold text-dark">@nv.HoTen</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <i class="fa-solid fa-phone text-muted me-2 small"></i>@nv.SoDienThoai
+                                </td>
+                                <td class="text-center">
+                                    <span class="badge-account">
+                                        <i class="fa-solid fa-key me-1 text-warning"></i> TK-@nv.MaTaiKhoan
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="text-secondary small">
+                                        <i class="fa-regular fa-calendar me-1"></i> @nv.NgayVaoLam
+                                    </span>
+                                </td>
+                                <td class="text-center">
+                                    <a asp-controller="Nhanvien" asp-action="Suanhanvien" asp-route-ma="@nv.MaNhanVien" class="btn btn-action btn-edit" title="Sửa thông tin">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </a>
+                                    <a asp-controller="Nhanvien" asp-action="Xoanhanvien" asp-route-ma="@nv.MaNhanVien" class="btn btn-action btn-delete" title="Xóa nhân viên">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="6" class="text-center py-5 text-muted">
+                                <div class="py-4">
+                                    <i class="fa-solid fa-folder-open fs-1 text-secondary opacity-25 mb-3 d-block"></i>
+                                    <p class="mb-0 fw-medium">Không tìm thấy nhân viên nào trong hệ thống.</p>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="admin-card-footer">
+            <span>Hệ thống quản lý nội dung NewsCMS</span>
+            <div class="total-badge">
+                Tổng số: <span class="text-primary">@(bang?.Count() ?? 0)</span> nhân viên
+            </div>
+        </div>
+
+    </div>
+</div>

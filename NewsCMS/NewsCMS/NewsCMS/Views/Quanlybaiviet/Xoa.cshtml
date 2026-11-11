@@ -1,0 +1,352 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLTELayout.cshtml";
+}
+@using NewsCMS.Models
+
+@{
+    ViewData["Title"] = "Xác nhận xóa bài viết";
+    var baiViet = ViewBag.dongcu as BaiVietModel;
+    bool daDuyet = baiViet != null && baiViet.MaNhanVienDuyet != null;
+}
+
+@if (baiViet != null)
+{
+    <div class="delete-container">
+        <div class="delete-card">
+
+            <div class="delete-heading">
+                <div class="delete-icon">!</div>
+                <h2>Xác nhận xóa bài viết</h2>
+                <p>Bạn có chắc chắn muốn xóa bài viết này không?</p>
+            </div>
+
+            @if (!daDuyet)
+            {
+                <div class="delete-error">
+                    <strong>Không thể xóa bài viết!</strong>
+                    <p>
+                        Bài viết chưa được Chủ biên duyệt.
+                        Bạn phải hoàn thành quy trình duyệt trước khi thực hiện xóa.
+                    </p>
+                </div>
+            }
+            else
+            {
+                <div class="delete-success">
+                    Bài viết đã được Chủ biên duyệt. Bạn có thể thực hiện xóa.
+                </div>
+            }
+
+            <div class="delete-content">
+
+                <div class="delete-row">
+                    <span>Mã bài viết</span>
+                    <strong>@baiViet.MaBaiViet</strong>
+                </div>
+
+                <div class="delete-row">
+                    <span>Tiêu đề</span>
+                    <strong>@baiViet.TieuDe</strong>
+                </div>
+
+                <div class="delete-row">
+                    <span>Tóm tắt</span>
+                    <p>@baiViet.TomTat</p>
+                </div>
+
+                <div class="delete-row">
+                    <span>Ảnh đại diện</span>
+
+                    @if (!string.IsNullOrWhiteSpace(baiViet.AnhDaiDien))
+                    {
+                        <img src="@Url.Content("~/images/" + baiViet.AnhDaiDien)"
+                             alt="@baiViet.TieuDe"
+                             class="delete-image" />
+                    }
+                    else
+                    {
+                        <p>Không có ảnh đại diện</p>
+                    }
+                </div>
+
+                <div class="delete-row">
+                    <span>Nội dung bài viết</span>
+                    <div class="article-content">
+                        @Html.Raw(baiViet.NoiDung)
+                    </div>
+                </div>
+
+                <div class="delete-row">
+                    <span>Trạng thái bài viết</span>
+                    <strong>@baiViet.TrangThai</strong>
+                </div>
+
+                <div class="delete-row">
+                    <span>Mã nhân viên duyệt</span>
+                    @if (daDuyet)
+                    {
+                        <strong>@baiViet.MaNhanVienDuyet</strong>
+                    }
+                    else
+                    {
+                        <strong class="text-danger">Chưa được duyệt</strong>
+                    }
+                </div>
+
+            </div>
+
+            <div class="delete-warning">
+                Lưu ý: Khi xóa bài viết, các lịch sử duyệt và bình luận
+                liên quan cũng sẽ bị xóa. Bạn không thể hoàn tác thao tác này.
+            </div>
+
+            <div class="delete-actions">
+
+                @if (daDuyet)
+                {
+                    <form asp-controller="Quanlybaiviet"
+                          asp-action="Xoabv"
+                          asp-route-id="@baiViet.MaBaiViet"
+                          method="post">
+
+                        @Html.AntiForgeryToken()
+
+                        <button type="submit" class="btn-delete">
+                            Xóa bài viết
+                        </button>
+                    </form>
+                }
+                else
+                {
+                    <button type="button" class="btn-delete" disabled>
+                        Chưa thể xóa bài viết
+                    </button>
+                }
+
+                <a asp-controller="Quanlybaiviet"
+                   asp-action="Quanlybaiviet"
+                   class="btn-back">
+                    Quay lại
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+}
+
+<style>
+    .delete-container {
+        max-width: 900px;
+        margin: 35px auto;
+        padding: 15px;
+    }
+
+    .delete-card {
+        background: #fff;
+        border: 1px solid #e5eaf0;
+        border-radius: 14px;
+        padding: 28px;
+        box-shadow: 0 8px 25px rgba(0,0,0,.06);
+    }
+
+    .delete-heading {
+        text-align: center;
+        padding-bottom: 22px;
+        border-bottom: 1px solid #edf0f4;
+    }
+
+    .delete-icon {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 12px;
+        border-radius: 50%;
+        background: #fff0f0;
+        color: #dc3545;
+        font-size: 27px;
+        font-weight: bold;
+    }
+
+    .delete-heading h2 {
+        color: #243247;
+        margin: 0 0 8px;
+        font-size: 23px;
+    }
+
+    .delete-heading p {
+        color: #788495;
+        margin: 0;
+    }
+
+    .delete-error {
+        margin-top: 20px;
+        padding: 15px;
+        background: #fff0f0;
+        border: 1px solid #f5b7b7;
+        border-radius: 8px;
+        color: #b42318;
+    }
+
+        .delete-error p {
+            margin: 6px 0 0;
+            line-height: 1.6;
+        }
+
+    .delete-success {
+        margin-top: 20px;
+        padding: 13px 15px;
+        background: #ecfdf3;
+        border: 1px solid #abefc6;
+        border-radius: 8px;
+        color: #067647;
+    }
+
+    .delete-content {
+        margin-top: 20px;
+    }
+
+    .delete-row {
+        padding: 15px 0;
+        border-bottom: 1px solid #edf0f4;
+    }
+
+        .delete-row > span {
+            display: block;
+            margin-bottom: 8px;
+            color: #667085;
+            font-weight: 600;
+        }
+
+        .delete-row strong {
+            color: #26364b;
+            overflow-wrap: anywhere;
+        }
+
+        .delete-row p {
+            color: #344054;
+            margin: 0;
+            line-height: 1.7;
+        }
+
+    .delete-image {
+        display: block;
+        max-width: 250px;
+        max-height: 180px;
+        object-fit: cover;
+        border-radius: 9px;
+        border: 1px solid #e5eaf0;
+    }
+
+    .article-content {
+        padding: 18px;
+        background: #f8fafc;
+        border: 1px solid #e5eaf0;
+        border-radius: 9px;
+        color: #344054;
+        line-height: 1.8;
+        overflow-wrap: anywhere;
+        max-width: 100%;
+    }
+
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .article-content iframe,
+        .article-content video {
+            max-width: 100%;
+        }
+
+        .article-content table {
+            max-width: 100%;
+            border-collapse: collapse;
+        }
+
+        .article-content pre {
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+        }
+
+    .delete-warning {
+        margin-top: 20px;
+        padding: 13px 15px;
+        background: #fff7e8;
+        border: 1px solid #ffe1a6;
+        border-radius: 8px;
+        color: #946200;
+        line-height: 1.6;
+    }
+
+    .delete-actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin-top: 25px;
+    }
+
+        .delete-actions form {
+            margin: 0;
+        }
+
+    .btn-delete,
+    .btn-back {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 140px;
+        padding: 11px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: .2s;
+    }
+
+    .btn-delete {
+        background: #dc3545;
+        color: #fff;
+    }
+
+        .btn-delete:hover:not(:disabled) {
+            background: #b02a37;
+        }
+
+        .btn-delete:disabled {
+            background: #adb5bd;
+            cursor: not-allowed;
+        }
+
+    .btn-back {
+        background: #e9eef5;
+        color: #344054;
+    }
+
+        .btn-back:hover {
+            background: #d8e0eb;
+            color: #172b4d;
+        }
+
+    @@media (max-width: 600px) {
+        .delete-card {
+            padding: 18px;
+        }
+
+        .delete-actions {
+            flex-direction: column;
+        }
+
+            .delete-actions form,
+            .btn-delete,
+            .btn-back {
+                width: 100%;
+            }
+    }
+</style>

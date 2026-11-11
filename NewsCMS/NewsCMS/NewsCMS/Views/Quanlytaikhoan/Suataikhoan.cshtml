@@ -1,0 +1,76 @@
+﻿@model NewsCMS.Models.TaiKhoanModel
+@{
+    Layout = "~/Views/Shared/_AdminLTELayout.cshtml";
+}
+@{
+    ViewData["Title"] = "Sửa thông tin tài khoản";
+}
+
+<div class="container mt-4" style="max-width: 650px;">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">Cập Nhật Tài Khoản</h4>
+        </div>
+
+        <div class="card-body">
+
+            @if (ViewBag.thongbao != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    @ViewBag.thongbao
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+
+            <form asp-action="Suatk" method="post">
+
+                <input type="hidden" asp-for="MaTaiKhoan" />
+                <input type="hidden" asp-for="NgayTao" />
+
+                <div class="mb-3">
+                    <label asp-for="TenDangNhap" class="form-label">Tên đăng nhập</label>
+                    <input asp-for="TenDangNhap" class="form-control" placeholder="Nhập tên đăng nhập" />
+                    <span asp-validation-for="TenDangNhap" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label">Email</label>
+                    <input asp-for="Email" type="email" class="form-control" placeholder="Nhập địa chỉ email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="MatKhau" class="form-label">Mật khẩu</label>
+                    <input asp-for="MatKhau" type="password" class="form-control" placeholder="Nhập mật khẩu" />
+                    <span asp-validation-for="MatKhau" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="MaVaiTro" class="form-label">Vai trò</label>
+
+                    <select asp-for="MaVaiTro" asp-items="ViewBag.vaitro" class="form-select">
+                        <option value="">-- Chọn vai trò --</option>
+                    </select>
+
+                    <span asp-validation-for="MaVaiTro" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3 form-check form-switch">
+                    <input class="form-check-input" type="checkbox" asp-for="TrangThai" />
+                    <label class="form-check-label" asp-for="TrangThai">Trạng thái (Hoạt động)</label>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <a asp-action="Quanlytaikhoan" asp-controller="Quanlytaikhoan" class="btn btn-secondary">
+                        Quay lại
+                    </a>
+
+                    <button type="submit" class="btn btn-primary px-4">
+                        Lưu cập nhật
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

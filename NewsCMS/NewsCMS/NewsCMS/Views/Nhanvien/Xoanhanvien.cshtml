@@ -1,0 +1,226 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLTELayout.cshtml";
+}
+@{
+    ViewData["Title"] = "Xóa nhân viên";
+    var nv = ViewBag.bang;
+}
+
+<style>
+    .delete-employee-page {
+        max-width: 850px;
+        margin: 45px auto;
+        padding: 0 15px;
+    }
+
+    .delete-card {
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 35px rgba(35, 45, 60, .1);
+        border: 1px solid #f0e1e1;
+    }
+
+    .delete-header {
+        background: linear-gradient(120deg, #a92f3a, #dc5660);
+        color: white;
+        text-align: center;
+        padding: 32px 25px;
+    }
+
+    .delete-icon {
+        width: 72px;
+        height: 72px;
+        background: rgba(255,255,255,.17);
+        border: 2px solid rgba(255,255,255,.35);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px;
+        font-size: 29px;
+    }
+
+    .delete-header h3 {
+        font-weight: 750;
+        margin-bottom: 8px;
+    }
+
+    .delete-header p {
+        margin: 0;
+        opacity: .9;
+    }
+
+    .delete-body {
+        padding: 30px;
+    }
+
+    .delete-warning {
+        background: #fff6e9;
+        border: 1px solid #f5d9a8;
+        border-radius: 10px;
+        padding: 16px 18px;
+        color: #79551c;
+        margin-bottom: 25px;
+    }
+
+        .delete-warning strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+    .employee-info-title {
+        font-weight: 700;
+        color: #35445a;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .employee-info-table {
+        border: 1px solid #e9edf2;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+        .employee-info-table table {
+            margin-bottom: 0;
+        }
+
+        .employee-info-table th {
+            width: 38%;
+            background: #f7f9fc;
+            color: #536276;
+            font-weight: 600;
+            padding: 13px 16px;
+        }
+
+        .employee-info-table td {
+            padding: 13px 16px;
+            color: #27384d;
+        }
+
+    .delete-footer {
+        border-top: 1px solid #edf0f4;
+        margin-top: 25px;
+        padding-top: 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .btn-confirm-delete {
+        background: #c93643;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 11px 22px;
+        font-weight: 600;
+    }
+
+        .btn-confirm-delete:hover {
+            background: #a9212d;
+            color: white;
+        }
+
+    .delete-note {
+        color: #8994a3;
+        font-size: 13px;
+        margin-top: 18px;
+    }
+</style>
+
+<div class="delete-employee-page">
+    @if (nv != null)
+    {
+        <div class="delete-card">
+            <div class="delete-header">
+                <div class="delete-icon">
+                    <i class="fa-solid fa-user-xmark"></i>
+                </div>
+                <h3>Xác nhận xóa nhân viên</h3>
+                <p>Vui lòng kiểm tra thông tin trước khi thực hiện thao tác.</p>
+            </div>
+
+            <div class="delete-body">
+                <div class="delete-warning">
+                    <strong>
+                        <i class="fa-solid fa-triangle-exclamation me-2"></i>
+                        Cảnh báo: Thao tác này có thể ảnh hưởng đến dữ liệu liên quan.
+                    </strong>
+                    Theo logic xóa hiện tại trong Controller, các bài viết, bình luận
+                    và lịch sử duyệt thuộc nhóm bài viết được chọn có thể bị xóa.
+                    Vui lòng cân nhắc trước khi xác nhận.
+                </div>
+
+                <div class="employee-info-title">
+                    <i class="fa-solid fa-address-card text-danger me-2"></i>
+                    Thông tin nhân viên cần xóa
+                </div>
+
+                <div class="employee-info-table">
+                    <table class="table table-borderless">
+                        <tr>
+                            <th>Mã nhân viên</th>
+                            <td><strong>NV-@nv.MaNhanVien</strong></td>
+                        </tr>
+                        <tr>
+                            <th>Mã tài khoản</th>
+                            <td>@nv.MaTaiKhoan</td>
+                        </tr>
+                        <tr>
+                            <th>Họ và tên</th>
+                            <td class="fw-semibold">@nv.HoTen</td>
+                        </tr>
+                        <tr>
+                            <th>Số điện thoại</th>
+                            <td>@nv.SoDienThoai</td>
+                        </tr>
+                        <tr>
+                            <th>Ngày vào làm</th>
+                            <td>
+                                @(nv.NgayVaoLam == null
+                                    ? "Chưa cập nhật"
+                                    : ((DateTime)nv.NgayVaoLam).ToString("dd/MM/yyyy"))
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="delete-note">
+                    <i class="fa-solid fa-circle-info me-1"></i>
+                    Tài khoản đăng nhập không được xóa bởi đoạn xử lý hiện tại.
+                </div>
+
+                <div class="delete-footer">
+                    <a asp-controller="Nhanvien" asp-action="Nhanvien"
+                       class="btn btn-outline-secondary px-4">
+                        <i class="fa-solid fa-arrow-left me-1"></i> Hủy bỏ
+                    </a>
+
+                    <form asp-controller="Nhanvien" asp-action="Xoanv" method="post">
+                        @Html.AntiForgeryToken()
+
+                        <input type="hidden" name="MaNhanVien" value="@nv.MaNhanVien" />
+                        <input type="hidden" name="MaTaiKhoan" value="@nv.MaTaiKhoan" />
+                        <input type="hidden" name="HoTen" value="@nv.HoTen" />
+                        <input type="hidden" name="SoDienThoai" value="@nv.SoDienThoai" />
+                        <input type="hidden" name="NgayVaoLam"
+                               value="@(nv.NgayVaoLam == null ? "" : ((DateTime)nv.NgayVaoLam).ToString("yyyy-MM-dd"))" />
+
+                        <button type="submit" class="btn-confirm-delete">
+                            <i class="fa-solid fa-trash-can me-2"></i>
+                            Xác nhận xóa
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger">
+            Không tìm thấy nhân viên cần xóa.
+        </div>
+    }
+</div>

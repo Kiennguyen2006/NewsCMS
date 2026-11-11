@@ -1,0 +1,682 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLTELayout.cshtml";
+}
+@{
+    ViewData["Title"] = "Quản lý bài viết";
+
+    var bang = ViewBag.bang;
+
+    int maVaiTro = Context.Session.GetInt32("MaVaiTro") ?? 0;
+
+    bool laBienTapVien = maVaiTro == 2;
+    bool laChuBien = maVaiTro == 3;
+    bool laQuanTriVien = maVaiTro == 1;
+    int soCot = (laBienTapVien || laChuBien) ? 7 : 6;
+}
+
+<style>
+    .ql-container {
+        min-height: 100vh;
+        padding: 28px;
+        background: #f4f7fb;
+        color: #26364b;
+        box-sizing: border-box;
+    }
+
+        .ql-container * {
+            box-sizing: border-box;
+        }
+
+    .ql-content {
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+
+    .ql-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin-bottom: 24px;
+    }
+
+        .ql-header h2 {
+            margin: 0;
+            color: #172b4d;
+            font-size: 27px;
+            font-weight: 750;
+        }
+
+            .ql-header h2 i {
+                margin-right: 8px;
+                color: #0875df;
+            }
+
+        .ql-header p {
+            margin: 8px 0 0;
+            color: #7b8797;
+            font-size: 14px;
+        }
+
+    .ql-header-actions {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .ql-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 650;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: all .2s ease;
+    }
+
+    .ql-btn-home {
+        color: #0875df;
+        background: #eaf3ff;
+        border: 1px solid #d5e7ff;
+    }
+
+        .ql-btn-home:hover {
+            color: #fff;
+            background: #0875df;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(8,117,223,.2);
+        }
+
+    .ql-btn-add {
+        color: #fff;
+        background: #0875df;
+        box-shadow: 0 4px 10px rgba(8,117,223,.15);
+    }
+
+        .ql-btn-add:hover {
+            color: #fff;
+            background: #0562bd;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(8,117,223,.22);
+        }
+
+    .ql-btn-search {
+        color: #fff;
+        background: #0875df;
+    }
+
+        .ql-btn-search:hover {
+            color: #fff;
+            background: #0562bd;
+        }
+
+    .ql-btn-reset {
+        color: #526174;
+        background: #edf1f6;
+    }
+
+        .ql-btn-reset:hover {
+            color: #26364b;
+            background: #dfe6ef;
+        }
+
+    .ql-search-box {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 18px;
+        margin-bottom: 22px;
+        background: #fff;
+        border: 1px solid #e8edf4;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(25,45,75,.035);
+    }
+
+    .ql-search-input {
+        position: relative;
+        flex: 1;
+    }
+
+        .ql-search-input i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #98a4b3;
+        }
+
+        .ql-search-input input {
+            width: 100%;
+            height: 43px;
+            padding: 0 14px 0 40px;
+            border: 1px solid #dce3eb;
+            border-radius: 8px;
+            outline: none;
+            color: #26364b;
+            font-size: 14px;
+            transition: .2s;
+        }
+
+            .ql-search-input input:focus {
+                border-color: #0875df;
+                box-shadow: 0 0 0 3px rgba(8,117,223,.1);
+            }
+
+    .ql-table-container {
+        overflow: hidden;
+        background: #fff;
+        border: 1px solid #e8edf4;
+        border-radius: 13px;
+        box-shadow: 0 5px 20px rgba(25,45,75,.045);
+    }
+
+    .ql-table-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 20px 22px;
+        border-bottom: 1px solid #edf0f4;
+    }
+
+        .ql-table-heading h4 {
+            margin: 0;
+            color: #26364b;
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+            .ql-table-heading h4 i {
+                margin-right: 7px;
+                color: #0875df;
+            }
+
+    .ql-role {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        padding: 7px 13px;
+        color: #0759b5;
+        background: #eaf3ff;
+        border: 1px solid #d9eaff;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .ql-table-scroll {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .ql-table {
+        width: 100%;
+        min-width: 1050px;
+        border-collapse: collapse;
+    }
+
+        .ql-table thead th {
+            padding: 15px 14px;
+            color: #526174;
+            background: #f5f8fc;
+            border-bottom: 1px solid #e8edf4;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 750;
+            white-space: nowrap;
+        }
+
+        .ql-table tbody td {
+            padding: 15px 14px;
+            color: #526174;
+            border-bottom: 1px solid #edf0f4;
+            font-size: 13px;
+            vertical-align: middle;
+        }
+
+        .ql-table tbody tr {
+            transition: background .2s ease;
+        }
+
+            .ql-table tbody tr:hover {
+                background: #f8fbff;
+            }
+
+            .ql-table tbody tr:last-child td {
+                border-bottom: none;
+            }
+
+    .ql-id {
+        color: #0875df !important;
+        font-weight: 750;
+        white-space: nowrap;
+    }
+
+    .ql-title {
+        max-width: 300px;
+        color: #26364b !important;
+        font-weight: 650;
+        line-height: 1.5;
+    }
+
+    .ql-author {
+        color: #526174;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    .ql-category {
+        display: inline-block;
+        padding: 5px 9px;
+        color: #526174;
+        background: #f1f4f8;
+        border-radius: 6px;
+        font-size: 12px;
+    }
+
+    .ql-date {
+        white-space: nowrap;
+    }
+
+    .ql-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 10px;
+        border-radius: 20px;
+        font-size: 11px;
+        font-weight: 750;
+        white-space: nowrap;
+    }
+
+        .ql-status i {
+            font-size: 7px;
+        }
+
+    .status-hoanthanh {
+        color: #167447;
+        background: #e3f5eb;
+    }
+
+    .status-choduyet {
+        color: #956500;
+        background: #fff4d7;
+    }
+
+    .status-cansua {
+        color: #bd3545;
+        background: #fde9eb;
+    }
+
+    .status-default {
+        color: #526174;
+        background: #edf1f6;
+    }
+
+    .ql-actions {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        white-space: nowrap;
+    }
+
+    .ql-action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        min-width: 67px;
+        padding: 8px 10px;
+        border-radius: 7px;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 700;
+        transition: .2s ease;
+    }
+
+    .ql-action-edit {
+        color: #956500;
+        background: #fff4d7;
+    }
+
+        .ql-action-edit:hover {
+            color: #fff;
+            background: #d99b00;
+            transform: translateY(-1px);
+        }
+
+    .ql-action-delete {
+        color: #bd3545;
+        background: #fde9eb;
+    }
+
+        .ql-action-delete:hover {
+            color: #fff;
+            background: #dc3545;
+            transform: translateY(-1px);
+        }
+
+    .ql-empty {
+        padding: 55px 20px !important;
+        text-align: center;
+        color: #8491a2 !important;
+    }
+
+        .ql-empty i {
+            display: block;
+            margin-bottom: 12px;
+            color: #b6c2d0;
+            font-size: 35px;
+        }
+
+        .ql-empty strong {
+            display: block;
+            margin-bottom: 6px;
+            color: #526174;
+            font-size: 15px;
+        }
+
+    .ql-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 15px 22px;
+        color: #8491a2;
+        background: #fff;
+        border-top: 1px solid #edf0f4;
+        font-size: 12px;
+    }
+
+        .ql-footer strong {
+            color: #0875df;
+        }
+
+    @@media (max-width: 768px) {
+        .ql-container {
+            padding: 15px;
+        }
+
+        .ql-header {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+            .ql-header h2 {
+                font-size: 22px;
+            }
+
+        .ql-search-box {
+            flex-wrap: wrap;
+        }
+
+        .ql-search-input {
+            flex-basis: 100%;
+        }
+
+        .ql-search-box .ql-btn {
+            flex: 1;
+        }
+
+        .ql-table-heading {
+            padding: 16px;
+        }
+    }
+
+    @@media (max-width: 420px) {
+        .ql-header-actions {
+            width: 100%;
+        }
+
+            .ql-header-actions .ql-btn {
+                flex: 1;
+            }
+    }
+</style>
+
+<div class="ql-container">
+    <div class="ql-content">
+
+        <div class="ql-header">
+            <div>
+                <h2>
+                    <i class="fa-solid fa-newspaper"></i>
+                    Quản lý bài viết
+                </h2>
+
+                <p>
+                    Theo dõi, tìm kiếm và quản lý các bài viết trong hệ thống NewsCMS.
+                </p>
+            </div>
+
+            <div class="ql-header-actions">
+                <a asp-controller="Trangchu"
+                   asp-action="Trangdau"
+                   class="ql-btn ql-btn-home">
+                    <i class="fa-solid fa-house"></i>
+                    Quay về trang chủ
+                </a>
+
+                @if (laBienTapVien)
+                {
+                    <a asp-controller="Quanlybaiviet"
+                       asp-action="Them"
+                       class="ql-btn ql-btn-add">
+                        <i class="fa-solid fa-plus"></i>
+                        Thêm bài viết
+                    </a>
+                }
+            </div>
+        </div>
+
+        <form asp-controller="Quanlybaiviet"
+              asp-action="Quanlybaiviet"
+              method="get"
+              class="ql-search-box">
+
+            <div class="ql-search-input">
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input type="text"
+                       name="timkiem"
+                       value="@Context.Request.Query["timkiem"]"
+                       placeholder="Nhập tiêu đề bài viết cần tìm..." />
+            </div>
+
+            <button type="submit" class="ql-btn ql-btn-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Tìm kiếm
+            </button>
+
+            <a asp-controller="Quanlybaiviet"
+               asp-action="Quanlybaiviet"
+               class="ql-btn ql-btn-reset">
+                <i class="fa-solid fa-rotate-left"></i>
+                Làm mới
+            </a>
+        </form>
+
+        <div class="ql-table-container">
+
+            <div class="ql-table-heading">
+                <h4>
+                    <i class="fa-solid fa-list"></i>
+                    Danh sách bài viết
+                </h4>
+
+                @if (laBienTapVien)
+                {
+                    <span class="ql-role">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        Biên tập viên
+                    </span>
+                }
+                else if (laChuBien)
+                {
+                    <span class="ql-role">
+                        <i class="fa-solid fa-user-shield"></i>
+                        Chủ biên
+                    </span>
+                }
+                else
+                {
+                    <span class="ql-role">
+                        <i class="fa-solid fa-eye"></i>
+                        Chế độ xem
+                    </span>
+                }
+            </div>
+
+            <div class="ql-table-scroll">
+                <table class="ql-table">
+                    <thead>
+                        <tr>
+                            <th>Mã bài viết</th>
+                            <th>Tiêu đề bài viết</th>
+                            <th>Mã nhân viên</th>
+                            <th>Mã danh mục</th>
+                            <th>Trạng thái</th>
+                            <th>Ngày tạo</th>
+
+                            @if (laBienTapVien || laChuBien || laQuanTriVien)
+                            {
+                                <th>Thao tác</th>
+                            }
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @if (bang != null && bang.Count > 0)
+                        {
+                            foreach (var item in bang)
+                            {
+                                <tr>
+                                    <td class="ql-id">
+                                        #@item.MaBaiViet
+                                    </td>
+
+                                    <td class="ql-title">
+                                        @item.TieuDe
+                                    </td>
+
+                                    <td class="ql-author">
+                                        @item.MaNhanVienTacGia
+                                    </td>
+
+                                    <td>
+                                        <span class="ql-category">
+                                            @item.MaDanhMuc
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        @if (item.TrangThai == "Hoàn Thành")
+                                        {
+                                            <span class="ql-status status-hoanthanh">
+                                                <i class="fa-solid fa-circle"></i>
+                                                Hoàn Thành
+                                            </span>
+                                        }
+                                        else if (item.TrangThai == "Chờ Duyệt")
+                                        {
+                                            <span class="ql-status status-choduyet">
+                                                <i class="fa-solid fa-circle"></i>
+                                                Chờ Duyệt
+                                            </span>
+                                        }
+                                        else if (item.TrangThai == "Cần Sửa")
+                                        {
+                                            <span class="ql-status status-cansua">
+                                                <i class="fa-solid fa-circle"></i>
+                                                Cần Sửa
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            <span class="ql-status status-default">
+                                                <i class="fa-solid fa-circle"></i>
+                                                @item.TrangThai
+                                            </span>
+                                        }
+                                    </td>
+
+                                    <td class="ql-date">
+                                        @item.NgayTao.ToString("dd/MM/yyyy")
+                                    </td>
+
+                                    @if (laBienTapVien || laChuBien||laQuanTriVien)
+                                    {
+                                        <td>
+                                            @{
+                                                if (laBienTapVien || laChuBien)
+                                                {
+                                                    <a asp-controller="Quanlybaiviet"
+                                                       asp-action="Sua"
+                                                       asp-route-id="@item.MaBaiViet"
+                                                       class="ql-action ql-action-edit">
+                                                        <i class="fa-solid fa-pen"></i>
+                                                        Sửa
+                                                    </a>
+                                                }
+                                            }
+                                            <div class="ql-actions">
+                                                @if (laQuanTriVien)
+                                                {
+                                                    <a asp-controller="Quanlybaiviet"
+                                                       asp-action="Xoa"
+                                                       asp-route-id="@item.MaBaiViet"
+                                                       class="ql-action ql-action-delete">
+                                                        <i class="fa-solid fa-trash"></i>
+                                                        Xóa
+                                                    </a>
+                                                }
+                                            </div>
+                                        </td>
+                                    }
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="@soCot" class="ql-empty">
+                                    <i class="fa-solid fa-folder-open"></i>
+                                    <strong>Không tìm thấy bài viết</strong>
+                                    <span>
+                                        Hãy thử tìm kiếm bằng từ khóa khác.
+                                    </span>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ql-footer">
+                <span>
+                    <i class="fa-solid fa-circle-info"></i>
+                    Danh sách bài viết trong hệ thống
+                </span>
+
+                @if (bang != null)
+                {
+                    <span>
+                        Tổng số:
+                        <strong>@bang.Count bài viết</strong>
+                    </span>
+                }
+            </div>
+
+        </div>
+    </div>
+</div>

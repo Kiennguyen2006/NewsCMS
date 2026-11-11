@@ -1,0 +1,206 @@
+﻿@using Microsoft.AspNetCore.Http
+
+@{
+    var maVaiTro = Context.Session.GetInt32("MaVaiTro") ?? 0;
+
+    var controllerHienTai = ViewContext.RouteData.Values["controller"]?.ToString();
+
+    var laTrangThongKe = controllerHienTai == "Thongke";
+    var laTrangBaiViet = controllerHienTai == "Quanlybaiviet";
+    var laTrangDanhMuc = controllerHienTai == "Danhmuc";
+    var laTrangLichSu = controllerHienTai == "Lichsuduyet";
+    var laTrangTaiKhoan = controllerHienTai == "Quanlytaikhoan";
+    var laTrangNhanVien = controllerHienTai == "Nhanvien";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>@ViewData["Title"] - NewsCMS</title>
+
+    <link rel="stylesheet"
+          href="~/admin-lte-v4.10.1/dist/css/adminlte.css" />
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<div style="background:yellow;color:black;padding:8px">
+    Mã vai trò hiện tại: @maVaiTro
+</div>
+<body class="layout-fixed sidebar-expand-lg sidebar-open bg-body-tertiary">
+
+    <div class="app-wrapper">
+        <nav class="app-header navbar navbar-expand bg-body">
+            <div class="container-fluid">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           data-lte-toggle="sidebar"
+                           href="#"
+                           role="button">
+                            <i class="bi bi-list"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item d-none d-md-block">
+                        <a asp-controller="Trangchu"
+                           asp-action="Trangdau"
+                           class="nav-link">
+                            <i class="bi bi-house-door"></i>
+                            Trang chủ
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </nav>
+        <aside class="app-sidebar bg-body-secondary shadow"
+               data-bs-theme="dark">
+
+            <div class="sidebar-brand">
+                <a asp-controller="Thongke"
+                   asp-action="Thongke"
+                   class="brand-link">
+
+                    <span class="brand-text fw-light">
+                        NewsCMS
+                    </span>
+
+                </a>
+            </div>
+
+
+            <div class="sidebar-wrapper">
+
+                <nav class="mt-2">
+
+                    <ul class="nav sidebar-menu flex-column"
+                        role="navigation">
+
+                        @if (maVaiTro == 1)
+                        {
+                            <li class="nav-item">
+                                <a asp-controller="Thongke"
+                                   asp-action="Thongke"
+                                   class="nav-link @(laTrangThongKe ? "active" : "")">
+
+                                    <i class="nav-icon bi bi-speedometer2"></i>
+                                    <p>Thống kê</p>
+
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a asp-controller="Quanlybaiviet"
+                                   asp-action="Quanlybaiviet"
+                                   class="nav-link @(laTrangBaiViet ? "active" : "")">
+
+                                    <i class="nav-icon bi bi-newspaper"></i>
+                                    <p>Quản lý bài viết</p>
+
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a asp-controller="Danhmuc"
+                                   asp-action="Danhmuc"
+                                   class="nav-link @(laTrangDanhMuc ? "active" : "")">
+
+                                    <i class="nav-icon bi bi-folder"></i>
+                                    <p>Quản lý danh mục</p>
+
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a asp-controller="Nhanvien"
+                                   asp-action="Nhanvien"
+                                   class="nav-link @(laTrangNhanVien ? "active" : "")">
+
+                                    <i class="nav-icon bi bi-person-badge"></i>
+                                    <p>Quản lý nhân viên</p>
+
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a asp-controller="Lichsuduyet"
+                                   asp-action="Lichsuduyet"
+                                   class="nav-link @(laTrangLichSu ? "active" : "")">
+
+                                    <i class="nav-icon bi bi-clock-history"></i>
+                                    <p>Lịch sử duyệt</p>
+
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a asp-controller="Quanlytaikhoan"
+                                   asp-action="Quanlytaikhoan"
+                                   class="nav-link @(laTrangTaiKhoan ? "active" : "")">
+
+                                    <i class="nav-icon bi bi-people"></i>
+                                    <p>Quản lý tài khoản</p>
+
+                                </a>
+                            </li>
+                        }
+                        else if (maVaiTro == 2 || maVaiTro == 3)
+                        {
+
+                            <li class="nav-item">
+                                <a asp-controller="Quanlybaiviet"
+                                   asp-action="Quanlybaiviet"
+                                   class="nav-link @(laTrangBaiViet ? "active" : "")">
+
+                                    <i class="nav-icon bi bi-newspaper"></i>
+                                    <p>Quản lý bài viết</p>
+
+                                </a>
+                            </li>
+                        }
+                        <li class="nav-item">
+                            <a asp-controller="Trangchu"
+                               asp-action="Trangdau"
+                               class="nav-link">
+
+                                <i class="nav-icon bi bi-house-door"></i>
+                                <p>Về trang tin tức</p>
+
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </aside>
+        <main class="app-main">
+
+            @RenderBody()
+
+        </main>
+
+        <footer class="app-footer">
+
+            <strong>NewsCMS</strong> - Hệ thống quản trị tin tức
+
+        </footer>
+
+    </div>
+    <script src="~/admin-lte-v4.10.1/dist/js/adminlte.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

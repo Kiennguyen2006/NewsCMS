@@ -1,0 +1,394 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLTELayout.cshtml";
+}
+@model NewsCMS.Models.BaiVietModel
+
+@{
+    ViewData["Title"] = "Thêm bài viết";
+
+    int maVaiTro = Context.Session.GetInt32("MaVaiTro") ?? 0;
+    bool laBienTapVien = maVaiTro == 2;
+
+    var danhMuc = ViewBag.bangdm;
+}
+
+@if (!laBienTapVien)
+{
+    <div class="alert alert-danger m-4">
+        Bạn không có quyền truy cập chức năng thêm bài viết.
+    </div>
+}
+else
+{
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css"
+          rel="stylesheet" />
+
+    <style>
+        .article-container {
+            background: #f5f7fb;
+            min-height: 100vh;
+            padding: 30px;
+        }
+
+        .article-card {
+            max-width: 1100px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,.06);
+        }
+
+        .article-header {
+            border-bottom: 1px solid #e9ecef;
+            padding-bottom: 18px;
+            margin-bottom: 25px;
+        }
+
+            .article-header h2 {
+                font-weight: 700;
+                color: #263238;
+                margin-bottom: 8px;
+            }
+
+            .article-header p {
+                color: #777;
+                margin: 0;
+            }
+
+        .form-label {
+            font-weight: 600;
+            color: #344054;
+            margin-bottom: 8px;
+        }
+
+        .form-control, .form-select {
+            padding: 11px 13px;
+            border-radius: 7px;
+        }
+
+        #editor {
+            height: 350px;
+            background: white;
+            font-size: 16px;
+        }
+
+        .ql-toolbar.ql-snow {
+            border-radius: 7px 7px 0 0;
+            background: #f8fafc;
+        }
+
+        .ql-container.ql-snow {
+            border-radius: 0 0 7px 7px;
+        }
+
+        /* Nút Undo và Redo */
+        .ql-toolbar button.ql-undo,
+        .ql-toolbar button.ql-redo {
+            width: 28px;
+            font-size: 21px;
+            font-weight: bold;
+            color: #344054;
+        }
+
+            .ql-toolbar button.ql-undo::before {
+                content: "↶";
+            }
+
+            .ql-toolbar button.ql-redo::before {
+                content: "↷";
+            }
+
+            .ql-toolbar button.ql-undo:hover,
+            .ql-toolbar button.ql-redo:hover {
+                color: #0d6efd;
+            }
+
+        .editor-label {
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #344054;
+        }
+
+        .article-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .btn-save {
+            background: #198754;
+            color: white;
+            border: none;
+            padding: 11px 22px;
+            border-radius: 7px;
+            font-weight: 600;
+        }
+
+            .btn-save:hover {
+                background: #157347;
+            }
+
+        .btn-back {
+            background: #6c757d;
+            color: white;
+            padding: 11px 22px;
+            border-radius: 7px;
+            text-decoration: none;
+        }
+
+        .text-danger {
+            font-size: 13px;
+        }
+
+        .image-preview {
+            display: none;
+            margin-top: 15px;
+            max-width: 300px;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        @@media(max-width: 768px) {
+            .article-container {
+                padding: 12px;
+            }
+
+            .article-card {
+                padding: 18px;
+            }
+
+            #editor {
+                height: 280px;
+            }
+        }
+    </style>
+
+    <div class="article-container">
+        <div class="article-card">
+
+            <div class="article-header">
+                <h2>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    Thêm bài viết mới
+                </h2>
+
+                <p>
+                    Nhập thông tin và soạn thảo nội dung bài viết
+                </p>
+            </div>
+
+            <form asp-controller="Quanlybaiviet"
+                  asp-action="Thembv"
+                  method="post"
+                  enctype="multipart/form-data"
+                  id="formThemBaiViet">
+
+                @Html.AntiForgeryToken()
+
+                <div asp-validation-summary="ModelOnly"
+                     class="text-danger mb-3"></div>
+
+                <div class="mb-3">
+                    <label asp-for="TieuDe" class="form-label">
+                        Tiêu đề bài viết
+                    </label>
+
+                    <input asp-for="TieuDe"
+                           class="form-control"
+                           placeholder="Nhập tiêu đề bài viết..." />
+
+                    <span asp-validation-for="TieuDe"
+                          class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="TomTat" class="form-label">
+                        Tóm tắt bài viết
+                    </label>
+
+                    <textarea asp-for="TomTat"
+                              class="form-control"
+                              rows="3"
+                              placeholder="Nhập nội dung tóm tắt..."></textarea>
+
+                    <span asp-validation-for="TomTat"
+                          class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        Ảnh đại diện bài viết
+                    </label>
+
+                    <input type="file"
+                           name="anhFile"
+                           id="AnhDaiDienFile"
+                           class="form-control"
+                           accept="image/*"
+                           required />
+
+                    <span class="text-muted">
+                        Chọn ảnh từ máy tính của bạn.
+                    </span>
+
+                    <div>
+                        <img id="imagePreview"
+                             class="image-preview"
+                             alt="Ảnh xem trước" />
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="MaDanhMuc" class="form-label">
+                        Danh mục bài viết
+                    </label>
+
+                    <select asp-for="MaDanhMuc"
+                            class="form-select">
+
+                        <option value="">-- Chọn danh mục bài viết --</option>
+
+                        @if (danhMuc != null)
+                        {
+                            foreach (var item in danhMuc)
+                            {
+                                <option value="@item.MaDanhMuc">
+                                    @item.TenDanhMuc
+                                </option>
+                            }
+                        }
+                    </select>
+
+                    <span asp-validation-for="MaDanhMuc"
+                          class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <div class="editor-label">
+                        Nội dung bài viết
+                    </div>
+
+                    <div id="editor"></div>
+
+                    <input asp-for="NoiDung"
+                           type="hidden"
+                           id="NoiDung" />
+
+                    <span asp-validation-for="NoiDung"
+                          class="text-danger"></span>
+                </div>
+
+                <div class="article-actions">
+
+                    <a asp-controller="Quanlybaiviet"
+                       asp-action="Quanlybaiviet"
+                       class="btn-back">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Quay lại
+                    </a>
+
+                    <button type="submit" class="btn-save">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Lưu bài viết
+                    </button>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+
+    <script>
+        const quill = new Quill('#editor', {
+            theme: 'snow',
+
+            placeholder: 'Bắt đầu soạn thảo nội dung bài viết...',
+
+            modules: {
+                toolbar: {
+                    container: [
+                        [{ 'header': [1, 2, 3, false] }],
+                        [{ 'font': [] }],
+                        [{ 'size': ['small', false, 'large', 'huge'] }],
+                        ['bold', 'italic', 'underline', 'strike'],
+                        [
+                            { 'color': [] },
+                            { 'background': [] }
+                        ],
+                        [
+                            { 'list': 'ordered' },
+                            { 'list': 'bullet' }
+                        ],
+                        [{ 'align': [] }],
+                        ['link'],
+                        ['blockquote'],
+                        ['undo', 'redo'],
+                        ['clean']
+                    ],
+
+                    handlers: {
+                        undo: function () {
+                            this.quill.history.undo();
+                        },
+
+                        redo: function () {
+                            this.quill.history.redo();
+                        }
+                    }
+                },
+                history: {
+                    delay: 1000,
+                    maxStack: 100,
+                    userOnly: true
+                }
+            }
+        });
+        const noiDungCu = document.getElementById('NoiDung').value;
+
+        if (noiDungCu) {
+            quill.root.innerHTML = noiDungCu;
+        }
+        document.getElementById('AnhDaiDienFile')
+            .addEventListener('change', function (event) {
+
+                const file = event.target.files[0];
+                const preview = document.getElementById('imagePreview');
+
+                if (file) {
+                    if (!file.type.startsWith('image/')) {
+                        alert('Vui lòng chọn một tệp hình ảnh.');
+                        event.target.value = '';
+                        preview.style.display = 'none';
+                        preview.removeAttribute('src');
+                        return;
+                    }
+
+                    const reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        preview.src = e.target.result;
+                        preview.style.display = 'block';
+                    };
+
+                    reader.readAsDataURL(file);
+                }
+                else {
+                    preview.style.display = 'none';
+                    preview.removeAttribute('src');
+                }
+            });
+        document.getElementById('formThemBaiViet')
+            .addEventListener('submit', function () {
+
+                document.getElementById('NoiDung').value =
+                    quill.root.innerHTML;
+
+            });
+    </script>
+}

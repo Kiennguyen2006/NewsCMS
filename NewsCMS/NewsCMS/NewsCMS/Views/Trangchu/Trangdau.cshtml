@@ -1,0 +1,793 @@
+﻿@using Microsoft.AspNetCore.Http
+@using NewsCMS.Models
+@using System.Collections.Generic
+@using System.Linq
+
+@section Styles {
+    <style>
+        .news-management {
+            margin: 24px 0 30px;
+            padding: 22px 24px;
+            background: #fff;
+            border: 1px solid #e7edf4;
+            border-radius: 14px;
+            box-shadow: 0 8px 24px rgba(25, 45, 75, .06);
+        }
+
+        .management-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+
+            .management-heading h2 {
+                margin: 5px 0 0;
+                color: #172b4d;
+                font-size: 21px;
+            }
+
+        .management-role {
+            padding: 7px 13px;
+            border-radius: 20px;
+            color: #0759b5;
+            background: #eaf3ff;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .management-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+            gap: 12px;
+        }
+
+        .management-link {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            min-height: 58px;
+            padding: 12px 14px;
+            color: #26364b;
+            text-decoration: none;
+            background: #f7f9fc;
+            border: 1px solid #e8edf4;
+            border-radius: 10px;
+            transition: transform .2s ease, background .2s ease, border-color .2s ease;
+        }
+
+            .management-link:hover {
+                color: #0759b5;
+                background: #edf5ff;
+                border-color: #b9d7ff;
+                transform: translateY(-2px);
+            }
+
+        .management-icon {
+            display: grid;
+            place-items: center;
+            width: 34px;
+            height: 34px;
+            flex: 0 0 34px;
+            color: #0875df;
+            background: #e2efff;
+            border-radius: 9px;
+            font-size: 18px;
+        }
+
+        .news-pagination {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin: 32px 0 12px;
+            padding: 18px 0 4px;
+            border-top: 1px solid #edf0f4;
+        }
+
+        .pagination-caption {
+            margin-right: 5px;
+            color: #697586;
+            font-size: 14px;
+        }
+
+        .news-pagination .pagination-link {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 38px;
+            height: 38px;
+            padding: 0 12px;
+            color: #344054;
+            background: #fff;
+            border: 1px solid #dce3eb;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .2s ease;
+        }
+
+            .news-pagination .pagination-link:hover,
+            .news-pagination .pagination-link.pagination-active {
+                color: #fff;
+                background: #0875df;
+                border-color: #0875df;
+            }
+
+        .news-pagination .pagination-next {
+            min-width: 82px;
+        }
+
+        .news-content {
+            transition: opacity .2s ease;
+        }
+
+        @@media (max-width: 768px) {
+            .news-management {
+                padding: 17px;
+                margin: 18px 0 22px;
+            }
+
+            .management-heading {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .management-links {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .news-pagination {
+                gap: 6px;
+            }
+
+                .news-pagination .pagination-link {
+                    min-width: 34px;
+                    height: 36px;
+                    padding: 0 9px;
+                }
+        }
+
+        @@media (max-width: 420px) {
+            .management-links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet"
+          href="~/css/Trangdau.css"
+          asp-append-version="true" />
+}
+
+@{
+    ViewData["Title"] = "Trang chủ - NewsCMS";
+
+    var maTaiKhoan = Context.Session.GetInt32("MaTaiKhoan");
+    var maVaiTro = Context.Session.GetInt32("MaVaiTro") ?? 0;
+
+    IEnumerable<BaiVietModel> danhSachBaiViet =
+        ViewBag.bang as IEnumerable<BaiVietModel>
+        ?? Enumerable.Empty<BaiVietModel>();
+
+    danhSachBaiViet = danhSachBaiViet
+        .Where(x => x.TrangThai == "Hoàn Thành")
+        .ToList();
+
+    int soLuongBaiViet = danhSachBaiViet.Count();
+}
+
+<div class="news-page">
+
+    <!-- HEADER -->
+    <header class="news-header">
+        <div class="news-header-inner">
+
+            <a asp-controller="Trangchu"
+               asp-action="Trangdau"
+               class="news-logo">
+
+                <img src="/images/logo.png" alt="NewsCMS" />
+
+                <span>
+                    News<span class="logo-blue">CMS</span>
+                </span>
+            </a>
+
+            <form asp-controller="Trangchu"
+                  asp-action="Trangdau"
+                  method="get"
+                  class="news-search"
+                  id="newsSearch">
+
+                <input type="text"
+                       name="timkiem"
+                       value="@ViewBag.timkiem"
+                       placeholder="Nhập tên bài viết muốn tìm..." />
+
+                <button type="submit">
+                    ⌕ Tìm kiếm
+                </button>
+
+            </form>
+
+            <div class="news-account">
+
+                @if (!maTaiKhoan.HasValue)
+                {
+                    <a href="/Trangchu/Dangnhap"
+                       class="account-login">
+                        Đăng nhập
+                    </a>
+
+                    <a href="/Trangchu/Dangky"
+                       class="account-register">
+                        Đăng ký
+                    </a>
+                }
+                else
+                {
+                    <a href="#"
+                       class="account-profile">
+                        ♙ Hồ sơ cá nhân
+                    </a>
+                }
+
+            </div>
+
+        </div>
+    </header>
+    <nav class="news-navigation">
+        <div class="news-navigation-inner">
+
+            <a asp-controller="Trangchu"
+               asp-action="Trangdau"
+               class="category-link category-home">
+                ⌂ Trang chủ
+            </a>
+
+            @if (ViewBag.bangdanhmuc != null)
+            {
+                foreach (var dm in ViewBag.bangdanhmuc)
+                {
+                    <a asp-controller="Trangchu"
+                       asp-action="Trangdau"
+                       asp-route-maDanhMuc="@dm.MaDanhMuc"
+                       class="category-link @(ViewBag.maDanhMuc == dm.MaDanhMuc ? "category-active" : "")">
+
+                        @dm.TenDanhMuc
+
+                    </a>
+                }
+            }
+
+        </div>
+    </nav>
+
+    <main class="news-main">
+        <section class="news-welcome">
+
+            <div>
+                <span class="welcome-label">
+                    TIN TỨC MỖI NGÀY
+                </span>
+
+                <h1>
+                    Cập nhật những tin tức mới nhất
+                </h1>
+
+                <p>
+                    Khám phá thông tin nổi bật về công nghệ,
+                    kinh tế, giáo dục và đời sống.
+                </p>
+            </div>
+
+            <div class="welcome-decoration">
+                NEWS
+            </div>
+
+        </section>
+        @if (maTaiKhoan.HasValue && (maVaiTro == 1 || maVaiTro == 2 || maVaiTro == 3))
+        {
+            <section class="news-management">
+
+                <div class="management-heading">
+
+                    <div>
+                        <span class="section-kicker">
+                            KHU VỰC ĐIỀU HÀNH
+                        </span>
+
+                        <h2>
+                            Quản lý hệ thống
+                        </h2>
+                    </div>
+
+                    <span class="management-role">
+                        @(maVaiTro == 1
+                            ? "Quản trị viên"
+                            : maVaiTro == 2
+                                ? "Biên tập viên"
+                                : "Chủ biên")
+                    </span>
+
+                </div>
+
+                <div class="management-links">
+
+                    @if (maVaiTro == 1)
+                    {
+                        <a asp-controller="Thongke"
+                           asp-action="Thongke"
+                           class="management-link">
+
+                            <span class="management-icon">▥</span>
+                            <span>Thống kê dữ liệu</span>
+
+                        </a>
+                    }
+                    else if (maVaiTro == 2 || maVaiTro == 3)
+                    {
+                        <a asp-controller="Quanlybaiviet"
+                           asp-action="Quanlybaiviet"
+                           class="management-link">
+
+                            <span class="management-icon">✎</span>
+                            <span>Quản lý bài viết</span>
+
+                        </a>
+                    }
+
+                </div>
+
+            </section>
+        }
+
+        <div class="news-columns">
+            <aside class="news-ad-column">
+
+                <h3 class="ad-heading">
+                    QUẢNG CÁO
+                </h3>
+
+                @for (int i = 1; i <= 5; i++)
+                {
+                    <div class="news-ad-card">
+
+                        <span class="ad-tag">
+                            AD
+                        </span>
+
+                        <div class="ad-placeholder">
+
+                            <span class="ad-symbol">
+                                ✦
+                            </span>
+
+                            <span>
+                                Vị trí quảng cáo
+                            </span>
+
+                        </div>
+
+                    </div>
+                }
+
+            </aside>
+            <section class="news-content" id="newsContent">
+
+                <div class="news-section-title">
+
+                    <div>
+                        <span class="section-kicker">
+                            NEWSROOM
+                        </span>
+
+                        <h2>
+                            Tin tức mới nhất
+                        </h2>
+                    </div>
+
+                    <span class="news-count">
+                        @ViewBag.soluongbaiviet bài viết
+                    </span>
+
+                </div>
+
+                <div class="news-article-list">
+
+                    @if (soLuongBaiViet > 0)
+                    {
+                        foreach (var item in danhSachBaiViet)
+                        {
+                            <article class="news-article">
+
+                                <a asp-controller="BaiViet"
+                                   asp-action="ChiTiet"
+                                   asp-route-id="@item.MaBaiViet"
+                                   class="article-image-link">
+
+                                    @if (!string.IsNullOrWhiteSpace(item.AnhDaiDien))
+                                    {
+                                        <img class="article-image"
+                                             src="@Url.Content("~/images/" + item.AnhDaiDien)"
+                                             alt="@item.TieuDe"
+                                             loading="lazy" />
+                                    }
+                                    else
+                                    {
+                                        <div class="article-image article-image-empty">
+                                            NEWS
+                                        </div>
+                                    }
+
+                                </a>
+
+                                <div class="article-body">
+
+                                    <span class="article-category">
+                                        TIN TỨC
+                                    </span>
+
+                                    <h3 class="article-title">
+
+                                        <a asp-controller="BaiViet"
+                                           asp-action="ChiTiet"
+                                           asp-route-id="@item.MaBaiViet">
+
+                                            @item.TieuDe
+
+                                        </a>
+
+                                    </h3>
+
+                                    @if (!string.IsNullOrWhiteSpace(item.TomTat))
+                                    {
+                                        <p class="article-summary">
+                                            @item.TomTat
+                                        </p>
+                                    }
+
+                                    <div class="article-footer">
+
+                                        <span class="article-date">
+                                            ◷ @item.NgayTao.ToString("dd/MM/yyyy")
+                                        </span>
+
+                                        <a asp-controller="BaiViet"
+                                           asp-action="ChiTiet"
+                                           asp-route-id="@item.MaBaiViet"
+                                           class="article-read-more">
+
+                                            Đọc tiếp →
+
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+                        }
+                    }
+                    else
+                    {
+                        <div class="news-empty">
+
+                            <span>▤</span>
+
+                            <h3>
+                                Không tìm thấy bài viết
+                            </h3>
+
+                            <p>
+                                Hiện tại chưa có bài viết nào được hoàn thành.
+                                Hãy thử từ khóa khác hoặc chọn danh mục khác.
+                            </p>
+
+                        </div>
+                    }
+
+                </div>
+                @if (ViewBag.tongsotrang > 1)
+                {
+                    <nav class="news-pagination"
+                         aria-label="Phân trang">
+
+                        <span class="pagination-caption">
+                            Trang
+                        </span>
+
+                        @if (ViewBag.trang > 1)
+                        {
+                            <a asp-action="Trangdau"
+                               asp-route-trang="@(ViewBag.trang - 1)"
+                               asp-route-timkiem="@ViewBag.timkiem"
+                               asp-route-maDanhMuc="@ViewBag.maDanhMuc"
+                               class="pagination-link">
+                                ‹
+                            </a>
+                        }
+
+                        @for (int i = 1; i <= ViewBag.tongsotrang; i++)
+                        {
+                            <a asp-action="Trangdau"
+                               asp-route-trang="@i"
+                               asp-route-timkiem="@ViewBag.timkiem"
+                               asp-route-maDanhMuc="@ViewBag.maDanhMuc"
+                               class="pagination-link @(i == ViewBag.trang ? "pagination-active" : "")">
+                                @i
+                            </a>
+                        }
+
+                        @if (ViewBag.trang < ViewBag.tongsotrang)
+                        {
+                            <a asp-action="Trangdau"
+                               asp-route-trang="@(ViewBag.trang + 1)"
+                               asp-route-timkiem="@ViewBag.timkiem"
+                               asp-route-maDanhMuc="@ViewBag.maDanhMuc"
+                               class="pagination-link pagination-next">
+                                Tiếp →
+                            </a>
+                        }
+
+                    </nav>
+                }
+
+            </section>
+            <aside class="news-ad-column">
+
+                <h3 class="ad-heading">
+                    ĐỐI TÁC
+                </h3>
+
+                @for (int i = 1; i <= 5; i++)
+                {
+                    <div class="news-ad-card">
+
+                        <span class="ad-tag">
+                            AD
+                        </span>
+
+                        <div class="ad-placeholder">
+
+                            <span class="ad-symbol">
+                                ✧
+                            </span>
+
+                            <span>
+                                Khu vực đối tác
+                            </span>
+
+                        </div>
+
+                    </div>
+                }
+
+            </aside>
+
+        </div>
+
+    </main>
+    <footer class="news-footer">
+
+        <a asp-controller="Trangchu"
+           asp-action="Trangdau"
+           class="footer-logo">
+
+            News<span>CMS</span>
+
+        </a>
+
+        <p>
+            Kết nối thông tin, cập nhật mỗi ngày.
+        </p>
+
+        <div class="footer-copyright">
+
+            © @DateTime.Now.Year NewsCMS. All rights reserved.
+
+        </div>
+
+    </footer>
+
+</div>
+
+@section Scripts {
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const newsContent = document.getElementById('newsContent');
+            const searchForm = document.getElementById('newsSearch');
+
+            if (!newsContent) return;
+
+            async function loadPage(url, addHistory = true) {
+
+                newsContent.style.opacity = '0.5';
+
+                try {
+
+                    const response = await fetch(url, {
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest'
+                        }
+                    });
+
+                    if (!response.ok) {
+                        throw new Error('Không thể tải trang.');
+                    }
+
+                    const html = await response.text();
+                    const parser = new DOMParser();
+
+                    const newDocument = parser.parseFromString(
+                        html,
+                        'text/html'
+                    );
+
+                    const newContent = newDocument.getElementById('newsContent');
+
+                    if (!newContent) {
+                        window.location.href = url;
+                        return;
+                    }
+
+                    newsContent.innerHTML = newContent.innerHTML;
+
+                    if (newDocument.title) {
+                        document.title = newDocument.title;
+                    }
+
+                    if (addHistory) {
+                        window.history.pushState({}, '', url);
+                    }
+
+                    updateCategoryActive(url);
+
+                    const currentUrl = new URL(
+                        url,
+                        window.location.origin
+                    );
+
+                    const keyword =
+                        currentUrl.searchParams.get('timkiem') || '';
+
+                    if (searchForm) {
+
+                        const searchInput = searchForm.querySelector(
+                            'input[name="timkiem"]'
+                        );
+
+                        if (searchInput) {
+                            searchInput.value = keyword;
+                        }
+                    }
+
+                    newsContent.style.opacity = '1';
+
+                    window.scrollTo({
+                        top: newsContent.getBoundingClientRect().top
+                            + window.scrollY - 110,
+                        behavior: 'smooth'
+                    });
+
+                }
+                catch (error) {
+
+                    newsContent.style.opacity = '1';
+                    window.location.href = url;
+
+                }
+            }
+
+            function updateCategoryActive(url) {
+
+                const currentUrl = new URL(
+                    url,
+                    window.location.origin
+                );
+
+                const currentCategory =
+                    currentUrl.searchParams.get('maDanhMuc') || '';
+
+                document.querySelectorAll(
+                    '.news-navigation .category-link'
+                ).forEach(link => {
+
+                    const linkUrl = new URL(
+                        link.href,
+                        window.location.origin
+                    );
+
+                    const linkCategory =
+                        linkUrl.searchParams.get('maDanhMuc') || '';
+
+                    const isHome =
+                        link.classList.contains('category-home');
+
+                    link.classList.toggle(
+                        'category-active',
+                        isHome
+                            ? currentCategory === ''
+                            : linkCategory === currentCategory
+                    );
+
+                });
+            }
+
+            document.addEventListener('click', function (event) {
+
+                const link = event.target.closest(
+                    '.news-navigation .category-link, .news-pagination a'
+                );
+
+                if (!link || !link.href) return;
+
+                if (
+                    event.ctrlKey ||
+                    event.shiftKey ||
+                    event.altKey ||
+                    event.metaKey ||
+                    link.target === '_blank' ||
+                    link.hasAttribute('download')
+                ) {
+                    return;
+                }
+
+                const url = new URL(
+                    link.href,
+                    window.location.origin
+                );
+
+                if (url.origin !== window.location.origin) return;
+
+                if (
+                    url.hash &&
+                    url.pathname === window.location.pathname &&
+                    url.search === window.location.search
+                ) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                loadPage(url.href);
+
+            });
+
+            if (searchForm) {
+
+                searchForm.addEventListener('submit', function (event) {
+
+                    event.preventDefault();
+
+                    const formData = new FormData(searchForm);
+                    const params = new URLSearchParams(formData);
+
+                    const url = new URL(
+                        searchForm.action,
+                        window.location.origin
+                    );
+
+                    url.search = params.toString();
+
+                    loadPage(url.href);
+
+                });
+
+            }
+
+            window.addEventListener('popstate', function () {
+
+                loadPage(window.location.href, false);
+
+            });
+
+        });
+    </script>
+
+}

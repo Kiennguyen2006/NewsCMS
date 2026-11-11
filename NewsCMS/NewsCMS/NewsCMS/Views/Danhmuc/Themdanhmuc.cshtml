@@ -1,0 +1,312 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLTELayout.cshtml";
+}
+@model NewsCMS.Models.DanhMucModel
+
+@{
+    ViewData["Title"] = "Thêm danh mục";
+}
+
+<style>
+    .category-page {
+        min-height: 85vh;
+        padding: 45px 15px;
+        background: linear-gradient(135deg, #f3f6ff, #f8faff);
+    }
+
+    .category-wrapper {
+        max-width: 850px;
+        margin: auto;
+    }
+
+    .category-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #64748b;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.25s;
+    }
+
+        .category-back:hover {
+            color: #2563eb;
+            transform: translateX(-4px);
+        }
+
+    .category-heading {
+        margin: 30px 0 25px;
+    }
+
+        .category-heading h2 {
+            color: #1e3a8a;
+            font-weight: 750;
+            letter-spacing: -0.5px;
+        }
+
+        .category-heading p {
+            color: #64748b;
+            margin-top: 8px;
+        }
+
+    .category-card {
+        background: #fff;
+        border: 1px solid #e8edf5;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 12px 35px rgba(30, 64, 175, 0.08);
+    }
+
+    .category-card-header {
+        padding: 25px 30px;
+        color: white;
+        background: linear-gradient(120deg, #2563eb, #4f46e5);
+    }
+
+        .category-card-header h5 {
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .category-card-header p {
+            margin: 0;
+            color: rgba(255,255,255,.85);
+            font-size: 14px;
+        }
+
+    .category-card-body {
+        padding: 32px;
+    }
+
+    .form-label {
+        color: #334155;
+        font-weight: 650;
+        margin-bottom: 9px;
+    }
+
+    .form-control,
+    .form-select {
+        border: 1px solid #dbe3ef;
+        border-radius: 11px;
+        padding: 12px 15px;
+        color: #334155;
+        transition: all .25s ease;
+    }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 4px rgba(59,130,246,.12);
+        }
+
+    textarea.form-control {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    .field-hint {
+        color: #94a3b8;
+        font-size: 12px;
+        margin-top: 6px;
+    }
+
+    .required-mark {
+        color: #ef4444;
+    }
+
+    .category-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 12px;
+        border-top: 1px solid #edf1f7;
+        padding-top: 24px;
+        margin-top: 30px;
+    }
+
+    .btn-category {
+        border-radius: 10px;
+        padding: 11px 22px;
+        font-weight: 600;
+        transition: all .25s ease;
+    }
+
+        .btn-category:hover {
+            transform: translateY(-2px);
+        }
+
+    .btn-save {
+        color: white;
+        border: none;
+        background: linear-gradient(120deg, #2563eb, #4f46e5);
+        box-shadow: 0 5px 14px rgba(37,99,235,.2);
+    }
+
+        .btn-save:hover {
+            color: white;
+            box-shadow: 0 8px 18px rgba(37,99,235,.3);
+        }
+
+    .btn-cancel {
+        color: #475569;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+    }
+
+        .btn-cancel:hover {
+            color: #1e293b;
+            background: #f1f5f9;
+        }
+
+    .validation-summary-errors,
+    .field-validation-error {
+        color: #dc2626;
+        font-size: 13px;
+    }
+
+    @@media (max-width: 576px) {
+        .category-page {
+            padding: 25px 12px;
+        }
+
+        .category-card-body {
+            padding: 22px 18px;
+        }
+
+        .category-card-header {
+            padding: 22px 20px;
+        }
+
+        .category-actions {
+            flex-direction: column-reverse;
+        }
+
+            .category-actions .btn {
+                width: 100%;
+            }
+    }
+</style>
+
+<div class="category-page">
+    <div class="category-wrapper">
+
+        <a asp-action="Danhmuc" class="category-back">
+            <i class="bi bi-arrow-left"></i>
+            Quay lại danh sách danh mục
+        </a>
+
+        <div class="category-heading">
+            <h2>
+                <i class="bi bi-folder-plus me-2"></i>
+                Thêm danh mục mới
+            </h2>
+            <p>
+                Tạo danh mục để phân loại và quản lý các bài viết trên hệ thống.
+            </p>
+        </div>
+
+        <div class="category-card">
+
+            <div class="category-card-header">
+                <h5>
+                    <i class="bi bi-pencil-square me-2"></i>
+                    Thông tin danh mục
+                </h5>
+                <p>Vui lòng nhập thông tin danh mục bên dưới.</p>
+            </div>
+
+            <div class="category-card-body">
+
+                <form asp-controller="Danhmuc"
+                      asp-action="Themdm"
+                      method="post">
+
+                    @Html.AntiForgeryToken()
+
+                    <div asp-validation-summary="ModelOnly"
+                         class="mb-3"></div>
+
+                    <div class="mb-4">
+                        <label asp-for="TenDanhMuc" class="form-label">
+                            Tên danh mục
+                            <span class="required-mark">*</span>
+                        </label>
+
+                        <input asp-for="TenDanhMuc"
+                               class="form-control"
+                               placeholder="Ví dụ: Công nghệ, Thể thao, Giáo dục..."
+                               maxlength="100" />
+
+                        <span asp-validation-for="TenDanhMuc"
+                              class="field-validation-error"></span>
+
+                        <div class="field-hint">
+                            Tên danh mục không được vượt quá 100 ký tự.
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label asp-for="MoTa" class="form-label">
+                            Mô tả danh mục
+                        </label>
+
+                        <textarea asp-for="MoTa"
+                                  class="form-control"
+                                  rows="4"
+                                  maxlength="500"
+                                  placeholder="Nhập nội dung mô tả cho danh mục..."></textarea>
+
+                        <span asp-validation-for="MoTa"
+                              class="field-validation-error"></span>
+
+                        <div class="field-hint">
+                            Mô tả tối đa 500 ký tự.
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label asp-for="TrangThai" class="form-label">
+                            Trạng thái danh mục
+                        </label>
+
+                        <select asp-for="TrangThai"
+                                class="form-select">
+                            <option value="true">Đang hoạt động</option>
+                            <option value="false">Ngừng hoạt động</option>
+                        </select>
+
+                        <span asp-validation-for="TrangThai"
+                              class="field-validation-error"></span>
+
+                        <div class="field-hint">
+                            Bạn có thể thay đổi trạng thái danh mục sau này.
+                        </div>
+                    </div>
+
+                    <div class="category-actions">
+
+                        <a asp-action="Danhmuc"
+                           class="btn btn-category btn-cancel">
+                            <i class="bi bi-x-circle me-1"></i>
+                            Hủy
+                        </a>
+
+                        <button type="submit"
+                                class="btn btn-category btn-save">
+                            <i class="bi bi-check-circle me-1"></i>
+                            Lưu danh mục
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

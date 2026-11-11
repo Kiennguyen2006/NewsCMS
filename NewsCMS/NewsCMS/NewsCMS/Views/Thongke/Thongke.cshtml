@@ -1,0 +1,279 @@
+﻿@model NewsCMS.Models.ThongKeViewModel
+
+@{
+    ViewData["Title"] = "Thống kê hệ thống";
+    Layout = "~/Views/Shared/_AdminLTELayout.cshtml";
+}
+
+
+<!-- TIÊU ĐỀ -->
+<div class="app-content-header">
+
+    <div class="container-fluid">
+
+        <h3>Thống kê hệ thống</h3>
+
+    </div>
+
+</div>
+
+
+<div class="app-content">
+
+    <div class="container-fluid">
+
+        <!-- THỐNG KÊ TỔNG QUAN -->
+        <div class="row">
+
+            <!-- Tổng bài viết -->
+            <div class="col-lg-3 col-6">
+
+                <div class="small-box text-bg-primary">
+
+                    <div class="inner">
+
+                        <h3>@Model.TongBaiViet</h3>
+
+                        <p>Tổng bài viết</p>
+
+                    </div>
+
+                    <i class="small-box-icon bi bi-newspaper"></i>
+
+                </div>
+
+            </div>
+
+
+            <!-- Bài viết hoàn thành -->
+            <div class="col-lg-3 col-6">
+
+                <div class="small-box text-bg-success">
+
+                    <div class="inner">
+
+                        <h3>@Model.HoanThanh</h3>
+
+                        <p>Bài viết hoàn thành</p>
+
+                    </div>
+
+                    <i class="small-box-icon bi bi-check-circle"></i>
+
+                </div>
+
+            </div>
+
+
+            <!-- Bài viết chờ duyệt -->
+            <div class="col-lg-3 col-6">
+
+                <div class="small-box text-bg-warning">
+
+                    <div class="inner">
+
+                        <h3>@Model.ChoDuyet</h3>
+
+                        <p>Bài viết chờ duyệt</p>
+
+                    </div>
+
+                    <i class="small-box-icon bi bi-hourglass-split"></i>
+
+                </div>
+
+            </div>
+
+
+            <!-- Bài viết cần sửa -->
+            <div class="col-lg-3 col-6">
+
+                <div class="small-box text-bg-danger">
+
+                    <div class="inner">
+
+                        <h3>@Model.CanSua</h3>
+
+                        <p>Bài viết cần sửa</p>
+
+                    </div>
+
+                    <i class="small-box-icon bi bi-exclamation-circle"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BIỂU ĐỒ -->
+        <div class="row">
+
+            <!-- Biểu đồ bài viết theo tháng -->
+            <div class="col-lg-8">
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <h3 class="card-title">
+                            Số lượng bài viết theo tháng
+                        </h3>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <div style="height:320px">
+
+                            <canvas id="bieuDoBaiViet"></canvas>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Biểu đồ trạng thái -->
+            <div class="col-lg-4">
+
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <h3 class="card-title">
+                            Bài viết theo trạng thái
+                        </h3>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <div style="height:320px">
+
+                            <canvas id="bieuDoTrangThai"></canvas>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- JAVASCRIPT BIỂU ĐỒ -->
+@section Scripts {
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+
+        // Nhận dữ liệu từ Controller thông qua Model
+        const nhanThang = @Html.Raw(
+                    System.Text.Json.JsonSerializer.Serialize(Model.NhanThang)
+                    );
+
+        const baiVietTheoThang = @Html.Raw(
+                    System.Text.Json.JsonSerializer.Serialize(Model.BaiVietTheoThang)
+                    );
+
+        const tenTrangThai = @Html.Raw(
+                    System.Text.Json.JsonSerializer.Serialize(Model.TenTrangThai)
+                    );
+
+        const soLuongTrangThai = @Html.Raw(
+                    System.Text.Json.JsonSerializer.Serialize(Model.SoLuongTrangThai)
+                    );
+
+
+        // BIỂU ĐỒ ĐƯỜNG: SỐ LƯỢNG BÀI VIẾT THEO THÁNG
+        new Chart(document.getElementById('bieuDoBaiViet'), {
+
+            type: 'line',
+
+            data: {
+
+                labels: nhanThang,
+
+                datasets: [{
+
+                    label: 'Số bài viết',
+
+                    data: baiVietTheoThang,
+
+                    borderWidth: 2,
+
+                    tension: 0.3,
+
+                    fill: false
+
+                }]
+
+            },
+
+            options: {
+
+                responsive: true,
+
+                maintainAspectRatio: false,
+
+                scales: {
+
+                    y: {
+
+                        beginAtZero: true,
+
+                        ticks: {
+                            precision: 0
+                        }
+
+                    }
+
+                }
+
+            }
+
+        });
+
+
+        // BIỂU ĐỒ TRÒN: BÀI VIẾT THEO TRẠNG THÁI
+        new Chart(document.getElementById('bieuDoTrangThai'), {
+
+            type: 'doughnut',
+
+            data: {
+
+                labels: tenTrangThai,
+
+                datasets: [{
+
+                    data: soLuongTrangThai
+
+                }]
+
+            },
+
+            options: {
+
+                responsive: true,
+
+                maintainAspectRatio: false
+
+            }
+
+        });
+
+    </script>
+
+}

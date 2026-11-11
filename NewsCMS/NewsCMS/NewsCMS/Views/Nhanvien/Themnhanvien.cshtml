@@ -1,0 +1,118 @@
+﻿@model NewsCMS.Models.NhanVienModel
+@{
+    Layout = "~/Views/Shared/_AdminLTELayout.cshtml";
+}
+@{
+    ViewData["Title"] = "Thêm nhân viên";
+    var bangtk = ViewBag.bangtk;
+}
+
+<div class="container py-4">
+
+    <div class="mb-4">
+        <a asp-controller="Nhanvien" asp-action="Nhanvien"
+           class="btn btn-outline-secondary">
+            <i class="fa-solid fa-arrow-left me-1"></i>
+            Quay lại danh sách nhân viên
+        </a>
+    </div>
+
+    <div class="card shadow-sm border-0 mx-auto" style="max-width: 750px;">
+
+        <div class="card-header bg-primary text-white py-3">
+            <h4 class="mb-0">
+                <i class="fa-solid fa-user-plus me-2"></i>
+                Thêm nhân viên
+            </h4>
+        </div>
+
+        <div class="card-body p-4">
+
+            @if (ViewBag.thongbao != null)
+            {
+                <div class="alert alert-danger">
+                    @ViewBag.thongbao
+                </div>
+            }
+
+            <form asp-controller="Nhanvien" asp-action="Themnv" method="post">
+
+                @Html.AntiForgeryToken()
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">Tài khoản</label>
+
+                    <select asp-for="MaTaiKhoan" class="form-select">
+                        <option value="">-- Chọn tài khoản --</option>
+
+                        @if (bangtk != null)
+                        {
+                            foreach (var tk in bangtk)
+                            {
+                                <option value="@tk.MaTaiKhoan">
+                                    TK-@tk.MaTaiKhoan
+                                </option>
+                            }
+                        }
+                    </select>
+
+                    <span asp-validation-for="MaTaiKhoan"
+                          class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="HoTen" class="form-label fw-semibold">
+                        Họ tên nhân viên
+                    </label>
+
+                    <input asp-for="HoTen" class="form-control"
+                           placeholder="Nhập họ tên nhân viên" />
+
+                    <span asp-validation-for="HoTen"
+                          class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="SoDienThoai" class="form-label fw-semibold">
+                        Số điện thoại
+                    </label>
+
+                    <input asp-for="SoDienThoai" class="form-control"
+                           placeholder="Nhập số điện thoại" />
+
+                    <span asp-validation-for="SoDienThoai"
+                          class="text-danger"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label asp-for="NgayVaoLam" class="form-label fw-semibold">
+                        Ngày vào làm
+                    </label>
+
+                    <input asp-for="NgayVaoLam" type="date"
+                           class="form-control" />
+
+                    <span asp-validation-for="NgayVaoLam"
+                          class="text-danger"></span>
+                </div>
+
+                <div class="d-flex justify-content-end gap-2">
+                    <a asp-controller="Nhanvien" asp-action="Nhanvien"
+                       class="btn btn-secondary">
+                        Hủy
+                    </a>
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa-solid fa-floppy-disk me-1"></i>
+                        Thêm nhân viên
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

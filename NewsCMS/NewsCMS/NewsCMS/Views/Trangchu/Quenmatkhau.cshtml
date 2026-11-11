@@ -1,0 +1,290 @@
+﻿@{
+    ViewData["Title"] = "Quên mật khẩu";
+}
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #0f172a, #1e40af, #6366f1);
+    }
+
+    .forgot-page {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .circle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.08);
+        animation: float 7s ease-in-out infinite;
+    }
+
+    .circle-one {
+        width: 280px;
+        height: 280px;
+        top: -80px;
+        left: -70px;
+    }
+
+    .circle-two {
+        width: 200px;
+        height: 200px;
+        bottom: -60px;
+        right: -40px;
+        animation-delay: 2s;
+    }
+
+    .forgot-card {
+        width: 100%;
+        max-width: 430px;
+        padding: 42px 38px;
+        background: rgba(255,255,255,0.96);
+        border-radius: 22px;
+        box-shadow: 0 25px 70px rgba(0,0,0,0.25);
+        position: relative;
+        z-index: 1;
+        animation: appear 0.8s ease forwards;
+    }
+
+    .forgot-header {
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .forgot-logo {
+        width: 65px;
+        height: 65px;
+        margin: 0 auto 18px;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #2563eb, #6366f1);
+        color: white;
+        font-size: 27px;
+        font-weight: bold;
+        box-shadow: 0 8px 20px rgba(37,99,235,0.3);
+    }
+
+    .forgot-header h2 {
+        color: #172554;
+        font-size: 26px;
+        margin-bottom: 9px;
+    }
+
+    .forgot-header p {
+        color: #64748b;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .form-group {
+        margin-bottom: 22px;
+    }
+
+        .form-group label {
+            display: block;
+            color: #334155;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 9px;
+        }
+
+    .input-box input {
+        width: 100%;
+        height: 51px;
+        padding: 0 15px;
+        border: 1.5px solid #dbe3ef;
+        border-radius: 11px;
+        outline: none;
+        font-size: 14px;
+        color: #1e293b;
+        background: #f8fafc;
+        transition: all 0.3s ease;
+    }
+
+        .input-box input:focus {
+            border-color: #3b82f6;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(59,130,246,0.12);
+        }
+
+        .input-box input::placeholder {
+            color: #94a3b8;
+        }
+
+    .forgot-button {
+        width: 100%;
+        height: 51px;
+        border: none;
+        border-radius: 11px;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        background: linear-gradient(135deg, #2563eb, #6366f1);
+        box-shadow: 0 8px 18px rgba(37,99,235,0.25);
+        transition: all 0.3s ease;
+    }
+
+        .forgot-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(37,99,235,0.35);
+        }
+
+    .forgot-message {
+        padding: 12px;
+        margin-bottom: 20px;
+        border-radius: 9px;
+        background: #fee2e2;
+        border: 1px solid #fecaca;
+        color: #b91c1c;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .success-message {
+        padding: 12px;
+        margin-bottom: 20px;
+        border-radius: 9px;
+        background: #dcfce7;
+        border: 1px solid #bbf7d0;
+        color: #15803d;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .back-login {
+        text-align: center;
+        margin-top: 22px;
+        font-size: 13px;
+    }
+
+        .back-login a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+            .back-login a:hover {
+                text-decoration: underline;
+            }
+
+    .forgot-footer {
+        text-align: center;
+        margin-top: 28px;
+        color: #94a3b8;
+        font-size: 12px;
+    }
+
+    @@keyframes appear {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @@keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-25px);
+        }
+    }
+
+    @@media (max-width: 480px) {
+        .forgot-card {
+            padding: 32px 23px;
+        }
+
+        .forgot-header h2 {
+            font-size: 23px;
+        }
+    }
+</style>
+
+<div class="forgot-page">
+
+    <div class="circle circle-one"></div>
+    <div class="circle circle-two"></div>
+
+    <div class="forgot-card">
+
+        <div class="forgot-header">
+            <div class="forgot-logo">N</div>
+            <h2>Quên mật khẩu?</h2>
+            <p>
+                Vui lòng nhập địa chỉ email đã đăng ký
+                để kiểm tra tài khoản của bạn.
+            </p>
+        </div>
+
+        <form method="post"
+              asp-controller="Trangchu"
+              asp-action="Quenmatkhau">
+
+            @if (ViewBag.thongbao != null)
+            {
+                <div class="forgot-message">
+                    @ViewBag.thongbao
+                </div>
+            }
+
+            @if (ViewBag.thanhcong != null)
+            {
+                <div class="success-message">
+                    @ViewBag.thanhcong
+                </div>
+            }
+
+            <div class="form-group">
+                <label for="Email">Địa chỉ Email</label>
+
+                <div class="input-box">
+                    <input type="email"
+                           id="Email"
+                           name="Email"
+                           placeholder="Nhập email của bạn"
+                           autocomplete="email"
+                           required />
+                </div>
+            </div>
+
+            <button type="submit" class="forgot-button">
+                Kiểm tra email
+            </button>
+
+        </form>
+
+        <div class="back-login">
+            <a asp-controller="Trangchu" asp-action="Dangnhap">
+                ← Quay lại đăng nhập
+            </a>
+        </div>
+
+        <div class="forgot-footer">
+            © 2026 NewsCMS. All rights reserved.
+        </div>
+
+    </div>
+</div>

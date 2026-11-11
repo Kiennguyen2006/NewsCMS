@@ -1,0 +1,532 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLTELayout.cshtml";
+}
+@{
+    ViewData["Title"] = "Sửa bài viết";
+
+    var baiViet = ViewBag.bangcu as NewsCMS.Models.BaiVietModel;
+    var bangdm = ViewBag.bangdm;
+
+    int maVaiTro = Context.Session.GetInt32("MaVaiTro") ?? 0;
+    bool laChuBien = maVaiTro == 3;
+
+    string anh = baiViet?.AnhDaiDien ?? "";
+    string duongDanAnh = string.IsNullOrEmpty(anh)
+        ? ""
+        : (anh.StartsWith("/") ? anh : "/images/" + anh);
+}
+
+<link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css"
+      rel="stylesheet" />
+
+<style>
+    .edit-container {
+        max-width: 1100px;
+        margin: 30px auto;
+    }
+
+    .edit-card {
+        border: none;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .edit-header {
+        background: #0d6efd;
+        color: white;
+        padding: 20px 25px;
+    }
+
+        .edit-header h4 {
+            margin: 0;
+            font-weight: 600;
+        }
+
+    .edit-body {
+        padding: 30px;
+    }
+
+    .form-label {
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .form-control,
+    .form-select {
+        border-radius: 7px;
+        padding: 10px 12px;
+    }
+
+    .image-current,
+    .image-preview {
+        width: 220px;
+        height: 145px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+    }
+
+    .image-preview {
+        margin-top: 12px;
+    }
+
+    #editor {
+        height: 350px;
+        background: white;
+        font-size: 16px;
+    }
+
+    .ql-toolbar.ql-snow {
+        background: #f8fafc;
+        border-radius: 7px 7px 0 0;
+    }
+
+    .ql-container.ql-snow {
+        border-radius: 0 0 7px 7px;
+    }
+
+    /* Nút Undo và Redo */
+    .ql-toolbar button.ql-undo,
+    .ql-toolbar button.ql-redo {
+        width: 28px;
+        font-size: 21px;
+        font-weight: bold;
+        color: #344054;
+    }
+
+        .ql-toolbar button.ql-undo::before {
+            content: "↶";
+        }
+
+        .ql-toolbar button.ql-redo::before {
+            content: "↷";
+        }
+
+        .ql-toolbar button.ql-undo:hover,
+        .ql-toolbar button.ql-redo:hover {
+            color: #0d6efd;
+        }
+
+    .status-view {
+        background: #f1f3f5;
+        font-weight: 600;
+    }
+
+    .form-actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 25px;
+    }
+
+        .form-actions .btn {
+            padding: 10px 22px;
+            border-radius: 7px;
+        }
+
+    .field-validation-error {
+        color: #dc3545;
+        font-size: 14px;
+    }
+
+    .validation-summary-errors {
+        color: #dc3545;
+        background: #fff1f1;
+        border: 1px solid #f5c2c7;
+        border-radius: 7px;
+        padding: 12px 20px;
+        margin-bottom: 20px;
+    }
+
+        .validation-summary-errors ul {
+            margin-bottom: 0;
+        }
+
+    @@media(max-width: 768px) {
+        .edit-container {
+            padding: 0 10px;
+        }
+
+        .edit-body {
+            padding: 18px;
+        }
+
+        #editor {
+            height: 280px;
+        }
+
+        .form-actions {
+            flex-wrap: wrap;
+        }
+    }
+</style>
+
+@if (baiViet != null)
+{
+    <div class="container edit-container">
+        <div class="card shadow edit-card">
+
+            <div class="edit-header">
+                <h4>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    CHỈNH SỬA BÀI VIẾT
+                </h4>
+            </div>
+
+            <div class="edit-body">
+
+                <form asp-controller="Quanlybaiviet"
+                      asp-action="Suabv"
+                      method="post"
+                      enctype="multipart/form-data"
+                      id="formSuaBaiViet">
+
+                    @Html.AntiForgeryToken()
+
+                    <input type="hidden"
+                           name="MaBaiViet"
+                           value="@baiViet.MaBaiViet" />
+
+                    <div asp-validation-summary="All"
+                         class="text-danger mb-3">
+                    </div>
+
+                    <!-- TIÊU ĐỀ -->
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Tiêu đề bài viết
+                        </label>
+
+                        <input type="text"
+                               name="TieuDe"
+                               class="form-control"
+                               value="@baiViet.TieuDe"
+                               minlength="5"
+                               maxlength="250"
+                               required />
+
+                        <span class="text-danger"
+                              data-valmsg-for="TieuDe">
+                        </span>
+                    </div>
+
+                    <!-- TÓM TẮT -->
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Tóm tắt bài viết
+                        </label>
+
+                        <textarea name="TomTat"
+                                  class="form-control"
+                                  rows="4"
+                                  minlength="10"
+                                  maxlength="1000"
+                                  required>@baiViet.TomTat</textarea>
+
+                        <span class="text-danger"
+                              data-valmsg-for="TomTat">
+                        </span>
+                    </div>
+
+                    <!-- ẢNH ĐẠI DIỆN HIỆN TẠI -->
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Ảnh đại diện hiện tại
+                        </label>
+
+                        @if (!string.IsNullOrEmpty(anh))
+                        {
+                            <div class="mb-2">
+                                <a href="@duongDanAnh" target="_blank">
+                                    <img src="@duongDanAnh"
+                                         class="image-current"
+                                         alt="Ảnh bài viết hiện tại" />
+                                </a>
+                            </div>
+
+                            <a href="@duongDanAnh"
+                               target="_blank"
+                               class="text-primary">
+                                <i class="fa-solid fa-eye"></i>
+                                Xem ảnh hiện tại
+                            </a>
+                        }
+                        else
+                        {
+                            <p class="text-muted">
+                                Bài viết chưa có ảnh đại diện.
+                            </p>
+                        }
+                    </div>
+
+                    <!-- CHỌN ẢNH MỚI -->
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Chọn ảnh mới
+                        </label>
+
+                        <input type="file"
+                               name="anhFile"
+                               id="anhFile"
+                               class="form-control"
+                               accept="image/*" />
+
+                        <div id="previewAnh"></div>
+
+                        <small class="text-muted">
+                            Không chọn ảnh mới nếu muốn giữ nguyên ảnh hiện tại.
+                        </small>
+                    </div>
+
+                    <!-- DANH MỤC -->
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Danh mục bài viết
+                        </label>
+
+                        <select name="MaDanhMuc"
+                                class="form-select"
+                                required>
+
+                            <option value="">
+                                -- Chọn danh mục --
+                            </option>
+
+                            @if (bangdm != null)
+                            {
+                                foreach (var dm in bangdm)
+                                {
+                                    if (dm.MaDanhMuc == baiViet.MaDanhMuc)
+                                    {
+                                        <option value="@dm.MaDanhMuc" selected>
+                                            @dm.TenDanhMuc
+                                        </option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@dm.MaDanhMuc">
+                                            @dm.TenDanhMuc
+                                        </option>
+                                    }
+                                }
+                            }
+                        </select>
+                    </div>
+
+                    <!-- NỘI DUNG QUILL -->
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Nội dung bài viết
+                        </label>
+
+                        <div id="editor">
+                            @Html.Raw(baiViet.NoiDung)
+                        </div>
+
+                        <input type="hidden"
+                               name="NoiDung"
+                               id="NoiDung" />
+
+                        <span class="text-danger"
+                              id="loiNoiDung">
+                        </span>
+                    </div>
+
+                    <!-- TRẠNG THÁI -->
+                    <div class="mb-3">
+                        <label class="form-label">
+                            Trạng thái bài viết
+                        </label>
+
+                        @if (laChuBien)
+                        {
+                            <select name="TrangThai"
+                                    class="form-select"
+                                    required>
+
+                                <option value="Chờ Duyệt"
+                                        selected="@(baiViet.TrangThai == "Chờ Duyệt")">
+                                    Chờ Duyệt
+                                </option>
+
+                                <option value="Hoàn Thành"
+                                        selected="@(baiViet.TrangThai == "Hoàn Thành")">
+                                    Hoàn Thành
+                                </option>
+
+                                <option value="Cần Sửa"
+                                        selected="@(baiViet.TrangThai == "Cần Sửa")">
+                                    Cần Sửa
+                                </option>
+                            </select>
+
+                            <small class="text-success">
+                                <i class="fa-solid fa-lock-open"></i>
+                                Chủ biên được phép thay đổi trạng thái bài viết.
+                            </small>
+                        }
+                        else
+                        {
+                            <input type="text"
+                                   class="form-control status-view"
+                                   value="@baiViet.TrangThai"
+                                   readonly />
+
+                            <input type="hidden"
+                                   name="TrangThai"
+                                   value="@baiViet.TrangThai" />
+
+                            <small class="text-muted">
+                                <i class="fa-solid fa-lock"></i>
+                                Bạn chỉ được xem trạng thái, không được chỉnh sửa.
+                            </small>
+                        }
+                    </div>
+
+                    <!-- NÚT ĐIỀU KHIỂN -->
+                    <div class="form-actions">
+
+                        <button type="submit"
+                                class="btn btn-primary">
+                            <i class="fa-solid fa-floppy-disk"></i>
+                            Lưu thay đổi
+                        </button>
+
+                        <a asp-controller="Quanlybaiviet"
+                           asp-action="Quanlybaiviet"
+                           class="btn btn-secondary">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            Quay lại
+                        </a>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="container mt-4">
+        <div class="alert alert-danger">
+            Không tìm thấy thông tin bài viết.
+        </div>
+
+        <a asp-controller="Quanlybaiviet"
+           asp-action="Quanlybaiviet"
+           class="btn btn-secondary">
+            Quay lại
+        </a>
+    </div>
+}
+
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+
+<script>
+    var editorElement = document.getElementById('editor');
+
+    if (editorElement) {
+
+        var quill = new Quill('#editor', {
+            theme: 'snow',
+
+            modules: {
+
+                toolbar: {
+                    container: [
+                        [{ header: [1, 2, 3, false] }],
+                        ['bold', 'italic', 'underline', 'strike'],
+                        [
+                            { color: [] },
+                            { background: [] }
+                        ],
+                        [
+                            { list: 'ordered' },
+                            { list: 'bullet' }
+                        ],
+                        [{ align: [] }],
+                        ['link'],
+                        ['blockquote'],
+                        ['undo', 'redo'],
+                        ['clean']
+                    ],
+
+                    handlers: {
+
+                        undo: function () {
+                            this.quill.history.undo();
+                        },
+
+                        redo: function () {
+                            this.quill.history.redo();
+                        }
+                    }
+                },
+                history: {
+                    delay: 1000,
+                    maxStack: 100,
+                    userOnly: true
+                }
+            }
+        });
+        var nutUndo = document.querySelector('.ql-undo');
+        var nutRedo = document.querySelector('.ql-redo');
+        if (nutUndo) {
+            nutUndo.title = 'Hoàn tác thao tác trước';
+            nutUndo.setAttribute('aria-label', 'Hoàn tác');
+        }
+
+        if (nutRedo) {
+            nutRedo.title = 'Làm lại thao tác vừa hoàn tác';
+            nutRedo.setAttribute('aria-label', 'Làm lại');
+        }
+        document.getElementById('formSuaBaiViet')
+            .addEventListener('submit', function (e) {
+
+                var noiDung = quill.root.innerHTML;
+                var noiDungText = quill.getText().trim();
+                document.getElementById('NoiDung').value = noiDung;
+                if (noiDungText.length < 20) {
+                    e.preventDefault();
+                    document.getElementById('loiNoiDung').innerText =
+                        'Nội dung bài viết phải có ít nhất 20 ký tự.';
+                    return;
+                }
+                document.getElementById('loiNoiDung').innerText = '';
+            });
+    }
+    var inputAnh = document.getElementById('anhFile');
+    if (inputAnh) {
+        inputAnh.addEventListener('change', function (e) {
+
+            var file = e.target.files[0];
+            var preview = document.getElementById('previewAnh');
+
+            preview.innerHTML = '';
+
+            if (file) {
+
+                if (!file.type.startsWith('image/')) {
+                    alert('Vui lòng chọn một tệp hình ảnh.');
+                    inputAnh.value = '';
+                    return;
+                }
+
+                var reader = new FileReader();
+
+                reader.onload = function (event) {
+
+                    var img = document.createElement('img');
+
+                    img.src = event.target.result;
+                    img.className = 'image-preview';
+                    img.alt = 'Ảnh xem trước';
+
+                    preview.appendChild(img);
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+    }
+</script>

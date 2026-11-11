@@ -1,0 +1,111 @@
+﻿@using NewsCMS.Models
+@{
+    Layout = "~/Views/Shared/_AdminLTELayout.cshtml";
+}
+@{
+    ViewData["Title"] = "Xóa tài khoản";
+
+    var bang = ViewBag.bang as TaiKhoanModel;
+}
+
+@if (bang == null)
+{
+    <div class="container mt-5">
+        <div class="alert alert-danger">
+            Không tìm thấy thông tin tài khoản cần xóa!
+        </div>
+        <a asp-action="Quanlytaikhoan" class="btn btn-secondary">
+            Quay lại
+        </a>
+    </div>
+}
+else
+{
+    <div class="container mt-5" style="max-width: 650px;">
+
+        <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+
+            <div class="card-header bg-danger text-white text-center py-4">
+                <h3 class="mb-1">
+                    <i class="fas fa-trash-alt"></i>
+                    XÁC NHẬN XÓA TÀI KHOẢN
+                </h3>
+                <p class="mb-0 mt-2">
+                    Vui lòng kiểm tra thông tin trước khi xóa
+                </p>
+            </div>
+
+            <div class="card-body p-4">
+
+                <div class="alert alert-warning">
+                    <strong>Cảnh báo!</strong>
+                    Khi xóa tài khoản, các dữ liệu liên quan như
+                    nhân viên, độc giả, bài viết, bình luận và lịch sử
+                    duyệt có thể bị xóa theo quy tắc của hệ thống.
+                </div>
+
+                <h5 class="mb-3 text-secondary">
+                    Thông tin tài khoản
+                </h5>
+
+                <table class="table table-bordered">
+                    <tr>
+                        <th style="width: 40%">Mã tài khoản</th>
+                        <td>@bang.MaTaiKhoan</td>
+                    </tr>
+
+                    <tr>
+                        <th>Tên đăng nhập</th>
+                        <td>@bang.TenDangNhap</td>
+                    </tr>
+
+                    <tr>
+                        <th>Email</th>
+                        <td>@bang.Email</td>
+                    </tr>
+
+                    <tr>
+                        <th>Mã vai trò</th>
+                        <td>@bang.MaVaiTro</td>
+                    </tr>
+
+                    <tr>
+                        <th>Ngày tạo</th>
+                        <td>@bang.NgayTao.ToString("dd/MM/yyyy")</td>
+                    </tr>
+                </table>
+
+                <form asp-controller="Quanlytaikhoan"
+                      asp-action="Xoatk"
+                      method="post">
+
+                    <input type="hidden"
+                           name="MaTaiKhoan"
+                           value="@bang.MaTaiKhoan" />
+
+                    <input type="hidden"
+                           name="MaVaiTro"
+                           value="@bang.MaVaiTro" />
+
+                    <div class="d-flex justify-content-between mt-4">
+
+                        <a asp-controller="Quanlytaikhoan"
+                           asp-action="Quanlytaikhoan"
+                           class="btn btn-secondary px-4">
+                            <i class="fas fa-arrow-left"></i>
+                            Quay lại
+                        </a>
+
+                        <button type="submit"
+                                class="btn btn-danger px-4"
+                                onclick="return confirm('Bạn có chắc chắn muốn xóa tài khoản này và các dữ liệu liên quan không?')">
+                            <i class="fas fa-trash"></i>
+                            Xác nhận xóa
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+}
