@@ -16,31 +16,137 @@
     var ngayVaoLam = Model?.NgayVaoLam ?? nv?.NgayVaoLam;
 }
 
-<div class="container py-4">
+<style>
+    .slate-form-card {
+        background: #131b2e;
+        border: 1px solid #23314d;
+        border-radius: 16px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+        overflow: hidden;
+    }
+
+    .slate-form-header-edit {
+        background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(217, 119, 6, 0.25));
+        border-bottom: 1px solid rgba(245, 158, 11, 0.3);
+        padding: 22px 28px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+        .slate-form-header-edit h4 {
+            color: #fbbf24;
+            font-weight: 800;
+            font-size: 20px;
+            margin: 0;
+        }
+
+    .form-label {
+        color: #cbd5e1;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .form-control, .form-select {
+        background-color: #1a243d !important;
+        border: 1px solid #2a3a5c !important;
+        color: #f1f5f9 !important;
+        border-radius: 10px !important;
+        padding: 11px 14px !important;
+        font-size: 14px;
+        transition: all 0.2s ease;
+    }
+
+        .form-control:focus, .form-select:focus {
+            border-color: #38bdf8 !important;
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15) !important;
+            background-color: #1e2a47 !important;
+        }
+
+        .form-control::placeholder {
+            color: #64748b;
+        }
+
+    .btn-slate-back {
+        background: #1a243d;
+        border: 1px solid #2a3a5c;
+        color: #38bdf8;
+        border-radius: 10px;
+        padding: 9px 18px;
+        font-weight: 600;
+        font-size: 14px;
+        transition: all 0.2s ease;
+    }
+
+        .btn-slate-back:hover {
+            background: rgba(56, 189, 248, 0.15);
+            border-color: #38bdf8;
+            color: #ffffff;
+        }
+
+    .btn-slate-secondary {
+        background: #1e293b;
+        border: 1px solid #334155;
+        color: #cbd5e1;
+        border-radius: 10px;
+        padding: 10px 22px;
+        font-weight: 600;
+        transition: all 0.2s ease;
+    }
+
+        .btn-slate-secondary:hover {
+            background: #334155;
+            color: #ffffff;
+        }
+
+    .btn-slate-warning {
+        background: linear-gradient(135deg, #f59e0b, #d97706);
+        border: 1px solid rgba(251, 191, 36, 0.4);
+        color: #0f172a;
+        border-radius: 10px;
+        padding: 10px 24px;
+        font-weight: 700;
+        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25);
+        transition: all 0.2s ease;
+    }
+
+        .btn-slate-warning:hover {
+            opacity: 0.92;
+            color: #0f172a;
+            transform: translateY(-1px);
+        }
+
+    .text-danger {
+        color: #f87171 !important;
+        font-size: 13px;
+    }
+</style>
+
+<div class="container py-3" style="max-width: 750px;">
 
     <div class="mb-4">
         <a asp-controller="Nhanvien" asp-action="Nhanvien"
-           class="btn btn-outline-secondary">
-            <i class="fa-solid fa-arrow-left me-1"></i>
+           class="btn btn-slate-back">
+            <i class="bi bi-arrow-left me-1"></i>
             Quay lại danh sách nhân viên
         </a>
     </div>
 
-    <div class="card shadow-sm border-0 mx-auto" style="max-width: 750px;">
+    <div class="slate-form-card mx-auto">
 
-        <div class="card-header bg-warning py-3">
-            <h4 class="mb-0 text-dark">
-                <i class="fa-solid fa-user-pen me-2"></i>
+        <div class="slate-form-header-edit">
+            <h4 class="mb-0">
+                <i class="bi bi-person-gear me-2"></i>
                 Sửa thông tin nhân viên
             </h4>
         </div>
 
-        <div class="card-body p-4">
+        <div class="p-4">
 
             @if (ViewBag.thongbao != null)
             {
-                <div class="alert alert-danger">
-                    @ViewBag.thongbao
+                <div class="alert rounded-3 p-3 mb-4" style="background: rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.3); color: #fca5a5;">
+                    <i class="bi bi-exclamation-circle me-1"></i> @ViewBag.thongbao
                 </div>
             }
 
@@ -78,7 +184,7 @@
 
                     </select>
 
-                    <small class="text-muted">
+                    <small class="d-block mt-1" style="color: #64748b;">
                         Tài khoản đang sử dụng được hiển thị ở dòng đầu tiên.
                         Bạn có thể chọn tài khoản khác bên dưới.
                     </small>
@@ -125,14 +231,14 @@
                           class="text-danger"></span>
                 </div>
 
-                <div class="d-flex justify-content-end gap-2">
+                <div class="d-flex justify-content-end gap-2 pt-3 border-top" style="border-color: #23314d !important;">
                     <a asp-controller="Nhanvien" asp-action="Nhanvien"
-                       class="btn btn-secondary">
+                       class="btn btn-slate-secondary">
                         Hủy
                     </a>
 
-                    <button type="submit" class="btn btn-warning">
-                        <i class="fa-solid fa-floppy-disk me-1"></i>
+                    <button type="submit" class="btn btn-slate-warning">
+                        <i class="bi bi-floppy me-1"></i>
                         Lưu thay đổi
                     </button>
                 </div>

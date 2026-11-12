@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\giaodienbaiviet\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\giaodienbaiviet\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\trangchu\\trangdau.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\trangchu\\trangdau.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -11,12 +15,104 @@
       "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\hoso\\hoso.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\controllers\\hosocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\controllers\\hosocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\quanlybaiviet\\xoa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\quanlybaiviet\\xoa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\binhluan\\binhluan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\binhluan\\binhluan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\binhluan\\xacnhanxoa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\binhluan\\xacnhanxoa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\danhmuc\\themdanhmuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\danhmuc\\themdanhmuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\danhmuc\\suadanhmuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\danhmuc\\suadanhmuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\danhmuc\\danhmuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\danhmuc\\danhmuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\lichsuduyet\\lichsuduyet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\lichsuduyet\\lichsuduyet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\nhanvien\\nhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\nhanvien\\nhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\nhanvien\\suanhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\nhanvien\\suanhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\nhanvien\\themnhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\nhanvien\\themnhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\nhanvien\\xoanhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\nhanvien\\xoanhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\quanlybaiviet\\quanlybaiviet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\quanlybaiviet\\quanlybaiviet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\quanlybaiviet\\sua.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\quanlybaiviet\\sua.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\quanlybaiviet\\them.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\quanlybaiviet\\them.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\quanlytaikhoan\\quanlytaikhoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\quanlytaikhoan\\quanlytaikhoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\quanlytaikhoan\\suataikhoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\quanlytaikhoan\\suataikhoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\quanlytaikhoan\\xoa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\quanlytaikhoan\\xoa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\shared\\_adminltelayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\shared\\_adminltelayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\trangchu\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\trangchu\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\trangchu\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\trangchu\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\trangchu\\nhapma.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\trangchu\\nhapma.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\trangchu\\taolaimk.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\trangchu\\taolaimk.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\trangchu\\quenmatkhau.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\trangchu\\quenmatkhau.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\controllers\\trangchucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\controllers\\trangchucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\controllers\\hosocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\controllers\\hosocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\controllers\\quanlytaikhoancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,16 +127,8 @@
       "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\controllers\\giaodienbaivietcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\binhluan\\binhluan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\binhluan\\binhluan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\controllers\\binhluancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\controllers\\binhluancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\binhluan\\xacnhanxoa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\binhluan\\xacnhanxoa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\models\\lichsuduyetmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,10 +147,6 @@
       "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\controllers\\lichsuduyetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\giaodienbaiviet\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\giaodienbaiviet\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\controllers\\nhanviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\controllers\\nhanviencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -75,88 +159,16 @@
       "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\controllers\\thongkecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\danhmuc\\danhmuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\danhmuc\\danhmuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\controllers\\danhmuccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\controllers\\danhmuccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\shared\\_adminltelayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\shared\\_adminltelayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\thongke\\thongke.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\thongke\\thongke.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\trangchu\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\trangchu\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\controllers\\quanlybaivietcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\controllers\\quanlybaivietcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\trangchu\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\trangchu\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\quanlytaikhoan\\xoa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\quanlytaikhoan\\xoa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\quanlybaiviet\\xoa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\quanlybaiviet\\xoa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\quanlybaiviet\\them.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\quanlybaiviet\\them.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\quanlybaiviet\\sua.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\quanlybaiviet\\sua.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\quanlybaiviet\\quanlybaiviet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\quanlybaiviet\\quanlybaiviet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\quanlytaikhoan\\suataikhoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\quanlytaikhoan\\suataikhoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\quanlytaikhoan\\quanlytaikhoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\quanlytaikhoan\\quanlytaikhoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\nhanvien\\xoanhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\nhanvien\\xoanhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\nhanvien\\themnhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\nhanvien\\themnhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\nhanvien\\suanhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\nhanvien\\suanhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\nhanvien\\nhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\nhanvien\\nhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\lichsuduyet\\lichsuduyet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\lichsuduyet\\lichsuduyet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\danhmuc\\themdanhmuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\danhmuc\\themdanhmuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\views\\danhmuc\\suadanhmuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|solutionrelative:newscms\\views\\danhmuc\\suadanhmuc.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{87844A74-747F-9B78-DEDC-EDD5A3756067}|NewsCMS\\NewsCMS.csproj|d:\\kienthuccntt\\documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\newscms\\newscms\\newscms\\models\\thongkeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -190,76 +202,349 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "TrangchuController.cs",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Controllers\\TrangchuController.cs",
-              "RelativeDocumentMoniker": "NewsCMS\\Controllers\\TrangchuController.cs",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Controllers\\TrangchuController.cs",
-              "RelativeToolTip": "NewsCMS\\Controllers\\TrangchuController.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAowF8AAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-11T13:23:48.914Z",
+              "Title": "Xoa.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlybaiviet\\Xoa.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Quanlybaiviet\\Xoa.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlybaiviet\\Xoa.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Quanlybaiviet\\Xoa.cshtml",
+              "ViewState": "AgIAAFwBAAAAAAAAAADwv3QBAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T08:00:35.3Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "HosoController.cs",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Controllers\\HosoController.cs",
-              "RelativeDocumentMoniker": "NewsCMS\\Controllers\\HosoController.cs",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Controllers\\HosoController.cs",
-              "RelativeToolTip": "NewsCMS\\Controllers\\HosoController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAYwBgAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-12T09:02:31.922Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Trangdau.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Trangchu\\Trangdau.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Trangchu\\Trangdau.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Trangchu\\Trangdau.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Trangchu\\Trangdau.cshtml",
-              "ViewState": "AgIAAAQEAAAAAAAAAAAmwCwEAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-10T17:22:34.312Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Hoso.cshtml",
               "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Hoso\\Hoso.cshtml",
               "RelativeDocumentMoniker": "NewsCMS\\Views\\Hoso\\Hoso.cshtml",
               "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Hoso\\Hoso.cshtml",
               "RelativeToolTip": "NewsCMS\\Views\\Hoso\\Hoso.cshtml",
-              "ViewState": "AgIAADoAAAAAAAAAAAAmwFkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAL4AAAAAAAAAAADwv8oAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-11-12T09:02:10.31Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Themdanhmuc.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Danhmuc\\Themdanhmuc.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Danhmuc\\Themdanhmuc.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Danhmuc\\Themdanhmuc.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Danhmuc\\Themdanhmuc.cshtml",
+              "ViewState": "AgIAACsBAAAAAAAAAAAmwFMBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T07:59:52.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Trangdau.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Trangchu\\Trangdau.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Trangchu\\Trangdau.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Trangchu\\Trangdau.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Trangchu\\Trangdau.cshtml",
+              "ViewState": "AgIAAOsDAAAAAAAAAADgv/gDAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-10T17:22:34.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChiTiet.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Giaodienbaiviet\\ChiTiet.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Giaodienbaiviet\\ChiTiet.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Giaodienbaiviet\\ChiTiet.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Giaodienbaiviet\\ChiTiet.cshtml",
+              "ViewState": "AgIAAF4DAAAAAAAAAAAAAHEDAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T13:16:10.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Danhmuc.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Danhmuc\\Danhmuc.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Danhmuc\\Danhmuc.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Danhmuc\\Danhmuc.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Danhmuc\\Danhmuc.cshtml",
+              "ViewState": "AgIAAGUBAAAAAAAAAAAmwI0BAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T07:41:55.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "QuanlytaikhoanController.cs",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Controllers\\QuanlytaikhoanController.cs",
-              "RelativeDocumentMoniker": "NewsCMS\\Controllers\\QuanlytaikhoanController.cs",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Controllers\\QuanlytaikhoanController.cs",
-              "RelativeToolTip": "NewsCMS\\Controllers\\QuanlytaikhoanController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-11T14:05:37.878Z",
+              "Title": "Binhluan.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Binhluan\\Binhluan.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Binhluan\\Binhluan.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Binhluan\\Binhluan.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Binhluan\\Binhluan.cshtml",
+              "ViewState": "AgIAAH4BAAAAAAAAAADwv5YBAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T14:32:06.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Suadanhmuc.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Danhmuc\\Suadanhmuc.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Danhmuc\\Suadanhmuc.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Danhmuc\\Suadanhmuc.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Danhmuc\\Suadanhmuc.cshtml",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAmwJUAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T07:59:47.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Lichsuduyet.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Lichsuduyet\\Lichsuduyet.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Lichsuduyet\\Lichsuduyet.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Lichsuduyet\\Lichsuduyet.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Lichsuduyet\\Lichsuduyet.cshtml",
+              "ViewState": "AgIAAKABAAAAAAAAAAAmwMgBAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T07:59:58.742Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Xacnhanxoa.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Binhluan\\Xacnhanxoa.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Binhluan\\Xacnhanxoa.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Binhluan\\Xacnhanxoa.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Binhluan\\Xacnhanxoa.cshtml",
+              "ViewState": "AgIAANQAAAAAAAAAAAAmwPwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T12:30:50.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Nhanvien.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Nhanvien\\Nhanvien.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Nhanvien\\Nhanvien.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Nhanvien\\Nhanvien.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Nhanvien\\Nhanvien.cshtml",
+              "ViewState": "AgIAAFcBAAAAAAAAAAAmwH8BAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-10T13:28:10.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Suanhanvien.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Nhanvien\\Suanhanvien.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Nhanvien\\Suanhanvien.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Nhanvien\\Suanhanvien.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Nhanvien\\Suanhanvien.cshtml",
+              "ViewState": "AgIAANQAAAAAAAAAAAAmwPwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-10T13:05:22.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Themnhanvien.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Nhanvien\\Themnhanvien.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Nhanvien\\Themnhanvien.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Nhanvien\\Themnhanvien.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Nhanvien\\Themnhanvien.cshtml",
+              "ViewState": "AgIAALsAAAAAAAAAAAAmwOMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-10T13:03:37.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Xoanhanvien.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Nhanvien\\Xoanhanvien.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Nhanvien\\Xoanhanvien.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Nhanvien\\Xoanhanvien.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Nhanvien\\Xoanhanvien.cshtml",
+              "ViewState": "AgIAAOMAAAAAAAAAAAAmwAsBAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T08:00:17.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Quanlybaiviet.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlybaiviet\\Quanlybaiviet.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Quanlybaiviet\\Quanlybaiviet.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlybaiviet\\Quanlybaiviet.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Quanlybaiviet\\Quanlybaiviet.cshtml",
+              "ViewState": "AgIAAJECAAAAAAAAAAAmwLkCAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T08:00:23.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Sua.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlybaiviet\\Sua.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Quanlybaiviet\\Sua.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlybaiviet\\Sua.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Quanlybaiviet\\Sua.cshtml",
+              "ViewState": "AgIAADkCAAAAAAAAAAAmwGECAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T08:00:27.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Them.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlybaiviet\\Them.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Quanlybaiviet\\Them.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlybaiviet\\Them.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Quanlybaiviet\\Them.cshtml",
+              "ViewState": "AgIAAKoBAAAAAAAAAAAmwNIBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T08:00:31.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Quanlytaikhoan.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlytaikhoan\\Quanlytaikhoan.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Quanlytaikhoan\\Quanlytaikhoan.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlytaikhoan\\Quanlytaikhoan.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Quanlytaikhoan\\Quanlytaikhoan.cshtml",
+              "ViewState": "AgIAAA0BAAAAAAAAAAAmwDUBAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T08:00:39.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Suataikhoan.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlytaikhoan\\Suataikhoan.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Quanlytaikhoan\\Suataikhoan.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlytaikhoan\\Suataikhoan.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Quanlytaikhoan\\Suataikhoan.cshtml",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAmwMcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T08:00:44.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Xoa.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlytaikhoan\\Xoa.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Quanlytaikhoan\\Xoa.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlytaikhoan\\Xoa.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Quanlytaikhoan\\Xoa.cshtml",
+              "ViewState": "AgIAALMAAAAAAAAAAAAmwNsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T08:00:48.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "_AdminLTELayout.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Shared\\_AdminLTELayout.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Shared\\_AdminLTELayout.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Shared\\_AdminLTELayout.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Shared\\_AdminLTELayout.cshtml",
+              "ViewState": "AgIAAEABAAAAAAAAAAAmwGgBAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-10T17:21:49.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Dangnhap.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Trangchu\\Dangnhap.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Trangchu\\Dangnhap.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Trangchu\\Dangnhap.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Trangchu\\Dangnhap.cshtml",
+              "ViewState": "AgIAAAQBAAAAAAAAAADwvw8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T08:01:05.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Nhapma.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Trangchu\\Nhapma.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Trangchu\\Nhapma.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Trangchu\\Nhapma.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Trangchu\\Nhapma.cshtml",
+              "ViewState": "AgIAAN8AAAAAAAAAAADwv+wAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-12T10:20:36.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Taolaimk.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Trangchu\\Taolaimk.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Trangchu\\Taolaimk.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Trangchu\\Taolaimk.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Trangchu\\Taolaimk.cshtml",
+              "ViewState": "AgIAANgAAAAAAAAAAAAmwAABAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-12T10:20:18.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Quenmatkhau.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Trangchu\\Quenmatkhau.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Trangchu\\Quenmatkhau.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Trangchu\\Quenmatkhau.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Trangchu\\Quenmatkhau.cshtml",
+              "ViewState": "AgIAAPMAAAAAAAAAAAAmwBsBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-12T10:20:27.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Dangky.cshtml",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Trangchu\\Dangky.cshtml",
+              "RelativeDocumentMoniker": "NewsCMS\\Views\\Trangchu\\Dangky.cshtml",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Trangchu\\Dangky.cshtml",
+              "RelativeToolTip": "NewsCMS\\Views\\Trangchu\\Dangky.cshtml",
+              "ViewState": "AgIAAPEAAAAAAAAAAADwvwkBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-11T08:01:00.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
               "Title": "TaikhoanModel.cs",
               "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Models\\TaikhoanModel.cs",
               "RelativeDocumentMoniker": "NewsCMS\\Models\\TaikhoanModel.cs",
@@ -267,12 +552,48 @@
               "RelativeToolTip": "NewsCMS\\Models\\TaikhoanModel.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-12T09:08:30.531Z",
+              "WhenOpened": "2026-11-12T09:08:30.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "TrangchuController.cs",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Controllers\\TrangchuController.cs",
+              "RelativeDocumentMoniker": "NewsCMS\\Controllers\\TrangchuController.cs",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Controllers\\TrangchuController.cs",
+              "RelativeToolTip": "NewsCMS\\Controllers\\TrangchuController.cs",
+              "ViewState": "AgIAACgBAAAAAAAAAADwvzMBAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T13:23:48.914Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 28,
+              "Title": "QuanlytaikhoanController.cs",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Controllers\\QuanlytaikhoanController.cs",
+              "RelativeDocumentMoniker": "NewsCMS\\Controllers\\QuanlytaikhoanController.cs",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Controllers\\QuanlytaikhoanController.cs",
+              "RelativeToolTip": "NewsCMS\\Controllers\\QuanlytaikhoanController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T14:05:37.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "HosoController.cs",
+              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Controllers\\HosoController.cs",
+              "RelativeDocumentMoniker": "NewsCMS\\Controllers\\HosoController.cs",
+              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Controllers\\HosoController.cs",
+              "RelativeToolTip": "NewsCMS\\Controllers\\HosoController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAYwBgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-12T09:02:31.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
               "Title": "GiaodienbaivietController.cs",
               "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Controllers\\GiaodienbaivietController.cs",
               "RelativeDocumentMoniker": "NewsCMS\\Controllers\\GiaodienbaivietController.cs",
@@ -280,25 +601,11 @@
               "RelativeToolTip": "NewsCMS\\Controllers\\GiaodienbaivietController.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAgwCIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-11T13:14:48.193Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-11T13:14:48.193Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Binhluan.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Binhluan\\Binhluan.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Binhluan\\Binhluan.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Binhluan\\Binhluan.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Binhluan\\Binhluan.cshtml",
-              "ViewState": "AgIAAGgAAAAAAAAAAADwv5UAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-11T14:32:06.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 31,
               "Title": "BinhluanController.cs",
               "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Controllers\\BinhluanController.cs",
               "RelativeDocumentMoniker": "NewsCMS\\Controllers\\BinhluanController.cs",
@@ -306,24 +613,11 @@
               "RelativeToolTip": "NewsCMS\\Controllers\\BinhluanController.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAqwCwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-11T14:39:46.79Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-11T14:39:46.79Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Xacnhanxoa.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Binhluan\\Xacnhanxoa.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Binhluan\\Xacnhanxoa.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Binhluan\\Xacnhanxoa.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Binhluan\\Xacnhanxoa.cshtml",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAmwD8AAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-11T12:30:50.381Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 32,
               "Title": "LichsuduyetModel.cs",
               "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Models\\LichsuduyetModel.cs",
               "RelativeDocumentMoniker": "NewsCMS\\Models\\LichsuduyetModel.cs",
@@ -335,7 +629,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 35,
               "Title": "LichsuduyetController.cs",
               "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Controllers\\LichsuduyetController.cs",
               "RelativeDocumentMoniker": "NewsCMS\\Controllers\\LichsuduyetController.cs",
@@ -347,7 +641,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 37,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "NewsCMS\\Controllers\\HomeController.cs",
@@ -359,7 +653,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 34,
               "Title": "NhanvienModel.cs",
               "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Models\\NhanvienModel.cs",
               "RelativeDocumentMoniker": "NewsCMS\\Models\\NhanvienModel.cs",
@@ -371,7 +665,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 33,
               "Title": "BinhluanModel.cs",
               "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Models\\BinhluanModel.cs",
               "RelativeDocumentMoniker": "NewsCMS\\Models\\BinhluanModel.cs",
@@ -383,7 +677,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 36,
               "Title": "NhanvienController.cs",
               "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Controllers\\NhanvienController.cs",
               "RelativeDocumentMoniker": "NewsCMS\\Controllers\\NhanvienController.cs",
@@ -395,31 +689,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ChiTiet.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Giaodienbaiviet\\ChiTiet.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Giaodienbaiviet\\ChiTiet.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Giaodienbaiviet\\ChiTiet.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Giaodienbaiviet\\ChiTiet.cshtml",
-              "ViewState": "AgIAAIcDAAAAAAAAAADwv58DAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-11T13:16:10.451Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Danhmuc.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Danhmuc\\Danhmuc.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Danhmuc\\Danhmuc.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Danhmuc\\Danhmuc.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Danhmuc\\Danhmuc.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-11T07:41:55.172Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 39,
               "Title": "DanhmucController.cs",
               "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Controllers\\DanhmucController.cs",
               "RelativeDocumentMoniker": "NewsCMS\\Controllers\\DanhmucController.cs",
@@ -431,7 +701,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 40,
               "Title": "Thongke.cshtml",
               "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Thongke\\Thongke.cshtml",
               "RelativeDocumentMoniker": "NewsCMS\\Views\\Thongke\\Thongke.cshtml",
@@ -443,7 +713,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 38,
               "Title": "ThongkeController.cs",
               "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Controllers\\ThongkeController.cs",
               "RelativeDocumentMoniker": "NewsCMS\\Controllers\\ThongkeController.cs",
@@ -455,31 +725,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "_AdminLTELayout.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Shared\\_AdminLTELayout.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Shared\\_AdminLTELayout.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Shared\\_AdminLTELayout.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Shared\\_AdminLTELayout.cshtml",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAAAKAAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-10T17:21:49.363Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Dangnhap.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Trangchu\\Dangnhap.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Trangchu\\Dangnhap.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Trangchu\\Dangnhap.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Trangchu\\Dangnhap.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-11T08:01:05.383Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 41,
               "Title": "QuanlybaivietController.cs",
               "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Controllers\\QuanlybaivietController.cs",
               "RelativeDocumentMoniker": "NewsCMS\\Controllers\\QuanlybaivietController.cs",
@@ -491,151 +737,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Xoa.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlytaikhoan\\Xoa.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Quanlytaikhoan\\Xoa.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlytaikhoan\\Xoa.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Quanlytaikhoan\\Xoa.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-11T08:00:48.697Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Dangky.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Trangchu\\Dangky.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Trangchu\\Dangky.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Trangchu\\Dangky.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Trangchu\\Dangky.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACUAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-11T08:01:00.109Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Suataikhoan.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlytaikhoan\\Suataikhoan.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Quanlytaikhoan\\Suataikhoan.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlytaikhoan\\Suataikhoan.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Quanlytaikhoan\\Suataikhoan.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-11T08:00:44.825Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Quanlytaikhoan.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlytaikhoan\\Quanlytaikhoan.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Quanlytaikhoan\\Quanlytaikhoan.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlytaikhoan\\Quanlytaikhoan.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Quanlytaikhoan\\Quanlytaikhoan.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-11T08:00:39.79Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Xoa.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlybaiviet\\Xoa.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Quanlybaiviet\\Xoa.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlybaiviet\\Xoa.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Quanlybaiviet\\Xoa.cshtml",
-              "ViewState": "AgIAAE0BAAAAAAAAAAAAAFsBAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-11T08:00:35.3Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Them.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlybaiviet\\Them.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Quanlybaiviet\\Them.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlybaiviet\\Them.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Quanlybaiviet\\Them.cshtml",
-              "ViewState": "AgIAAHYBAAAAAAAAAAAAAIUBAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-11T08:00:31.366Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Sua.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlybaiviet\\Sua.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Quanlybaiviet\\Sua.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlybaiviet\\Sua.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Quanlybaiviet\\Sua.cshtml",
-              "ViewState": "AgIAAAACAAAAAAAAAAAAAAoCAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-11T08:00:27.134Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Quanlybaiviet.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlybaiviet\\Quanlybaiviet.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Quanlybaiviet\\Quanlybaiviet.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Quanlybaiviet\\Quanlybaiviet.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Quanlybaiviet\\Quanlybaiviet.cshtml",
-              "ViewState": "AgIAAJcCAAAAAAAAAAAAAKoCAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-11T08:00:23.053Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Xoanhanvien.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Nhanvien\\Xoanhanvien.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Nhanvien\\Xoanhanvien.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Nhanvien\\Xoanhanvien.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Nhanvien\\Xoanhanvien.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-11T08:00:17.696Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Lichsuduyet.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Lichsuduyet\\Lichsuduyet.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Lichsuduyet\\Lichsuduyet.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Lichsuduyet\\Lichsuduyet.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Lichsuduyet\\Lichsuduyet.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-11T07:59:58.742Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Themdanhmuc.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Danhmuc\\Themdanhmuc.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Danhmuc\\Themdanhmuc.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Danhmuc\\Themdanhmuc.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Danhmuc\\Themdanhmuc.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-11T07:59:52.586Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Suadanhmuc.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Danhmuc\\Suadanhmuc.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Danhmuc\\Suadanhmuc.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Danhmuc\\Suadanhmuc.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Danhmuc\\Suadanhmuc.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-11T07:59:47.266Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "ThongKeViewModel.cs",
               "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Models\\ThongKeViewModel.cs",
               "RelativeDocumentMoniker": "NewsCMS\\Models\\ThongKeViewModel.cs",
@@ -647,7 +749,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "users.html",
               "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\wwwroot\\admin-lte-v4.10.1\\dist\\users.html",
               "RelativeDocumentMoniker": "NewsCMS\\wwwroot\\admin-lte-v4.10.1\\dist\\users.html",
@@ -659,7 +761,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "starter.html",
               "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\wwwroot\\admin-lte-v4.10.1\\dist\\starter.html",
               "RelativeDocumentMoniker": "NewsCMS\\wwwroot\\admin-lte-v4.10.1\\dist\\starter.html",
@@ -671,7 +773,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "index3.html",
               "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\wwwroot\\admin-lte-v4.10.1\\dist\\index3.html",
               "RelativeDocumentMoniker": "NewsCMS\\wwwroot\\admin-lte-v4.10.1\\dist\\index3.html",
@@ -683,7 +785,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 47,
               "Title": "index2.html",
               "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\wwwroot\\admin-lte-v4.10.1\\dist\\index2.html",
               "RelativeDocumentMoniker": "NewsCMS\\wwwroot\\admin-lte-v4.10.1\\dist\\index2.html",
@@ -695,7 +797,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "index.html",
               "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\wwwroot\\admin-lte-v4.10.1\\dist\\index.html",
               "RelativeDocumentMoniker": "NewsCMS\\wwwroot\\admin-lte-v4.10.1\\dist\\index.html",
@@ -704,42 +806,6 @@
               "ViewState": "AgIAAKQHAAAAAAAAAAAcwK8HAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-11-10T13:59:15.274Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Nhanvien.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Nhanvien\\Nhanvien.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Nhanvien\\Nhanvien.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Nhanvien\\Nhanvien.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Nhanvien\\Nhanvien.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-10T13:28:10.499Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Suanhanvien.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Nhanvien\\Suanhanvien.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Nhanvien\\Suanhanvien.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Nhanvien\\Suanhanvien.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Nhanvien\\Suanhanvien.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-10T13:05:22.189Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Themnhanvien.cshtml",
-              "DocumentMoniker": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Nhanvien\\Themnhanvien.cshtml",
-              "RelativeDocumentMoniker": "NewsCMS\\Views\\Nhanvien\\Themnhanvien.cshtml",
-              "ToolTip": "D:\\kienthuccntt\\Documents\\th\u1EF1c t\u1EADp chuy\u00EAn \u0111\u1EC1 \u0111\u1ED3 \u00E1n 2\\NewsCMS\\NewsCMS\\NewsCMS\\Views\\Nhanvien\\Themnhanvien.cshtml",
-              "RelativeToolTip": "NewsCMS\\Views\\Nhanvien\\Themnhanvien.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-10T13:03:37.569Z"
             }
           ]
         }

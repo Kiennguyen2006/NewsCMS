@@ -6,13 +6,95 @@
     var bang = ViewBag.bang;
 }
 
-<div class="container mt-4">
-    <div class="card shadow">
-        <div class="card-header bg-primary text-white">
-            <h4 class="mb-0">Sửa danh mục</h4>
+<style>
+    .slate-form-card {
+        background: #131b2e;
+        border: 1px solid #23314d;
+        border-radius: 16px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+        overflow: hidden;
+    }
+
+    .slate-form-header-edit {
+        background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(217, 119, 6, 0.25));
+        border-bottom: 1px solid rgba(245, 158, 11, 0.3);
+        padding: 22px 28px;
+    }
+
+        .slate-form-header-edit h4 {
+            color: #fbbf24;
+            font-weight: 800;
+            font-size: 20px;
+            margin: 0;
+        }
+
+    .form-label {
+        color: #cbd5e1;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .form-control, .form-select {
+        background-color: #1a243d !important;
+        border: 1px solid #2a3a5c !important;
+        color: #f1f5f9 !important;
+        border-radius: 10px !important;
+        padding: 11px 14px !important;
+        font-size: 14px;
+        transition: all 0.2s ease;
+    }
+
+        .form-control:focus, .form-select:focus {
+            border-color: #38bdf8 !important;
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15) !important;
+            background-color: #1e2a47 !important;
+        }
+
+    .btn-slate-warning {
+        background: linear-gradient(135deg, #f59e0b, #d97706);
+        border: 1px solid rgba(251, 191, 36, 0.4);
+        color: #0f172a;
+        border-radius: 10px;
+        padding: 10px 24px;
+        font-weight: 700;
+        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25);
+        transition: all 0.2s ease;
+    }
+
+        .btn-slate-warning:hover {
+            opacity: 0.92;
+            color: #0f172a;
+            transform: translateY(-1px);
+        }
+
+    .btn-slate-secondary {
+        background: #1e293b;
+        border: 1px solid #334155;
+        color: #cbd5e1;
+        border-radius: 10px;
+        padding: 10px 22px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+
+        .btn-slate-secondary:hover {
+            background: #334155;
+            color: #ffffff;
+        }
+</style>
+
+<div class="container mt-4" style="max-width: 750px;">
+    <div class="slate-form-card">
+        <div class="slate-form-header-edit">
+            <h4 class="mb-0">
+                <i class="bi bi-pencil-square me-2"></i>
+                Sửa danh mục
+            </h4>
         </div>
 
-        <div class="card-body">
+        <div class="p-4">
             <form asp-controller="Danhmuc" asp-action="Suadm" method="post">
 
                 @Html.AntiForgeryToken()
@@ -32,7 +114,7 @@
                               rows="4">@bang.MoTa</textarea>
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-4">
                     <label class="form-label">Trạng thái</label>
                     <select name="TrangThai" class="form-select">
                         @if (bang.TrangThai == true)
@@ -48,14 +130,16 @@
                     </select>
                 </div>
 
-                <div class="d-flex gap-2">
-                    <button type="submit" class="btn btn-primary">
+                <div class="d-flex gap-2 pt-3 border-top" style="border-color: #23314d !important;">
+                    <button type="submit" class="btn btn-slate-warning">
+                        <i class="bi bi-floppy me-1"></i>
                         Lưu thay đổi
                     </button>
 
                     <a asp-controller="Danhmuc"
                        asp-action="Danhmuc"
-                       class="btn btn-secondary">
+                       class="btn btn-slate-secondary">
+                        <i class="bi bi-arrow-left me-1"></i>
                         Quay lại
                     </a>
                 </div>

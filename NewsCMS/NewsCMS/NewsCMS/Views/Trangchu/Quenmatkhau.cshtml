@@ -11,8 +11,47 @@
 
     body {
         font-family: 'Segoe UI', sans-serif;
+        background: #0f172a;
         min-height: 100vh;
-        background: linear-gradient(135deg, #0f172a, #1e40af, #6366f1);
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    .snowflake, .star-dust {
+        position: fixed;
+        top: -20px;
+        z-index: 99999;
+        user-select: none;
+        pointer-events: none;
+        animation: fall linear infinite;
+    }
+
+    .snowflake {
+        color: #93c5fd;
+        text-shadow: 0 0 6px rgba(147, 197, 253, 0.6);
+    }
+
+    .star-dust {
+        color: #38bdf8;
+        text-shadow: 0 0 8px rgba(56, 189, 248, 0.8);
+        font-size: 11px;
+    }
+
+    @@keyframes fall {
+        0% {
+            transform: translateY(-20px) translateX(0) rotate(0deg);
+            opacity: 0.9;
+        }
+
+        50% {
+            transform: translateY(50vh) translateX(15px) rotate(180deg);
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translateY(105vh) translateX(-15px) rotate(360deg);
+            opacity: 0.1;
+        }
     }
 
     .forgot-page {
@@ -22,41 +61,21 @@
         align-items: center;
         padding: 25px;
         position: relative;
-        overflow: hidden;
-    }
-
-    .circle {
-        position: absolute;
-        border-radius: 50%;
-        background: rgba(255,255,255,0.08);
-        animation: float 7s ease-in-out infinite;
-    }
-
-    .circle-one {
-        width: 280px;
-        height: 280px;
-        top: -80px;
-        left: -70px;
-    }
-
-    .circle-two {
-        width: 200px;
-        height: 200px;
-        bottom: -60px;
-        right: -40px;
-        animation-delay: 2s;
+        z-index: 2;
     }
 
     .forgot-card {
         width: 100%;
         max-width: 430px;
         padding: 42px 38px;
-        background: rgba(255,255,255,0.96);
+        background: #1e293b;
+        border: 1px solid #334155;
         border-radius: 22px;
-        box-shadow: 0 25px 70px rgba(0,0,0,0.25);
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
         position: relative;
         z-index: 1;
         animation: appear 0.8s ease forwards;
+        color: #f8fafc;
     }
 
     .forgot-header {
@@ -72,21 +91,22 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: linear-gradient(135deg, #2563eb, #6366f1);
+        background: linear-gradient(135deg, #1e3a8a, #2563eb);
         color: white;
         font-size: 27px;
         font-weight: bold;
-        box-shadow: 0 8px 20px rgba(37,99,235,0.3);
+        box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
     }
 
     .forgot-header h2 {
-        color: #172554;
+        color: #f8fafc;
         font-size: 26px;
         margin-bottom: 9px;
+        font-weight: 800;
     }
 
     .forgot-header p {
-        color: #64748b;
+        color: #94a3b8;
         font-size: 14px;
         line-height: 1.6;
     }
@@ -97,7 +117,7 @@
 
         .form-group label {
             display: block;
-            color: #334155;
+            color: #cbd5e1;
             font-size: 14px;
             font-weight: 600;
             margin-bottom: 9px;
@@ -107,23 +127,18 @@
         width: 100%;
         height: 51px;
         padding: 0 15px;
-        border: 1.5px solid #dbe3ef;
+        border: 1.5px solid #475569;
         border-radius: 11px;
         outline: none;
         font-size: 14px;
-        color: #1e293b;
-        background: #f8fafc;
+        color: #f8fafc;
+        background: #0f172a;
         transition: all 0.3s ease;
     }
 
         .input-box input:focus {
             border-color: #3b82f6;
-            background: white;
-            box-shadow: 0 0 0 4px rgba(59,130,246,0.12);
-        }
-
-        .input-box input::placeholder {
-            color: #94a3b8;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
         }
 
     .forgot-button {
@@ -133,25 +148,25 @@
         border-radius: 11px;
         color: white;
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 700;
         cursor: pointer;
-        background: linear-gradient(135deg, #2563eb, #6366f1);
-        box-shadow: 0 8px 18px rgba(37,99,235,0.25);
+        background: linear-gradient(135deg, #1e3a8a, #2563eb);
+        box-shadow: 0 8px 18px rgba(37, 99, 235, 0.3);
         transition: all 0.3s ease;
     }
 
         .forgot-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 25px rgba(37,99,235,0.35);
+            box-shadow: 0 12px 25px rgba(37, 99, 235, 0.4);
         }
 
     .forgot-message {
         padding: 12px;
         margin-bottom: 20px;
         border-radius: 9px;
-        background: #fee2e2;
-        border: 1px solid #fecaca;
-        color: #b91c1c;
+        background: rgba(239, 68, 68, 0.2);
+        border: 1px solid #f87171;
+        color: #fca5a5;
         font-size: 13px;
         text-align: center;
     }
@@ -160,9 +175,9 @@
         padding: 12px;
         margin-bottom: 20px;
         border-radius: 9px;
-        background: #dcfce7;
-        border: 1px solid #bbf7d0;
-        color: #15803d;
+        background: rgba(34, 197, 94, 0.2);
+        border: 1px solid #4ade80;
+        color: #86efac;
         font-size: 13px;
         text-align: center;
     }
@@ -174,9 +189,9 @@
     }
 
         .back-login a {
-            color: #2563eb;
+            color: #60a5fa;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
         }
 
             .back-login a:hover {
@@ -186,7 +201,7 @@
     .forgot-footer {
         text-align: center;
         margin-top: 28px;
-        color: #94a3b8;
+        color: #64748b;
         font-size: 12px;
     }
 
@@ -201,90 +216,69 @@
             transform: translateY(0);
         }
     }
-
-    @@keyframes float {
-        0%, 100% {
-            transform: translateY(0);
-        }
-
-        50% {
-            transform: translateY(-25px);
-        }
-    }
-
-    @@media (max-width: 480px) {
-        .forgot-card {
-            padding: 32px 23px;
-        }
-
-        .forgot-header h2 {
-            font-size: 23px;
-        }
-    }
 </style>
 
 <div class="forgot-page">
-
-    <div class="circle circle-one"></div>
-    <div class="circle circle-two"></div>
-
     <div class="forgot-card">
-
         <div class="forgot-header">
             <div class="forgot-logo">N</div>
             <h2>Quên mật khẩu?</h2>
-            <p>
-                Vui lòng nhập địa chỉ email đã đăng ký
-                để kiểm tra tài khoản của bạn.
-            </p>
+            <p>Vui lòng nhập địa chỉ email đã đăng ký để kiểm tra tài khoản của bạn.</p>
         </div>
 
-        <form method="post"
-              asp-controller="Trangchu"
-              asp-action="Quenmatkhau">
-
+        <form method="post" asp-controller="Trangchu" asp-action="Quenmatkhau">
             @if (ViewBag.thongbao != null)
             {
-                <div class="forgot-message">
-                    @ViewBag.thongbao
-                </div>
+                <div class="forgot-message">@ViewBag.thongbao</div>
             }
-
             @if (ViewBag.thanhcong != null)
             {
-                <div class="success-message">
-                    @ViewBag.thanhcong
-                </div>
+                <div class="success-message">@ViewBag.thanhcong</div>
             }
 
             <div class="form-group">
                 <label for="Email">Địa chỉ Email</label>
-
                 <div class="input-box">
-                    <input type="email"
-                           id="Email"
-                           name="Email"
-                           placeholder="Nhập email của bạn"
-                           autocomplete="email"
-                           required />
+                    <input type="email" id="Email" name="Email" placeholder="Nhập email của bạn" autocomplete="email" required />
                 </div>
             </div>
 
-            <button type="submit" class="forgot-button">
-                Kiểm tra email
-            </button>
-
+            <button type="submit" class="forgot-button">Kiểm tra email</button>
         </form>
 
         <div class="back-login">
-            <a asp-controller="Trangchu" asp-action="Dangnhap">
-                ← Quay lại đăng nhập
-            </a>
+            <a asp-controller="Trangchu" asp-action="Dangnhap">← Quay lại đăng nhập</a>
         </div>
 
-        <div class="forgot-footer">
-            © 2026 NewsCMS. All rights reserved.
-        </div>
-
+        <div class="forgot-footer">© 2026 NewsCMS. All rights reserved.</div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const count = 35;
+        for (let i = 0; i < count; i++) {
+            const snow = document.createElement('div');
+            snow.classList.add('snowflake');
+            snow.innerHTML = i % 2 === 0 ? '❄' : '❅';
+            snow.style.left = Math.random() * window.innerWidth + 'px';
+            snow.style.top = -20 + Math.random() * -100 + 'px';
+            snow.style.fontSize = (Math.random() * 10 + 10) + 'px';
+            snow.style.opacity = Math.random() * 0.7 + 0.3;
+            snow.style.animationDuration = (Math.random() * 6 + 4) + 's';
+            snow.style.animationDelay = (Math.random() * 5) + 's';
+            document.body.appendChild(snow);
+
+            const star = document.createElement('div');
+            star.classList.add('star-dust');
+            star.innerHTML = '✦';
+            star.style.left = Math.random() * window.innerWidth + 'px';
+            star.style.top = -20 + Math.random() * -100 + 'px';
+            star.style.fontSize = (Math.random() * 8 + 8) + 'px';
+            star.style.opacity = Math.random() * 0.8 + 0.2;
+            star.style.animationDuration = (Math.random() * 5 + 3) + 's';
+            star.style.animationDelay = (Math.random() * 4) + 's';
+            document.body.appendChild(star);
+        }
+    });
+</script>

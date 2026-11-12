@@ -12,106 +12,270 @@
 }
 
 <style>
-    body {
-        background: #f4f6fb;
-    }
-
     .history-container {
-        max-width: 1250px;
-        margin: 35px auto;
-        padding: 25px;
+        max-width: 1300px;
+        margin: 20px auto;
+        padding: 15px;
     }
 
     .history-header {
-        background: linear-gradient(135deg, #1e3a8a, #2563eb);
-        color: white;
-        padding: 30px;
-        border-radius: 16px;
-        margin-bottom: 25px;
-        box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        border: 1px solid #334155;
+        color: #f8fafc;
+        padding: 30px 34px;
+        border-radius: 18px;
+        margin-bottom: 24px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+        position: relative;
+        overflow: hidden;
     }
 
+        .history-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, #38bdf8, #2563eb);
+        }
+
         .history-header h2 {
-            font-weight: 700;
+            font-weight: 800;
+            font-size: 24px;
             margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+            .history-header h2 i {
+                color: #38bdf8;
+                margin-right: 8px;
+            }
+
+        .history-header p {
+            color: #94a3b8;
+            font-size: 14px;
         }
 
     .search-box {
-        background: white;
-        padding: 20px;
-        border-radius: 12px;
-        margin-bottom: 22px;
-        box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+        background: #131b2e;
+        border: 1px solid #23314d;
+        padding: 22px 24px;
+        border-radius: 16px;
+        margin-bottom: 24px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     }
+
+        .search-box .form-label {
+            color: #cbd5e1;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+    .slate-input-group .form-control {
+        background-color: #1a243d !important;
+        border: 1px solid #2a3a5c !important;
+        color: #f1f5f9 !important;
+        border-radius: 10px 0 0 10px !important;
+        padding: 11px 16px;
+        font-size: 14px;
+    }
+
+        .slate-input-group .form-control:focus {
+            border-color: #38bdf8 !important;
+            box-shadow: none !important;
+        }
+
+        .slate-input-group .form-control::placeholder {
+            color: #64748b;
+        }
+
+    .btn-slate-search {
+        background: linear-gradient(135deg, #0284c7, #2563eb);
+        border: 1px solid rgba(56, 189, 248, 0.4);
+        color: #ffffff;
+        font-weight: 600;
+        padding: 0 22px;
+        transition: all 0.2s ease;
+    }
+
+        .btn-slate-search:hover {
+            opacity: 0.92;
+            color: #ffffff;
+        }
+
+    .btn-slate-reset {
+        background: #1e293b;
+        border: 1px solid #334155;
+        color: #cbd5e1;
+        font-weight: 600;
+        padding: 0 20px;
+        border-radius: 0 10px 10px 0 !important;
+        display: inline-flex;
+        align-items: center;
+        transition: all 0.2s ease;
+    }
+
+        .btn-slate-reset:hover {
+            background: #334155;
+            color: #ffffff;
+        }
 
     .table-box {
-        background: white;
-        border-radius: 12px;
-        padding: 20px;
-        box-shadow: 0 3px 12px rgba(0,0,0,0.05);
-        overflow-x: auto;
+        background: #131b2e;
+        border: 1px solid #23314d;
+        border-radius: 16px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
     }
 
-    .table thead th {
-        background: #eff4ff;
-        color: #1e3a8a;
-        white-space: nowrap;
-        padding: 15px;
+    .table-box-header {
+        background: rgba(26, 36, 61, 0.6);
+        border-bottom: 1px solid #23314d;
+        padding: 18px 24px;
     }
 
-    .table tbody td {
-        padding: 15px;
-        vertical-align: middle;
+        .table-box-header h5 {
+            color: #f8fafc;
+            font-size: 16px;
+        }
+
+            .table-box-header h5 i {
+                color: #38bdf8;
+                margin-right: 8px;
+            }
+
+    .slate-badge-count {
+        background: rgba(56, 189, 248, 0.15);
+        color: #38bdf8;
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 700;
     }
 
-    .table tbody tr:hover {
-        background: #f8faff;
+    .slate-table {
+        color: #e2e8f0;
+        margin-bottom: 0;
+    }
+
+        .slate-table thead th {
+            background: #1a243d;
+            color: #94a3b8;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            border-bottom: 1px solid #23314d;
+            border-top: none;
+            white-space: nowrap;
+            padding: 15px 18px;
+        }
+
+        .slate-table tbody td {
+            background: transparent;
+            border-bottom: 1px solid #1e293b;
+            padding: 15px 18px;
+            vertical-align: middle;
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        .slate-table tbody tr {
+            transition: background-color 0.2s ease;
+        }
+
+            .slate-table tbody tr:hover td {
+                background-color: rgba(56, 189, 248, 0.06);
+            }
+
+            .slate-table tbody tr:last-child td {
+                border-bottom: none;
+            }
+
+    .slate-id-pill {
+        background: #1e293b;
+        color: #cbd5e1;
+        border: 1px solid #334155;
+        padding: 5px 11px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
     }
 
     .action-badge {
         display: inline-block;
-        padding: 6px 12px;
+        padding: 6px 14px;
         border-radius: 20px;
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 600;
         white-space: nowrap;
     }
 
     .action-approve {
-        background: #dcfce7;
-        color: #166534;
+        background: rgba(16, 185, 129, 0.15);
+        color: #34d399;
+        border: 1px solid rgba(16, 185, 129, 0.3);
     }
 
     .action-reject {
-        background: #fee2e2;
-        color: #991b1b;
+        background: rgba(239, 68, 68, 0.15);
+        color: #f87171;
+        border: 1px solid rgba(239, 68, 68, 0.3);
     }
 
     .action-edit {
-        background: #fef3c7;
-        color: #92400e;
+        background: rgba(245, 158, 11, 0.15);
+        color: #fbbf24;
+        border: 1px solid rgba(245, 158, 11, 0.3);
     }
 
     .action-default {
-        background: #e0e7ff;
-        color: #3730a3;
+        background: rgba(56, 189, 248, 0.15);
+        color: #38bdf8;
+        border: 1px solid rgba(56, 189, 248, 0.3);
     }
 
     .note-cell {
         min-width: 200px;
-        max-width: 320px;
+        max-width: 340px;
         overflow-wrap: anywhere;
+        color: #e2e8f0;
     }
 
     .empty-data {
-        padding: 45px 15px;
+        padding: 50px 15px;
         text-align: center;
         color: #64748b;
     }
 
+        .empty-data h5 {
+            color: #cbd5e1;
+            font-weight: 700;
+        }
+
     .history-footer {
-        margin-top: 20px;
+        margin-top: 24px;
     }
+
+    .btn-slate-back {
+        background: #1a243d;
+        border: 1px solid #2a3a5c;
+        color: #38bdf8;
+        border-radius: 10px;
+        padding: 10px 20px;
+        font-weight: 600;
+        font-size: 14px;
+        transition: all 0.2s ease;
+    }
+
+        .btn-slate-back:hover {
+            background: rgba(56, 189, 248, 0.15);
+            border-color: #38bdf8;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
 
     @@media (max-width: 768px) {
         .history-container {
@@ -127,7 +291,6 @@
 
 <div class="history-container">
 
-    <!-- Tiêu đề -->
     <div class="history-header">
         <h2>
             <i class="bi bi-clock-history"></i>
@@ -139,7 +302,6 @@
         </p>
     </div>
 
-    <!-- Tìm kiếm -->
     <div class="search-box">
         <form asp-controller="Lichsuduyet"
               asp-action="Lichsuduyet"
@@ -149,42 +311,41 @@
                 Tìm kiếm lịch sử
             </label>
 
-            <div class="input-group">
+            <div class="input-group slate-input-group">
                 <input type="number"
                        name="matk"
                        class="form-control"
                        placeholder="Nhập mã lịch sử, mã bài viết hoặc mã người duyệt..."
                        value="@(matk?.ToString() ?? "")" />
 
-                <button type="submit" class="btn btn-primary">
-                    <i class="bi bi-search"></i> Tìm kiếm
+                <button type="submit" class="btn btn-slate-search">
+                    <i class="bi bi-search me-1"></i> Tìm kiếm
                 </button>
 
                 <a asp-controller="Lichsuduyet"
                    asp-action="Lichsuduyet"
-                   class="btn btn-outline-secondary">
+                   class="btn btn-slate-reset">
                     Làm mới
                 </a>
             </div>
         </form>
     </div>
 
-    <!-- Bảng lịch sử -->
     <div class="table-box">
 
-        <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="table-box-header d-flex justify-content-between align-items-center">
             <h5 class="fw-bold mb-0">
                 <i class="bi bi-list-ul"></i>
                 Danh sách lịch sử
             </h5>
 
-            <span class="badge bg-primary">
+            <span class="slate-badge-count">
                 @bang.Count bản ghi
             </span>
         </div>
 
         <div class="table-responsive">
-            <table class="table table-bordered table-hover align-middle mb-0">
+            <table class="table slate-table align-middle mb-0">
 
                 <thead>
                     <tr>
@@ -218,18 +379,18 @@
                                 : "action-default";
 
                             <tr>
-                                <td class="fw-bold text-primary">
+                                <td class="fw-bold" style="color: #38bdf8;">
                                     #@item.MaLichSu
                                 </td>
 
                                 <td>
-                                    <span class="badge bg-light text-dark border">
+                                    <span class="slate-id-pill">
                                         #@item.MaBaiViet
                                     </span>
                                 </td>
 
                                 <td>
-                                    <span class="badge bg-light text-dark border">
+                                    <span class="slate-id-pill">
                                         #@item.MaNguoiDuyet
                                     </span>
                                 </td>
@@ -247,13 +408,13 @@
                                     }
                                     else
                                     {
-                                        <span class="text-muted fst-italic">
+                                        <span class="fst-italic" style="color: #64748b;">
                                             Không có ghi chú
                                         </span>
                                     }
                                 </td>
 
-                                <td style="white-space:nowrap">
+                                <td style="white-space:nowrap; color: #94a3b8;">
                                     @item.ThoiGian.ToString("dd/MM/yyyy HH:mm:ss")
                                 </td>
                             </tr>
@@ -265,7 +426,7 @@
                             <td colspan="6">
                                 <div class="empty-data">
                                     <i class="bi bi-inbox"
-                                       style="font-size:45px"></i>
+                                       style="font-size:45px; color: #475569;"></i>
 
                                     <h5 class="mt-3">
                                         Không tìm thấy lịch sử
@@ -283,11 +444,12 @@
             </table>
         </div>
     </div>
+
     <div class="history-footer">
         <a asp-controller="Trangchu"
            asp-action="Trangdau"
-           class="btn btn-outline-primary">
-            <i class="bi bi-arrow-left"></i>
+           class="btn btn-slate-back">
+            <i class="bi bi-arrow-left me-1"></i>
             Quay lại quản lý bài viết
         </a>
     </div>

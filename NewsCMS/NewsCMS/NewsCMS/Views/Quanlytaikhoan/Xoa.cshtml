@@ -8,50 +8,159 @@
     var bang = ViewBag.bang as TaiKhoanModel;
 }
 
+<style>
+    .slate-card {
+        background: #131b2e;
+        border: 1px solid #23314d;
+        border-radius: 16px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+        overflow: hidden;
+    }
+
+    .slate-card-header-danger {
+        background: linear-gradient(135deg, rgba(220, 38, 38, 0.25), rgba(153, 27, 27, 0.35));
+        border-bottom: 1px solid rgba(239, 68, 68, 0.3);
+        padding: 28px 24px;
+        text-align: center;
+    }
+
+        .slate-card-header-danger h3 {
+            color: #f87171;
+            font-weight: 800;
+            font-size: 22px;
+            letter-spacing: 0.5px;
+        }
+
+        .slate-card-header-danger p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+    .slate-warning-box {
+        background: rgba(245, 158, 11, 0.1);
+        border: 1px solid rgba(245, 158, 11, 0.3);
+        border-radius: 12px;
+        padding: 16px;
+        color: #fbbf24;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .slate-info-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        border: 1px solid #23314d;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+        .slate-info-table th,
+        .slate-info-table td {
+            padding: 13px 16px;
+            border-bottom: 1px solid #23314d;
+            font-size: 14px;
+        }
+
+        .slate-info-table tr:last-child th,
+        .slate-info-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .slate-info-table th {
+            background: #1a243d;
+            color: #94a3b8;
+            font-weight: 600;
+            width: 40%;
+        }
+
+        .slate-info-table td {
+            background: #131b2e;
+            color: #f1f5f9;
+            font-weight: 500;
+        }
+
+    .btn-slate-back {
+        background: #1e293b;
+        border: 1px solid #334155;
+        color: #cbd5e1;
+        border-radius: 10px;
+        padding: 10px 22px;
+        font-weight: 600;
+        transition: all 0.2s;
+    }
+
+        .btn-slate-back:hover {
+            background: #334155;
+            color: #ffffff;
+        }
+
+    .btn-slate-danger {
+        background: linear-gradient(135deg, #dc2626, #b91c1c);
+        border: 1px solid rgba(248, 113, 113, 0.4);
+        color: #ffffff;
+        border-radius: 10px;
+        padding: 10px 24px;
+        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+        transition: all 0.2s;
+    }
+
+        .btn-slate-danger:hover {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+</style>
+
 @if (bang == null)
 {
-    <div class="container mt-5">
-        <div class="alert alert-danger">
-            Không tìm thấy thông tin tài khoản cần xóa!
+    <div class="container mt-5" style="max-width: 600px;">
+        <div class="slate-card p-4 text-center">
+            <div class="slate-warning-box mb-4" style="background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.3); color: #f87171;">
+                <i class="bi bi-exclamation-triangle-fill fs-4 d-block mb-2"></i>
+                Không tìm thấy thông tin tài khoản cần xóa!
+            </div>
+            <a asp-action="Quanlytaikhoan" class="btn btn-slate-back">
+                <i class="bi bi-arrow-left me-1"></i> Quay lại
+            </a>
         </div>
-        <a asp-action="Quanlytaikhoan" class="btn btn-secondary">
-            Quay lại
-        </a>
     </div>
 }
 else
 {
-    <div class="container mt-5" style="max-width: 650px;">
+    <div class="container mt-4 mb-5" style="max-width: 650px;">
 
-        <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+        <div class="slate-card">
 
-            <div class="card-header bg-danger text-white text-center py-4">
+            <div class="slate-card-header-danger">
                 <h3 class="mb-1">
-                    <i class="fas fa-trash-alt"></i>
+                    <i class="bi bi-trash3-fill me-2"></i>
                     XÁC NHẬN XÓA TÀI KHOẢN
                 </h3>
                 <p class="mb-0 mt-2">
-                    Vui lòng kiểm tra thông tin trước khi xóa
+                    Vui lòng kiểm tra kỹ thông tin trước khi thực hiện thao tác xóa
                 </p>
             </div>
 
-            <div class="card-body p-4">
+            <div class="p-4">
 
-                <div class="alert alert-warning">
+                <div class="slate-warning-box mb-4">
+                    <i class="bi bi-exclamation-triangle-fill me-1"></i>
                     <strong>Cảnh báo!</strong>
                     Khi xóa tài khoản, các dữ liệu liên quan như
                     nhân viên, độc giả, bài viết, bình luận và lịch sử
                     duyệt có thể bị xóa theo quy tắc của hệ thống.
                 </div>
 
-                <h5 class="mb-3 text-secondary">
-                    Thông tin tài khoản
-                </h5>
+                <h6 class="text-uppercase fw-bold mb-3" style="color: #38bdf8; font-size: 12px; letter-spacing: 1px;">
+                    Thông tin chi tiết tài khoản
+                </h6>
 
-                <table class="table table-bordered">
+                <table class="slate-info-table">
                     <tr>
-                        <th style="width: 40%">Mã tài khoản</th>
-                        <td>@bang.MaTaiKhoan</td>
+                        <th>Mã tài khoản</th>
+                        <td class="fw-bold" style="color: #38bdf8;">#@bang.MaTaiKhoan</td>
                     </tr>
 
                     <tr>
@@ -87,19 +196,19 @@ else
                            name="MaVaiTro"
                            value="@bang.MaVaiTro" />
 
-                    <div class="d-flex justify-content-between mt-4">
+                    <div class="d-flex justify-content-between align-items-center mt-4 pt-2">
 
                         <a asp-controller="Quanlytaikhoan"
                            asp-action="Quanlytaikhoan"
-                           class="btn btn-secondary px-4">
-                            <i class="fas fa-arrow-left"></i>
+                           class="btn btn-slate-back">
+                            <i class="bi bi-arrow-left me-1"></i>
                             Quay lại
                         </a>
 
                         <button type="submit"
-                                class="btn btn-danger px-4"
+                                class="btn btn-slate-danger"
                                 onclick="return confirm('Bạn có chắc chắn muốn xóa tài khoản này và các dữ liệu liên quan không?')">
-                            <i class="fas fa-trash"></i>
+                            <i class="bi bi-trash3 me-1"></i>
                             Xác nhận xóa
                         </button>
                     </div>

@@ -22,48 +22,82 @@
 <style>
     .edit-container {
         max-width: 1100px;
-        margin: 30px auto;
+        margin: 25px auto;
     }
 
     .edit-card {
-        border: none;
-        border-radius: 12px;
+        background: #131b2e;
+        border: 1px solid #23314d;
+        border-radius: 16px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
         overflow: hidden;
     }
 
     .edit-header {
-        background: #0d6efd;
-        color: white;
-        padding: 20px 25px;
+        background: linear-gradient(135deg, rgba(2, 132, 199, 0.25), rgba(37, 99, 235, 0.25));
+        border-bottom: 1px solid rgba(56, 189, 248, 0.3);
+        color: #f8fafc;
+        padding: 22px 28px;
     }
 
         .edit-header h4 {
             margin: 0;
-            font-weight: 600;
+            font-weight: 800;
+            font-size: 20px;
         }
+
+            .edit-header h4 i {
+                color: #38bdf8;
+                margin-right: 8px;
+            }
 
     .edit-body {
         padding: 30px;
     }
 
     .form-label {
+        color: #cbd5e1;
         font-weight: 600;
+        font-size: 14px;
         margin-bottom: 8px;
     }
 
     .form-control,
     .form-select {
-        border-radius: 7px;
-        padding: 10px 12px;
+        background-color: #1a243d !important;
+        border: 1px solid #2a3a5c !important;
+        color: #f1f5f9 !important;
+        border-radius: 10px;
+        padding: 11px 14px;
+        font-size: 14px;
+        transition: all 0.2s ease;
     }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: #38bdf8 !important;
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15) !important;
+            background-color: #1e2a47 !important;
+        }
+
+        .form-control[type="file"]::file-selector-button {
+            background: #26354d;
+            color: #38bdf8;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            margin-right: 12px;
+            font-weight: 600;
+            cursor: pointer;
+        }
 
     .image-current,
     .image-preview {
-        width: 220px;
-        height: 145px;
+        width: 230px;
+        height: 150px;
         object-fit: cover;
-        border-radius: 8px;
-        border: 1px solid #ddd;
+        border-radius: 10px;
+        border: 1px solid #2a3a5c;
     }
 
     .image-preview {
@@ -71,27 +105,48 @@
     }
 
     #editor {
-        height: 350px;
-        background: white;
-        font-size: 16px;
+        height: 360px;
+        background: #1a243d;
+        color: #f1f5f9;
+        font-size: 15px;
+        border: none;
     }
 
     .ql-toolbar.ql-snow {
-        background: #f8fafc;
-        border-radius: 7px 7px 0 0;
+        background: #0f172a;
+        border-radius: 10px 10px 0 0;
+        border: 1px solid #2a3a5c !important;
     }
 
     .ql-container.ql-snow {
-        border-radius: 0 0 7px 7px;
+        border-radius: 0 0 10px 10px;
+        border: 1px solid #2a3a5c !important;
+        border-top: none !important;
     }
 
-    /* Nút Undo và Redo */
+    .ql-snow .ql-stroke {
+        stroke: #cbd5e1 !important;
+    }
+
+    .ql-snow .ql-fill {
+        fill: #cbd5e1 !important;
+    }
+
+    .ql-snow .ql-picker {
+        color: #cbd5e1 !important;
+    }
+
+    .ql-snow .ql-picker-options {
+        background-color: #1e293b !important;
+        border-color: #334155 !important;
+    }
+
     .ql-toolbar button.ql-undo,
     .ql-toolbar button.ql-redo {
         width: 28px;
-        font-size: 21px;
+        font-size: 20px;
         font-weight: bold;
-        color: #344054;
+        color: #cbd5e1;
     }
 
         .ql-toolbar button.ql-undo::before {
@@ -104,35 +159,65 @@
 
         .ql-toolbar button.ql-undo:hover,
         .ql-toolbar button.ql-redo:hover {
-            color: #0d6efd;
+            color: #38bdf8;
         }
 
     .status-view {
-        background: #f1f3f5;
+        background: #0f172a !important;
+        color: #94a3b8 !important;
         font-weight: 600;
     }
 
     .form-actions {
         display: flex;
-        gap: 10px;
-        margin-top: 25px;
+        gap: 12px;
+        margin-top: 28px;
+        padding-top: 20px;
+        border-top: 1px solid #23314d;
     }
 
-        .form-actions .btn {
-            padding: 10px 22px;
-            border-radius: 7px;
+        .form-actions .btn-slate-primary {
+            background: linear-gradient(135deg, #0284c7, #2563eb);
+            border: 1px solid rgba(56, 189, 248, 0.4);
+            color: #ffffff;
+            padding: 11px 24px;
+            border-radius: 10px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
+            transition: all 0.2s ease;
         }
 
-    .field-validation-error {
-        color: #dc3545;
-        font-size: 14px;
+            .form-actions .btn-slate-primary:hover {
+                opacity: 0.92;
+                transform: translateY(-1px);
+            }
+
+        .form-actions .btn-slate-secondary {
+            background: #1e293b;
+            border: 1px solid #334155;
+            color: #cbd5e1;
+            padding: 11px 22px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+            .form-actions .btn-slate-secondary:hover {
+                background: #334155;
+                color: #ffffff;
+            }
+
+    .field-validation-error, .text-danger {
+        color: #f87171 !important;
+        font-size: 13px;
     }
 
     .validation-summary-errors {
-        color: #dc3545;
-        background: #fff1f1;
-        border: 1px solid #f5c2c7;
-        border-radius: 7px;
+        color: #fca5a5;
+        background: rgba(239, 68, 68, 0.12);
+        border: 1px solid rgba(239, 68, 68, 0.3);
+        border-radius: 10px;
         padding: 12px 20px;
         margin-bottom: 20px;
     }
@@ -163,11 +248,11 @@
 @if (baiViet != null)
 {
     <div class="container edit-container">
-        <div class="card shadow edit-card">
+        <div class="edit-card">
 
             <div class="edit-header">
                 <h4>
-                    <i class="fa-solid fa-pen-to-square"></i>
+                    <i class="bi bi-pencil-square"></i>
                     CHỈNH SỬA BÀI VIẾT
                 </h4>
             </div>
@@ -190,7 +275,6 @@
                          class="text-danger mb-3">
                     </div>
 
-                    <!-- TIÊU ĐỀ -->
                     <div class="mb-3">
                         <label class="form-label">
                             Tiêu đề bài viết
@@ -209,7 +293,6 @@
                         </span>
                     </div>
 
-                    <!-- TÓM TẮT -->
                     <div class="mb-3">
                         <label class="form-label">
                             Tóm tắt bài viết
@@ -227,7 +310,6 @@
                         </span>
                     </div>
 
-                    <!-- ẢNH ĐẠI DIỆN HIỆN TẠI -->
                     <div class="mb-3">
                         <label class="form-label">
                             Ảnh đại diện hiện tại
@@ -245,20 +327,20 @@
 
                             <a href="@duongDanAnh"
                                target="_blank"
-                               class="text-primary">
-                                <i class="fa-solid fa-eye"></i>
+                               class="small fw-semibold text-decoration-none"
+                               style="color: #38bdf8;">
+                                <i class="bi bi-eye me-1"></i>
                                 Xem ảnh hiện tại
                             </a>
                         }
                         else
                         {
-                            <p class="text-muted">
+                            <p class="small" style="color: #64748b;">
                                 Bài viết chưa có ảnh đại diện.
                             </p>
                         }
                     </div>
 
-                    <!-- CHỌN ẢNH MỚI -->
                     <div class="mb-3">
                         <label class="form-label">
                             Chọn ảnh mới
@@ -272,12 +354,11 @@
 
                         <div id="previewAnh"></div>
 
-                        <small class="text-muted">
+                        <small class="d-block mt-1" style="color: #64748b;">
                             Không chọn ảnh mới nếu muốn giữ nguyên ảnh hiện tại.
                         </small>
                     </div>
 
-                    <!-- DANH MỤC -->
                     <div class="mb-3">
                         <label class="form-label">
                             Danh mục bài viết
@@ -312,7 +393,6 @@
                         </select>
                     </div>
 
-                    <!-- NỘI DUNG QUILL -->
                     <div class="mb-3">
                         <label class="form-label">
                             Nội dung bài viết
@@ -331,7 +411,6 @@
                         </span>
                     </div>
 
-                    <!-- TRẠNG THÁI -->
                     <div class="mb-3">
                         <label class="form-label">
                             Trạng thái bài viết
@@ -359,8 +438,8 @@
                                 </option>
                             </select>
 
-                            <small class="text-success">
-                                <i class="fa-solid fa-lock-open"></i>
+                            <small class="d-block mt-1" style="color: #34d399;">
+                                <i class="bi bi-unlock me-1"></i>
                                 Chủ biên được phép thay đổi trạng thái bài viết.
                             </small>
                         }
@@ -375,26 +454,25 @@
                                    name="TrangThai"
                                    value="@baiViet.TrangThai" />
 
-                            <small class="text-muted">
-                                <i class="fa-solid fa-lock"></i>
+                            <small class="d-block mt-1" style="color: #64748b;">
+                                <i class="bi bi-lock me-1"></i>
                                 Bạn chỉ được xem trạng thái, không được chỉnh sửa.
                             </small>
                         }
                     </div>
 
-                    <!-- NÚT ĐIỀU KHIỂN -->
                     <div class="form-actions">
 
                         <button type="submit"
-                                class="btn btn-primary">
-                            <i class="fa-solid fa-floppy-disk"></i>
+                                class="btn btn-slate-primary">
+                            <i class="bi bi-floppy me-1"></i>
                             Lưu thay đổi
                         </button>
 
                         <a asp-controller="Quanlybaiviet"
                            asp-action="Quanlybaiviet"
-                           class="btn btn-secondary">
-                            <i class="fa-solid fa-arrow-left"></i>
+                           class="btn btn-slate-secondary">
+                            <i class="bi bi-arrow-left me-1"></i>
                             Quay lại
                         </a>
 
@@ -408,7 +486,7 @@
 else
 {
     <div class="container mt-4">
-        <div class="alert alert-danger">
+        <div class="alert rounded-3 p-4 mb-3" style="background: rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.3); color: #f87171;">
             Không tìm thấy thông tin bài viết.
         </div>
 

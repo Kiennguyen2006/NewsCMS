@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NewsCMS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d664ea989f6676528a2a1a67ce9be0cb4caad162")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+457b19413fe04274f6b9ef1fbcfef8fe52eea82b")]
 [assembly: System.Reflection.AssemblyProductAttribute("NewsCMS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NewsCMS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

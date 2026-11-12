@@ -14,7 +14,7 @@
 }
 
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-bs-theme="dark">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -27,15 +27,147 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
 
+    <style>
+            body, .app-wrapper, .app-main {
+                background-color: #090d16 !important;
+                color: #e2e8f0;
+                font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            }
+
+            .app-header {
+                background: rgba(15, 23, 42, 0.9) !important;
+                backdrop-filter: blur(12px);
+                border-bottom: 1px solid #1e293b !important;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            }
+
+                .app-header .nav-link {
+                    color: #cbd5e1 !important;
+                    font-weight: 500;
+                    border-radius: 8px;
+                    transition: all 0.2s ease;
+                }
+
+                    .app-header .nav-link:hover {
+                        color: #38bdf8 !important;
+                        background: rgba(56, 189, 248, 0.1);
+                    }
+
+            .role-badge-header {
+                background: rgba(56, 189, 248, 0.12);
+                color: #38bdf8;
+                border: 1px solid rgba(56, 189, 248, 0.3);
+                padding: 5px 14px;
+                border-radius: 20px;
+                font-size: 13px;
+                font-weight: 600;
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+            }
+
+            .app-sidebar {
+                background: #0f172a !important;
+                border-right: 1px solid #1e293b !important;
+                box-shadow: 4px 0 25px rgba(0, 0, 0, 0.35) !important;
+            }
+
+            .sidebar-brand {
+                border-bottom: 1px solid #1e293b !important;
+                padding: 16px 20px;
+            }
+
+                .sidebar-brand .brand-link {
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+
+            .brand-logo-icon {
+                width: 34px;
+                height: 34px;
+                border-radius: 10px;
+                background: linear-gradient(135deg, #0284c7, #2563eb);
+                color: #ffffff;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 800;
+                font-size: 18px;
+                box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+            }
+
+            .sidebar-brand .brand-text {
+                font-weight: 800 !important;
+                font-size: 20px;
+                color: #f8fafc;
+                letter-spacing: 0.5px;
+            }
+
+                .sidebar-brand .brand-text span {
+                    color: #38bdf8;
+                }
+
+            .sidebar-menu .nav-item {
+                margin: 3px 10px;
+            }
+
+            .sidebar-menu .nav-link {
+                color: #94a3b8 !important;
+                border-radius: 10px !important;
+                padding: 10px 14px !important;
+                font-weight: 500;
+                transition: all 0.2s ease;
+            }
+
+                .sidebar-menu .nav-link:hover {
+                    color: #f8fafc !important;
+                    background: #1e293b !important;
+                }
+
+                .sidebar-menu .nav-link.active {
+                    color: #ffffff !important;
+                    background: linear-gradient(135deg, rgba(2, 132, 199, 0.25), rgba(37, 99, 235, 0.25)) !important;
+                    border: 1px solid rgba(56, 189, 248, 0.35);
+                    box-shadow: 0 4px 15px rgba(2, 132, 199, 0.15);
+                    font-weight: 600;
+                }
+
+                    .sidebar-menu .nav-link.active .nav-icon {
+                        color: #38bdf8 !important;
+                    }
+
+            .sidebar-menu .nav-icon {
+                font-size: 17px;
+                margin-right: 10px;
+                transition: color 0.2s;
+            }
+
+            .app-main {
+                padding: 24px;
+            }
+
+            .app-footer {
+                background: #060910 !important;
+                border-top: 1px solid #1e293b !important;
+                color: #64748b !important;
+                padding: 16px 24px;
+                font-size: 13px;
+            }
+
+                .app-footer strong {
+                    color: #94a3b8;
+                }
+    </style>
+
     @await RenderSectionAsync("Styles", required: false)
 </head>
-<div style="background:yellow;color:black;padding:8px">
-    Mã vai trò hiện tại: @maVaiTro
-</div>
-<body class="layout-fixed sidebar-expand-lg sidebar-open bg-body-tertiary">
+
+<body class="layout-fixed sidebar-expand-lg sidebar-open">
 
     <div class="app-wrapper">
-        <nav class="app-header navbar navbar-expand bg-body">
+        <nav class="app-header navbar navbar-expand">
             <div class="container-fluid">
 
                 <ul class="navbar-nav">
@@ -45,7 +177,7 @@
                            data-lte-toggle="sidebar"
                            href="#"
                            role="button">
-                            <i class="bi bi-list"></i>
+                            <i class="bi bi-list fs-5"></i>
                         </a>
                     </li>
 
@@ -53,30 +185,37 @@
                         <a asp-controller="Trangchu"
                            asp-action="Trangdau"
                            class="nav-link">
-                            <i class="bi bi-house-door"></i>
+                            <i class="bi bi-house-door me-1"></i>
                             Trang chủ
                         </a>
                     </li>
 
                 </ul>
 
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <span class="role-badge-header">
+                            <i class="bi bi-shield-check"></i>
+                            Mã vai trò hiện tại: @maVaiTro
+                        </span>
+                    </li>
+                </ul>
+
             </div>
         </nav>
-        <aside class="app-sidebar bg-body-secondary shadow"
-               data-bs-theme="dark">
+
+        <aside class="app-sidebar shadow">
 
             <div class="sidebar-brand">
                 <a asp-controller="Thongke"
                    asp-action="Thongke"
                    class="brand-link">
-
-                    <span class="brand-text fw-light">
-                        NewsCMS
+                    <span class="brand-logo-icon">N</span>
+                    <span class="brand-text">
+                        News<span>CMS</span>
                     </span>
-
                 </a>
             </div>
-
 
             <div class="sidebar-wrapper">
 
@@ -152,12 +291,13 @@
 
                                 </a>
                             </li>
+
                             <li class="nav-item">
                                 <a asp-controller="/Binhluan"
                                    asp-action="Binhluan"
                                    class="nav-link @(laTrangTaiKhoan ? "active" : "")">
 
-                                    <i class="nav-icon bi bi-people"></i>
+                                    <i class="nav-icon bi bi-chat-dots"></i>
                                     <p>Quản lý Bình luận</p>
 
                                 </a>
@@ -165,7 +305,6 @@
                         }
                         else if (maVaiTro == 2 || maVaiTro == 3)
                         {
-
                             <li class="nav-item">
                                 <a asp-controller="Quanlybaiviet"
                                    asp-action="Quanlybaiviet"
@@ -177,12 +316,13 @@
                                 </a>
                             </li>
                         }
-                        <li class="nav-item">
+
+                        <li class="nav-item mt-3 pt-2" style="border-top: 1px solid #1e293b;">
                             <a asp-controller="Trangchu"
                                asp-action="Trangdau"
                                class="nav-link">
 
-                                <i class="nav-icon bi bi-house-door"></i>
+                                <i class="nav-icon bi bi-box-arrow-left"></i>
                                 <p>Về trang tin tức</p>
 
                             </a>
@@ -195,19 +335,24 @@
             </div>
 
         </aside>
+
         <main class="app-main">
 
             @RenderBody()
 
         </main>
 
-        <footer class="app-footer">
-
-            <strong>NewsCMS</strong> - Hệ thống quản trị tin tức
-
+        <footer class="app-footer d-flex justify-content-between align-items-center">
+            <div>
+                <strong>NewsCMS</strong> - Hệ thống quản trị tin tức
+            </div>
+            <div>
+                © @DateTime.Now.Year NewsCMS
+            </div>
         </footer>
 
     </div>
+
     <script src="~/admin-lte-v4.10.1/dist/js/adminlte.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)

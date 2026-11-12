@@ -6,19 +6,143 @@
     ViewData["Title"] = "Sửa thông tin tài khoản";
 }
 
-<div class="container mt-4" style="max-width: 650px;">
-    <div class="card shadow">
-        <div class="card-header bg-primary text-white">
-            <h4 class="mb-0">Cập Nhật Tài Khoản</h4>
+<style>
+    .slate-form-card {
+        background: #131b2e;
+        border: 1px solid #23314d;
+        border-radius: 16px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+        overflow: hidden;
+    }
+
+    .slate-form-header {
+        background: linear-gradient(135deg, rgba(2, 132, 199, 0.25), rgba(37, 99, 235, 0.25));
+        border-bottom: 1px solid rgba(56, 189, 248, 0.3);
+        padding: 22px 28px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+        .slate-form-header h4 {
+            color: #f8fafc;
+            font-weight: 800;
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .slate-form-header i {
+            color: #38bdf8;
+            font-size: 22px;
+        }
+
+    .slate-label {
+        color: #cbd5e1;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .slate-input,
+    .slate-select {
+        background-color: #1a243d !important;
+        border: 1px solid #2a3a5c !important;
+        color: #f1f5f9 !important;
+        border-radius: 10px !important;
+        padding: 11px 14px !important;
+        font-size: 14px;
+        transition: all 0.2s ease;
+    }
+
+        .slate-input:focus,
+        .slate-select:focus {
+            border-color: #38bdf8 !important;
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15) !important;
+            background-color: #1e2a47 !important;
+        }
+
+        .slate-input::placeholder {
+            color: #64748b;
+        }
+
+    .slate-switch-box {
+        background: #1a243d;
+        border: 1px solid #2a3a5c;
+        border-radius: 10px;
+        padding: 12px 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+        .slate-switch-box .form-check-input {
+            width: 44px;
+            height: 22px;
+            cursor: pointer;
+            margin-left: 0;
+            background-color: #334155;
+            border-color: #475569;
+        }
+
+            .slate-switch-box .form-check-input:checked {
+                background-color: #0284c7;
+                border-color: #38bdf8;
+            }
+
+        .slate-switch-box .form-check-label {
+            color: #e2e8f0;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+    .btn-slate-secondary {
+        background: #1e293b;
+        border: 1px solid #334155;
+        color: #cbd5e1;
+        border-radius: 10px;
+        padding: 10px 22px;
+        font-weight: 600;
+        transition: all 0.2s;
+    }
+
+        .btn-slate-secondary:hover {
+            background: #334155;
+            color: #ffffff;
+        }
+
+    .btn-slate-primary {
+        background: linear-gradient(135deg, #0284c7, #2563eb);
+        border: 1px solid rgba(56, 189, 248, 0.4);
+        color: #ffffff;
+        border-radius: 10px;
+        padding: 10px 26px;
+        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
+        transition: all 0.2s;
+    }
+
+        .btn-slate-primary:hover {
+            opacity: 0.92;
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+</style>
+
+<div class="container mt-4 mb-5" style="max-width: 650px;">
+    <div class="slate-form-card">
+        <div class="slate-form-header">
+            <i class="bi bi-person-gear"></i>
+            <h4>Cập Nhật Tài Khoản</h4>
         </div>
 
-        <div class="card-body">
+        <div class="p-4">
 
             @if (ViewBag.thongbao != null)
             {
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    @ViewBag.thongbao
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <div class="alert alert-danger alert-dismissible fade show rounded-3" role="alert" style="background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.35); color: #fca5a5;">
+                    <i class="bi bi-exclamation-circle me-1"></i> @ViewBag.thongbao
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             }
 
@@ -28,45 +152,45 @@
                 <input type="hidden" asp-for="NgayTao" />
 
                 <div class="mb-3">
-                    <label asp-for="TenDangNhap" class="form-label">Tên đăng nhập</label>
-                    <input asp-for="TenDangNhap" class="form-control" placeholder="Nhập tên đăng nhập" />
-                    <span asp-validation-for="TenDangNhap" class="text-danger"></span>
+                    <label asp-for="TenDangNhap" class="form-label slate-label">Tên đăng nhập</label>
+                    <input asp-for="TenDangNhap" class="form-control slate-input" placeholder="Nhập tên đăng nhập" />
+                    <span asp-validation-for="TenDangNhap" class="text-danger small mt-1 d-block"></span>
                 </div>
 
                 <div class="mb-3">
-                    <label asp-for="Email" class="form-label">Email</label>
-                    <input asp-for="Email" type="email" class="form-control" placeholder="Nhập địa chỉ email" />
-                    <span asp-validation-for="Email" class="text-danger"></span>
+                    <label asp-for="Email" class="form-label slate-label">Email</label>
+                    <input asp-for="Email" type="email" class="form-control slate-input" placeholder="Nhập địa chỉ email" />
+                    <span asp-validation-for="Email" class="text-danger small mt-1 d-block"></span>
                 </div>
 
                 <div class="mb-3">
-                    <label asp-for="MatKhau" class="form-label">Mật khẩu</label>
-                    <input asp-for="MatKhau" type="password" class="form-control" placeholder="Nhập mật khẩu" />
-                    <span asp-validation-for="MatKhau" class="text-danger"></span>
+                    <label asp-for="MatKhau" class="form-label slate-label">Mật khẩu</label>
+                    <input asp-for="MatKhau" type="password" class="form-control slate-input" placeholder="Nhập mật khẩu" />
+                    <span asp-validation-for="MatKhau" class="text-danger small mt-1 d-block"></span>
                 </div>
 
                 <div class="mb-3">
-                    <label asp-for="MaVaiTro" class="form-label">Vai trò</label>
+                    <label asp-for="MaVaiTro" class="form-label slate-label">Vai trò</label>
 
-                    <select asp-for="MaVaiTro" asp-items="ViewBag.vaitro" class="form-select">
+                    <select asp-for="MaVaiTro" asp-items="ViewBag.vaitro" class="form-select slate-select">
                         <option value="">-- Chọn vai trò --</option>
                     </select>
 
-                    <span asp-validation-for="MaVaiTro" class="text-danger"></span>
+                    <span asp-validation-for="MaVaiTro" class="text-danger small mt-1 d-block"></span>
                 </div>
 
-                <div class="mb-3 form-check form-switch">
+                <div class="mb-4 slate-switch-box form-check form-switch">
                     <input class="form-check-input" type="checkbox" asp-for="TrangThai" />
                     <label class="form-check-label" asp-for="TrangThai">Trạng thái (Hoạt động)</label>
                 </div>
 
-                <div class="d-flex justify-content-between align-items-center mt-4">
-                    <a asp-action="Quanlytaikhoan" asp-controller="Quanlytaikhoan" class="btn btn-secondary">
-                        Quay lại
+                <div class="d-flex justify-content-between align-items-center pt-2 border-top" style="border-color: #23314d !important;">
+                    <a asp-action="Quanlytaikhoan" asp-controller="Quanlytaikhoan" class="btn btn-slate-secondary">
+                        <i class="bi bi-arrow-left me-1"></i> Quay lại
                     </a>
 
-                    <button type="submit" class="btn btn-primary px-4">
-                        Lưu cập nhật
+                    <button type="submit" class="btn btn-slate-primary">
+                        <i class="bi bi-check2-circle me-1"></i> Lưu cập nhật
                     </button>
                 </div>
 

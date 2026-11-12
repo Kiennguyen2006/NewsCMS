@@ -4,13 +4,54 @@
 
 <style>
     * {
+        margin: 0;
+        padding: 0;
         box-sizing: border-box;
     }
 
     body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #dbeafe, #e0e7ff, #f5f3ff);
+        font-family: 'Segoe UI', sans-serif;
+        background: #0f172a;
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    .snowflake, .star-dust {
+        position: fixed;
+        top: -20px;
+        z-index: 99999;
+        user-select: none;
+        pointer-events: none;
+        animation: fall linear infinite;
+    }
+
+    .snowflake {
+        color: #93c5fd;
+        text-shadow: 0 0 6px rgba(147, 197, 253, 0.6);
+    }
+
+    .star-dust {
+        color: #38bdf8;
+        text-shadow: 0 0 8px rgba(56, 189, 248, 0.8);
+        font-size: 11px;
+    }
+
+    @@keyframes fall {
+        0% {
+            transform: translateY(-20px) translateX(0) rotate(0deg);
+            opacity: 0.9;
+        }
+
+        50% {
+            transform: translateY(50vh) translateX(15px) rotate(180deg);
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translateY(105vh) translateX(-15px) rotate(360deg);
+            opacity: 0.1;
+        }
     }
 
     .register-container {
@@ -19,39 +60,44 @@
         justify-content: center;
         align-items: center;
         padding: 30px 15px;
+        position: relative;
+        z-index: 2;
     }
 
     .register-card {
         width: 100%;
         max-width: 520px;
-        background: white;
-        padding: 35px;
-        border-radius: 18px;
-        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+        background: #1e293b;
+        border: 1px solid #334155;
+        padding: 40px;
+        border-radius: 22px;
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+        animation: appear 0.8s ease;
+        color: #f8fafc;
     }
 
     .register-title {
         text-align: center;
         margin-bottom: 8px;
-        color: #1e3a8a;
+        color: #f8fafc;
         font-size: 27px;
-        font-weight: bold;
+        font-weight: 800;
     }
 
     .register-description {
         text-align: center;
-        color: #64748b;
+        color: #94a3b8;
         margin-bottom: 25px;
         font-size: 14px;
     }
 
     .section-title {
-        color: #2563eb;
-        font-size: 16px;
-        font-weight: bold;
+        color: #60a5fa;
+        font-size: 15px;
+        font-weight: 700;
         margin: 22px 0 15px;
         padding-bottom: 8px;
-        border-bottom: 1px solid #e2e8f0;
+        border-bottom: 1.5px solid #334155;
     }
 
     .form-group {
@@ -63,63 +109,84 @@
             margin-bottom: 7px;
             font-weight: 600;
             font-size: 14px;
-            color: #334155;
+            color: #cbd5e1;
         }
 
         .form-group input {
             width: 100%;
             padding: 12px 14px;
-            border: 1px solid #cbd5e1;
-            border-radius: 9px;
+            border: 1.5px solid #475569;
+            border-radius: 11px;
             font-size: 14px;
             outline: none;
-            transition: 0.2s;
+            background: #0f172a;
+            color: #f8fafc;
+            transition: 0.3s;
         }
 
             .form-group input:focus {
                 border-color: #3b82f6;
-                box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+                box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
             }
 
     .register-button {
         width: 100%;
         padding: 13px;
-        margin-top: 12px;
+        margin-top: 15px;
         border: none;
-        border-radius: 9px;
-        background: linear-gradient(135deg, #2563eb, #6366f1);
+        border-radius: 11px;
+        background: linear-gradient(135deg, #1e3a8a, #2563eb);
         color: white;
         font-size: 16px;
-        font-weight: bold;
+        font-weight: 700;
         cursor: pointer;
-        transition: 0.2s;
+        box-shadow: 0 8px 18px rgba(37, 99, 235, 0.3);
+        transition: 0.3s;
     }
 
         .register-button:hover {
-            opacity: 0.9;
-            transform: translateY(-1px);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(37, 99, 235, 0.4);
         }
 
     .login-link {
         text-align: center;
         margin-top: 20px;
         font-size: 14px;
-        color: #64748b;
+        color: #94a3b8;
     }
 
         .login-link a {
-            color: #2563eb;
+            color: #60a5fa;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 700;
         }
 
+            .login-link a:hover {
+                text-decoration: underline;
+            }
+
     .register-message {
-        padding: 10px;
-        margin-bottom: 15px;
-        border-radius: 8px;
-        background: #fee2e2;
-        color: #b91c1c;
-        font-size: 14px;
+        padding: 12px;
+        margin-bottom: 20px;
+        border-radius: 9px;
+        background: rgba(239, 68, 68, 0.2);
+        border: 1px solid #f87171;
+        color: #fca5a5;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    @@keyframes appear {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 </style>
 
@@ -127,74 +194,73 @@
     <div class="register-card">
 
         <h2 class="register-title">Tạo tài khoản</h2>
-
-        <p class="register-description">
-            Đăng ký tài khoản để sử dụng hệ thống NewsCMS
-        </p>
+        <p class="register-description">Đăng ký tài khoản để sử dụng hệ thống NewsCMS</p>
 
         @if (ViewBag.thongbao != null)
         {
-            <div class="register-message">
-                @ViewBag.thongbao
-            </div>
+            <div class="register-message">@ViewBag.thongbao</div>
         }
 
-        <form method="post"
-              asp-controller="Trangchu"
-              asp-action="Dangkytk">
-
+        <form method="post" asp-controller="Trangchu" asp-action="Dangkytk">
             <div class="section-title">Thông tin tài khoản</div>
 
             <div class="form-group">
                 <label for="TenDangNhap">Tên đăng nhập</label>
-                <input type="text"
-                       id="TenDangNhap"
-                       name="TenDangNhap"
-                       placeholder="Nhập tên đăng nhập"
-                       required />
+                <input type="text" id="TenDangNhap" name="TenDangNhap" placeholder="Nhập tên đăng nhập" required />
             </div>
 
             <div class="form-group">
                 <label for="Email">Địa chỉ Email</label>
-                <input type="email"
-                       id="Email"
-                       name="Email"
-                       placeholder="Nhập địa chỉ Email"
-                       required />
+                <input type="email" id="Email" name="Email" placeholder="Nhập địa chỉ Email" required />
             </div>
 
             <div class="form-group">
                 <label for="MatKhau">Mật khẩu</label>
-                <input type="password"
-                       id="MatKhau"
-                       name="MatKhau"
-                       placeholder="Nhập mật khẩu"
-                       required />
+                <input type="password" id="MatKhau" name="MatKhau" placeholder="Nhập mật khẩu" required />
             </div>
 
             <div class="section-title">Thông tin độc giả</div>
 
             <div class="form-group">
                 <label for="HoTen">Họ và tên</label>
-                <input type="text"
-                       id="HoTen"
-                       name="HoTen"
-                       placeholder="Nhập họ và tên"
-                       required />
+                <input type="text" id="HoTen" name="HoTen" placeholder="Nhập họ và tên" required />
             </div>
 
-            <button type="submit" class="register-button">
-                Đăng ký tài khoản
-            </button>
-
+            <button type="submit" class="register-button">Đăng ký tài khoản</button>
         </form>
 
         <div class="login-link">
-            Đã có tài khoản?
-            <a asp-controller="Trangchu" asp-action="Dangnhap">
-                Đăng nhập
-            </a>
+            Đã có tài khoản? <a asp-controller="Trangchu" asp-action="Dangnhap">Đăng nhập</a>
         </div>
 
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const count = 35;
+        for (let i = 0; i < count; i++) {
+            const snow = document.createElement('div');
+            snow.classList.add('snowflake');
+            snow.innerHTML = i % 2 === 0 ? '❄' : '❅';
+            snow.style.left = Math.random() * window.innerWidth + 'px';
+            snow.style.top = -20 + Math.random() * -100 + 'px';
+            snow.style.fontSize = (Math.random() * 10 + 10) + 'px';
+            snow.style.opacity = Math.random() * 0.7 + 0.3;
+            snow.style.animationDuration = (Math.random() * 6 + 4) + 's';
+            snow.style.animationDelay = (Math.random() * 5) + 's';
+            document.body.appendChild(snow);
+
+            const star = document.createElement('div');
+            star.classList.add('star-dust');
+            star.innerHTML = '✦';
+            star.style.left = Math.random() * window.innerWidth + 'px';
+            star.style.top = -20 + Math.random() * -100 + 'px';
+            star.style.fontSize = (Math.random() * 8 + 8) + 'px';
+            star.style.opacity = Math.random() * 0.8 + 0.2;
+            star.style.animationDuration = (Math.random() * 5 + 3) + 's';
+            star.style.animationDelay = (Math.random() * 4) + 's';
+            document.body.appendChild(star);
+        }
+    });
+</script>

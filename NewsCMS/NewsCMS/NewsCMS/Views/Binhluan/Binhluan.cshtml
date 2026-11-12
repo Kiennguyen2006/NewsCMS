@@ -5,8 +5,185 @@
 }
 
 <style>
+    .bl-wrapper {
+        min-height: 85vh;
+        padding: 15px;
+    }
+
+    .bl-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 24px;
+    }
+
+        .bl-header h2 {
+            margin: 0;
+            color: #f8fafc;
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+            .bl-header h2 i {
+                color: #38bdf8;
+                margin-right: 8px;
+            }
+
+        .bl-header p {
+            margin: 6px 0 0;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+    .btn-slate-back {
+        background: #1a243d;
+        border: 1px solid #2a3a5c;
+        color: #38bdf8;
+        border-radius: 10px;
+        padding: 9px 18px;
+        font-weight: 600;
+        font-size: 14px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+
+        .btn-slate-back:hover {
+            background: rgba(56, 189, 248, 0.15);
+            border-color: #38bdf8;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+    .bl-card {
+        background: #131b2e;
+        border: 1px solid #23314d;
+        border-radius: 16px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+    }
+
+    .bl-card-header {
+        background: rgba(26, 36, 61, 0.6);
+        border-bottom: 1px solid #23314d;
+        padding: 20px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+        .bl-card-header h5 {
+            color: #f8fafc;
+            font-weight: 700;
+            font-size: 16px;
+            margin: 0;
+        }
+
+            .bl-card-header h5 i {
+                color: #38bdf8;
+                margin-right: 8px;
+            }
+
+    .slate-badge-count {
+        background: rgba(56, 189, 248, 0.15);
+        color: #38bdf8;
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .slate-input-group .form-control {
+        background-color: #1a243d !important;
+        border: 1px solid #2a3a5c !important;
+        color: #f1f5f9 !important;
+        border-radius: 10px 0 0 10px !important;
+        padding: 11px 16px;
+        font-size: 14px;
+    }
+
+        .slate-input-group .form-control:focus {
+            border-color: #38bdf8 !important;
+            box-shadow: none !important;
+        }
+
+        .slate-input-group .form-control::placeholder {
+            color: #64748b;
+        }
+
+    .btn-slate-search {
+        background: linear-gradient(135deg, #0284c7, #2563eb);
+        border: 1px solid rgba(56, 189, 248, 0.4);
+        color: #ffffff;
+        font-weight: 600;
+        padding: 0 22px;
+        border-radius: 0 10px 10px 0 !important;
+        transition: all 0.2s ease;
+    }
+
+        .btn-slate-search:hover {
+            opacity: 0.92;
+            color: #ffffff;
+        }
+
+    .comment-table {
+        table-layout: fixed;
+        width: 100%;
+        min-width: 850px;
+        margin-bottom: 0;
+        color: #e2e8f0;
+    }
+
+        .comment-table thead th {
+            background: #1a243d;
+            color: #94a3b8;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            border-bottom: 1px solid #23314d;
+            border-top: none;
+            padding: 15px 14px;
+            vertical-align: middle;
+        }
+
+        .comment-table tbody td {
+            background: transparent;
+            border-bottom: 1px solid #1e293b;
+            padding: 15px 14px;
+            vertical-align: middle;
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        .comment-table tbody tr {
+            transition: background-color 0.2s ease;
+        }
+
+            .comment-table tbody tr:hover td {
+                background-color: rgba(56, 189, 248, 0.06);
+            }
+
+            .comment-table tbody tr:last-child td {
+                border-bottom: none;
+            }
+
+    .slate-id-pill {
+        background: #1e293b;
+        color: #cbd5e1;
+        border: 1px solid #334155;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
     .comment-cell {
-        max-width: 300px;
+        max-width: 320px;
         min-width: 220px;
         text-align: left;
     }
@@ -19,11 +196,12 @@
         white-space: normal;
         overflow-wrap: anywhere;
         line-height: 1.5;
+        color: #e2e8f0;
     }
 
     .comment-details summary {
         cursor: pointer;
-        color: #007bff;
+        color: #38bdf8;
         font-size: 13px;
         margin-top: 4px;
         list-style: none;
@@ -36,6 +214,8 @@
         .comment-details summary::after {
             content: "Xem thêm";
             font-weight: 600;
+            display: inline-block;
+            margin-top: 4px;
         }
 
     .comment-details[open] summary::after {
@@ -44,67 +224,107 @@
 
     .comment-full {
         margin-top: 8px;
-        padding: 8px 10px;
-        background: #f8f9fa;
-        border-left: 3px solid #007bff;
-        border-radius: 4px;
+        padding: 10px 12px;
+        background: #1a243d;
+        border-left: 3px solid #38bdf8;
+        border-radius: 6px;
+        color: #f1f5f9;
         white-space: pre-wrap;
         overflow-wrap: anywhere;
         line-height: 1.5;
     }
 
-    .comment-table {
-        table-layout: fixed;
-        width: 100%;
+    .btn-delete-pill {
+        background: rgba(239, 68, 68, 0.15);
+        color: #f87171;
+        border: 1px solid rgba(239, 68, 68, 0.3);
+        border-radius: 20px;
+        padding: 6px 14px;
+        font-size: 12px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        transition: all 0.2s ease;
     }
 
-        .comment-table th,
-        .comment-table td {
-            vertical-align: middle;
+        .btn-delete-pill:hover {
+            background: #ef4444;
+            color: #ffffff;
+            transform: translateY(-2px);
         }
+
+    .bl-card-footer {
+        background: rgba(26, 36, 61, 0.4);
+        border-top: 1px solid #23314d;
+        padding: 15px 24px;
+        color: #64748b;
+        font-size: 13px;
+    }
 </style>
 
-<div class="container-fluid">
-    <div class="card card-primary card-outline">
-        <div class="card-header">
-            <h3 class="card-title">
-                <i class="fas fa-comments mr-2"></i>
-                Danh sách bình luận
-            </h3>
+<div class="container-fluid bl-wrapper">
+
+    <div class="bl-header">
+        <div>
+            <h2>
+                <i class="bi bi-chat-dots-fill"></i>
+                Quản lý bình luận
+            </h2>
+            <p>Kiểm duyệt và quản lý phản hồi của độc giả trên các bài viết.</p>
         </div>
 
-        <div class="card-body">
+        <a asp-controller="Trangchu"
+           asp-action="Trangdau"
+           class="btn-slate-back">
+            <i class="bi bi-arrow-left me-1"></i>
+            Quay về trang chủ
+        </a>
+    </div>
+
+    <div class="bl-card">
+        <div class="bl-card-header">
+            <h5>
+                <i class="bi bi-list-ul"></i>
+                Danh sách bình luận
+            </h5>
+
+            <span class="slate-badge-count">
+                @(bang?.Count() ?? 0) bình luận
+            </span>
+        </div>
+
+        <div class="p-4">
             <form asp-controller="Binhluan"
                   asp-action="Binhluan"
                   method="get"
                   class="mb-4">
 
-                <div class="input-group">
+                <div class="input-group slate-input-group">
                     <input type="text"
                            name="tk"
                            class="form-control"
                            placeholder="Nhập nội dung bình luận cần tìm..."
                            value="@Context.Request.Query["tk"]" />
 
-                    <div class="input-group-append">
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-search mr-1"></i>
-                            Tìm kiếm
-                        </button>
-                    </div>
+                    <button type="submit" class="btn btn-slate-search">
+                        <i class="bi bi-search me-1"></i>
+                        Tìm kiếm
+                    </button>
                 </div>
             </form>
 
-            <div class="table-responsive">
-                <table class="table table-bordered table-hover text-center comment-table">
-                    <thead class="thead-light">
+            <div class="table-responsive rounded-3" style="border: 1px solid #23314d;">
+                <table class="table text-center comment-table">
+                    <thead>
                         <tr>
-                            <th style="width: 100px;">Mã bình luận</th>
-                            <th style="width: 100px;">Mã bài viết</th>
-                            <th style="width: 100px;">Mã độc giả</th>
+                            <th style="width: 110px;">Mã bình luận</th>
+                            <th style="width: 110px;">Mã bài viết</th>
+                            <th style="width: 110px;">Mã độc giả</th>
                             <th>Nội dung bình luận</th>
-                            <th style="width: 150px;">Ngày bình luận</th>
-                            <th style="width: 90px;">Thao tác</th>
+                            <th style="width: 160px;">Ngày bình luận</th>
+                            <th style="width: 105px;">Thao tác</th>
                         </tr>
                     </thead>
 
@@ -114,9 +334,15 @@
                             foreach (var bl in bang)
                             {
                                 <tr>
-                                    <td>@bl.MaBinhLuan</td>
-                                    <td>@bl.MaBaiViet</td>
-                                    <td>@bl.MaDocGia</td>
+                                    <td class="fw-bold" style="color: #38bdf8;">
+                                        #@bl.MaBinhLuan
+                                    </td>
+                                    <td>
+                                        <span class="slate-id-pill">#@bl.MaBaiViet</span>
+                                    </td>
+                                    <td>
+                                        <span class="slate-id-pill">#@bl.MaDocGia</span>
+                                    </td>
 
                                     <td class="comment-cell">
                                         @if (!string.IsNullOrEmpty(bl.NoiDung) && bl.NoiDung.Length > 100)
@@ -141,7 +367,7 @@
                                         }
                                     </td>
 
-                                    <td>
+                                    <td style="color: #94a3b8;">
                                         @bl.NgayBinhLuan.ToString("dd/MM/yyyy HH:mm")
                                     </td>
 
@@ -149,8 +375,8 @@
                                         <a asp-controller="Binhluan"
                                            asp-action="Xacnhanxoa"
                                            asp-route-ma="@bl.MaBinhLuan"
-                                           class="btn btn-danger btn-sm">
-                                            <i class="fas fa-trash-alt mr-1"></i>
+                                           class="btn-delete-pill">
+                                            <i class="bi bi-trash"></i>
                                             Xóa
                                         </a>
                                     </td>
@@ -160,8 +386,8 @@
                         else
                         {
                             <tr>
-                                <td colspan="6" class="text-muted py-4">
-                                    <i class="fas fa-info-circle mr-1"></i>
+                                <td colspan="6" class="py-5" style="color: #64748b;">
+                                    <i class="bi bi-chat-square-dots fs-1 d-block mb-2" style="color: #475569;"></i>
                                     Không tìm thấy bình luận nào.
                                 </td>
                             </tr>
@@ -171,10 +397,10 @@
             </div>
         </div>
 
-        <div class="card-footer">
-            <span class="text-muted">
+        <div class="bl-card-footer">
+            <span>
                 Tổng số bình luận:
-                <strong>@(bang?.Count() ?? 0)</strong>
+                <strong style="color: #38bdf8;">@(bang?.Count() ?? 0)</strong>
             </span>
         </div>
     </div>

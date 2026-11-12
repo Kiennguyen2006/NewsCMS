@@ -9,46 +9,50 @@
 <style>
     .delete-employee-page {
         max-width: 850px;
-        margin: 45px auto;
+        margin: 25px auto;
         padding: 0 15px;
     }
 
     .delete-card {
-        background: white;
+        background: #131b2e;
+        border: 1px solid #23314d;
         border-radius: 16px;
         overflow: hidden;
-        box-shadow: 0 10px 35px rgba(35, 45, 60, .1);
-        border: 1px solid #f0e1e1;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
     }
 
     .delete-header {
-        background: linear-gradient(120deg, #a92f3a, #dc5660);
-        color: white;
+        background: linear-gradient(135deg, rgba(220, 38, 38, 0.25), rgba(153, 27, 27, 0.35));
+        border-bottom: 1px solid rgba(239, 68, 68, 0.3);
         text-align: center;
         padding: 32px 25px;
     }
 
     .delete-icon {
-        width: 72px;
-        height: 72px;
-        background: rgba(255,255,255,.17);
-        border: 2px solid rgba(255,255,255,.35);
+        width: 68px;
+        height: 68px;
+        background: rgba(239, 68, 68, 0.15);
+        border: 1px solid rgba(239, 68, 68, 0.35);
+        color: #f87171;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0 auto 15px;
-        font-size: 29px;
+        font-size: 28px;
     }
 
     .delete-header h3 {
-        font-weight: 750;
+        color: #f87171;
+        font-weight: 800;
+        font-size: 22px;
         margin-bottom: 8px;
     }
 
     .delete-header p {
         margin: 0;
-        opacity: .9;
+        color: #94a3b8;
+        font-size: 14px;
     }
 
     .delete-body {
@@ -56,11 +60,13 @@
     }
 
     .delete-warning {
-        background: #fff6e9;
-        border: 1px solid #f5d9a8;
-        border-radius: 10px;
+        background: rgba(245, 158, 11, 0.12);
+        border: 1px solid rgba(245, 158, 11, 0.3);
+        border-radius: 12px;
         padding: 16px 18px;
-        color: #79551c;
+        color: #fbbf24;
+        font-size: 14px;
+        line-height: 1.6;
         margin-bottom: 25px;
     }
 
@@ -71,36 +77,51 @@
 
     .employee-info-title {
         font-weight: 700;
-        color: #35445a;
-        font-size: 16px;
+        color: #38bdf8;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
         margin-bottom: 15px;
     }
 
     .employee-info-table {
-        border: 1px solid #e9edf2;
-        border-radius: 10px;
+        border: 1px solid #23314d;
+        border-radius: 12px;
         overflow: hidden;
     }
 
         .employee-info-table table {
             margin-bottom: 0;
+            width: 100%;
+            border-collapse: collapse;
         }
+
+        .employee-info-table tr {
+            border-bottom: 1px solid #23314d;
+        }
+
+            .employee-info-table tr:last-child {
+                border-bottom: none;
+            }
 
         .employee-info-table th {
             width: 38%;
-            background: #f7f9fc;
-            color: #536276;
+            background: #1a243d;
+            color: #94a3b8;
             font-weight: 600;
-            padding: 13px 16px;
+            font-size: 14px;
+            padding: 14px 16px;
         }
 
         .employee-info-table td {
-            padding: 13px 16px;
-            color: #27384d;
+            background: #131b2e;
+            padding: 14px 16px;
+            color: #f1f5f9;
+            font-size: 14px;
         }
 
     .delete-footer {
-        border-top: 1px solid #edf0f4;
+        border-top: 1px solid #23314d;
         margin-top: 25px;
         padding-top: 22px;
         display: flex;
@@ -109,22 +130,43 @@
         gap: 12px;
     }
 
-    .btn-confirm-delete {
-        background: #c93643;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        padding: 11px 22px;
+    .btn-slate-cancel {
+        background: #1e293b;
+        border: 1px solid #334155;
+        color: #cbd5e1;
+        border-radius: 10px;
+        padding: 10px 22px;
         font-weight: 600;
+        font-size: 14px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+
+        .btn-slate-cancel:hover {
+            background: #334155;
+            color: #ffffff;
+        }
+
+    .btn-confirm-delete {
+        background: linear-gradient(135deg, #dc2626, #b91c1c);
+        border: 1px solid rgba(248, 113, 113, 0.4);
+        color: white;
+        border-radius: 10px;
+        padding: 10px 24px;
+        font-weight: 600;
+        font-size: 14px;
+        box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+        transition: all 0.2s ease;
     }
 
         .btn-confirm-delete:hover {
-            background: #a9212d;
+            background: linear-gradient(135deg, #ef4444, #dc2626);
             color: white;
+            transform: translateY(-1px);
         }
 
     .delete-note {
-        color: #8994a3;
+        color: #64748b;
         font-size: 13px;
         margin-top: 18px;
     }
@@ -136,7 +178,7 @@
         <div class="delete-card">
             <div class="delete-header">
                 <div class="delete-icon">
-                    <i class="fa-solid fa-user-xmark"></i>
+                    <i class="bi bi-person-x-fill"></i>
                 </div>
                 <h3>Xác nhận xóa nhân viên</h3>
                 <p>Vui lòng kiểm tra thông tin trước khi thực hiện thao tác.</p>
@@ -145,7 +187,7 @@
             <div class="delete-body">
                 <div class="delete-warning">
                     <strong>
-                        <i class="fa-solid fa-triangle-exclamation me-2"></i>
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i>
                         Cảnh báo: Thao tác này có thể ảnh hưởng đến dữ liệu liên quan.
                     </strong>
                     Theo logic xóa hiện tại trong Controller, các bài viết, bình luận
@@ -154,7 +196,7 @@
                 </div>
 
                 <div class="employee-info-title">
-                    <i class="fa-solid fa-address-card text-danger me-2"></i>
+                    <i class="bi bi-person-vcard me-2"></i>
                     Thông tin nhân viên cần xóa
                 </div>
 
@@ -162,7 +204,7 @@
                     <table class="table table-borderless">
                         <tr>
                             <th>Mã nhân viên</th>
-                            <td><strong>NV-@nv.MaNhanVien</strong></td>
+                            <td><strong style="color: #38bdf8;">NV-@nv.MaNhanVien</strong></td>
                         </tr>
                         <tr>
                             <th>Mã tài khoản</th>
@@ -188,14 +230,14 @@
                 </div>
 
                 <div class="delete-note">
-                    <i class="fa-solid fa-circle-info me-1"></i>
+                    <i class="bi bi-info-circle me-1"></i>
                     Tài khoản đăng nhập không được xóa bởi đoạn xử lý hiện tại.
                 </div>
 
                 <div class="delete-footer">
                     <a asp-controller="Nhanvien" asp-action="Nhanvien"
-                       class="btn btn-outline-secondary px-4">
-                        <i class="fa-solid fa-arrow-left me-1"></i> Hủy bỏ
+                       class="btn-slate-cancel">
+                        <i class="bi bi-arrow-left me-1"></i> Hủy bỏ
                     </a>
 
                     <form asp-controller="Nhanvien" asp-action="Xoanv" method="post">
@@ -208,8 +250,8 @@
                         <input type="hidden" name="NgayVaoLam"
                                value="@(nv.NgayVaoLam == null ? "" : ((DateTime)nv.NgayVaoLam).ToString("yyyy-MM-dd"))" />
 
-                        <button type="submit" class="btn-confirm-delete">
-                            <i class="fa-solid fa-trash-can me-2"></i>
+                        <button type="submit" class="btn btn-confirm-delete">
+                            <i class="bi bi-trash3 me-2"></i>
                             Xác nhận xóa
                         </button>
                     </form>
@@ -219,7 +261,7 @@
     }
     else
     {
-        <div class="alert alert-danger">
+        <div class="alert rounded-3 p-4" style="background: rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.3); color: #f87171;">
             Không tìm thấy nhân viên cần xóa.
         </div>
     }
