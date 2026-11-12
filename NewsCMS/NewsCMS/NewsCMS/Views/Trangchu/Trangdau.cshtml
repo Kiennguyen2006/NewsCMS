@@ -124,6 +124,138 @@
             transition: opacity .2s ease;
         }
 
+        /* Nút hồ sơ */
+        .news-account {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-hoso {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 10px 16px;
+            border: 1px solid #dce6f2;
+            border-radius: 25px;
+            background: #fff;
+            color: #26364b;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .25s ease;
+        }
+
+            .btn-hoso i:first-child {
+                color: #0875df;
+                font-size: 18px;
+            }
+
+            .btn-hoso i:last-child {
+                font-size: 11px;
+                transition: transform .25s ease;
+            }
+
+            .btn-hoso:hover,
+            .btn-hoso[aria-expanded="true"] {
+                color: #0875df;
+                background: #edf5ff;
+                border-color: #0875df;
+                box-shadow: 0 4px 12px rgba(8, 117, 223, .12);
+            }
+
+                .btn-hoso[aria-expanded="true"] i:last-child {
+                    transform: rotate(180deg);
+                }
+
+        /* Khung hồ sơ xổ xuống */
+        .hoso-dropdown {
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+            width: 360px;
+            max-width: calc(100vw - 24px);
+            max-height: 75vh;
+            overflow-y: auto;
+            background: #fff;
+            border: 1px solid #e5eaf0;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .16);
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px);
+            transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+        }
+
+            .hoso-dropdown.show {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+        .hoso-content {
+            padding: 20px;
+        }
+
+        .hoso-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            color: #0875df;
+        }
+
+            .hoso-header > i {
+                font-size: 34px;
+            }
+
+            .hoso-header h5 {
+                margin: 0;
+                color: #172b4d;
+                font-weight: 700;
+            }
+
+            .hoso-header small {
+                color: #778397;
+            }
+
+        .hoso-title {
+            margin-bottom: 12px;
+            color: #0875df;
+            font-weight: 700;
+        }
+
+        .hoso-field {
+            margin-bottom: 12px;
+        }
+
+            .hoso-field label {
+                display: block;
+                margin-bottom: 5px;
+                color: #526174;
+                font-size: 13px;
+                font-weight: 600;
+            }
+
+        .hoso-logout {
+            width: 100%;
+            padding: 10px 14px;
+            border: 0;
+            border-radius: 8px;
+            background: #dc3545;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background .2s ease;
+        }
+
+            .hoso-logout:hover {
+                background: #bb2d3b;
+            }
+
         @@media (max-width: 768px) {
             .news-management {
                 padding: 17px;
@@ -154,6 +286,15 @@
             .management-links {
                 grid-template-columns: 1fr;
             }
+
+            .hoso-dropdown {
+                width: min(340px, calc(100vw - 24px));
+            }
+
+            .btn-hoso {
+                padding: 8px 12px;
+                font-size: 13px;
+            }
         }
     </style>
 
@@ -181,7 +322,6 @@
 
 <div class="news-page">
 
-    <!-- HEADER -->
     <header class="news-header">
         <div class="news-header-inner">
 
@@ -229,16 +369,27 @@
                 }
                 else
                 {
-                    <a href="#"
-                       class="account-profile">
-                        ♙ Hồ sơ cá nhân
-                    </a>
+                    <button type="button"
+                            id="btnHoso"
+                            class="btn-hoso"
+                            data-url="@Url.Action("Hoso", "Hoso")"
+                            aria-expanded="false">
+
+                        <i class="fas fa-user-circle"></i>
+                        Hồ Sơ
+                        <i class="fas fa-chevron-down"></i>
+
+                    </button>
+
+                    <div id="khungHoso"
+                         class="hoso-dropdown"></div>
                 }
 
             </div>
 
         </div>
     </header>
+
     <nav class="news-navigation">
         <div class="news-navigation-inner">
 
@@ -267,6 +418,7 @@
     </nav>
 
     <main class="news-main">
+
         <section class="news-welcome">
 
             <div>
@@ -289,7 +441,8 @@
             </div>
 
         </section>
-        @if (maTaiKhoan.HasValue && (maVaiTro == 1 || maVaiTro == 2 || maVaiTro == 3))
+
+        @if (maTaiKhoan.HasValue && maVaiTro > 0)
         {
             <section class="news-management">
 
@@ -310,7 +463,9 @@
                             ? "Quản trị viên"
                             : maVaiTro == 2
                                 ? "Biên tập viên"
-                                : "Chủ biên")
+                                : maVaiTro == 3
+                                    ? "Chủ biên"
+                                    : "Người dùng")
                     </span>
 
                 </div>
@@ -346,6 +501,7 @@
         }
 
         <div class="news-columns">
+
             <aside class="news-ad-column">
 
                 <h3 class="ad-heading">
@@ -376,6 +532,7 @@
                 }
 
             </aside>
+
             <section class="news-content" id="newsContent">
 
                 <div class="news-section-title">
@@ -395,6 +552,7 @@
                     </span>
 
                 </div>
+
                 <div class="news-article-list">
 
                     @if (soLuongBaiViet > 0)
@@ -403,7 +561,7 @@
                         {
                             <article class="news-article">
 
-                                <a asp-controller="Giaodienbaiviet"
+                                <a asp-controller="BaiViet"
                                    asp-action="ChiTiet"
                                    asp-route-id="@item.MaBaiViet"
                                    class="article-image-link">
@@ -432,7 +590,7 @@
 
                                     <h3 class="article-title">
 
-                                        <a asp-controller="Giaodienbaiviet"
+                                        <a asp-controller="BaiViet"
                                            asp-action="ChiTiet"
                                            asp-route-id="@item.MaBaiViet">
 
@@ -455,7 +613,7 @@
                                             ◷ @item.NgayTao.ToString("dd/MM/yyyy")
                                         </span>
 
-                                        <a asp-controller="Giaodienbaiviet"
+                                        <a asp-controller="BaiViet"
                                            asp-action="ChiTiet"
                                            asp-route-id="@item.MaBaiViet"
                                            class="article-read-more">
@@ -490,6 +648,7 @@
                     }
 
                 </div>
+
                 @if (ViewBag.tongsotrang > 1)
                 {
                     <nav class="news-pagination"
@@ -506,7 +665,9 @@
                                asp-route-timkiem="@ViewBag.timkiem"
                                asp-route-maDanhMuc="@ViewBag.maDanhMuc"
                                class="pagination-link">
+
                                 ‹
+
                             </a>
                         }
 
@@ -517,7 +678,9 @@
                                asp-route-timkiem="@ViewBag.timkiem"
                                asp-route-maDanhMuc="@ViewBag.maDanhMuc"
                                class="pagination-link @(i == ViewBag.trang ? "pagination-active" : "")">
+
                                 @i
+
                             </a>
                         }
 
@@ -528,7 +691,9 @@
                                asp-route-timkiem="@ViewBag.timkiem"
                                asp-route-maDanhMuc="@ViewBag.maDanhMuc"
                                class="pagination-link pagination-next">
+
                                 Tiếp →
+
                             </a>
                         }
 
@@ -536,6 +701,7 @@
                 }
 
             </section>
+
             <aside class="news-ad-column">
 
                 <h3 class="ad-heading">
@@ -570,6 +736,7 @@
         </div>
 
     </main>
+
     <footer class="news-footer">
 
         <a asp-controller="Trangchu"
@@ -599,8 +766,107 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
 
-            const newsContent = document.getElementById('newsContent');
-            const searchForm = document.getElementById('newsSearch');
+            const newsContent =
+                document.getElementById('newsContent');
+
+            const searchForm =
+                document.getElementById('newsSearch');
+
+            // Xử lý hồ sơ xổ xuống
+            const btnHoso =
+                document.getElementById('btnHoso');
+
+            const khungHoso =
+                document.getElementById('khungHoso');
+
+            if (btnHoso && khungHoso) {
+
+                btnHoso.addEventListener('click', async function (event) {
+
+                    event.stopPropagation();
+
+                    if (khungHoso.classList.contains('show')) {
+
+                        khungHoso.classList.remove('show');
+
+                        btnHoso.setAttribute(
+                            'aria-expanded',
+                            'false'
+                        );
+
+                        return;
+                    }
+
+                    khungHoso.classList.add('show');
+
+                    btnHoso.setAttribute(
+                        'aria-expanded',
+                        'true'
+                    );
+
+                    if (khungHoso.dataset.loaded === 'true') {
+                        return;
+                    }
+
+                    khungHoso.innerHTML =
+                        '<div class="p-3 text-center">Đang tải thông tin...</div>';
+
+                    try {
+
+                        const response = await fetch(
+                            btnHoso.dataset.url
+                        );
+
+                        if (response.status === 401) {
+
+                            window.location.href =
+                                '/Trangchu/Dangnhap';
+
+                            return;
+                        }
+
+                        if (!response.ok) {
+                            throw new Error('Không thể tải hồ sơ.');
+                        }
+
+                        khungHoso.innerHTML =
+                            await response.text();
+
+                        khungHoso.dataset.loaded = 'true';
+
+                    }
+                    catch (error) {
+
+                        khungHoso.innerHTML = `
+                                    <div class="p-3 text-danger">
+                                        Không thể tải thông tin hồ sơ.
+                                        Vui lòng thử lại.
+                                    </div>
+                                `;
+
+                    }
+
+                });
+
+                document.addEventListener('click', function (event) {
+
+                    if (
+                        !khungHoso.contains(event.target) &&
+                        !btnHoso.contains(event.target)
+                    ) {
+
+                        khungHoso.classList.remove('show');
+
+                        btnHoso.setAttribute(
+                            'aria-expanded',
+                            'false'
+                        );
+
+                    }
+
+                });
+
+            }
 
             if (!newsContent) return;
 
@@ -621,6 +887,7 @@
                     }
 
                     const html = await response.text();
+
                     const parser = new DOMParser();
 
                     const newDocument = parser.parseFromString(
@@ -628,14 +895,18 @@
                         'text/html'
                     );
 
-                    const newContent = newDocument.getElementById('newsContent');
+                    const newContent =
+                        newDocument.getElementById('newsContent');
 
                     if (!newContent) {
+
                         window.location.href = url;
+
                         return;
                     }
 
-                    newsContent.innerHTML = newContent.innerHTML;
+                    newsContent.innerHTML =
+                        newContent.innerHTML;
 
                     if (newDocument.title) {
                         document.title = newDocument.title;
@@ -664,6 +935,7 @@
                         if (searchInput) {
                             searchInput.value = keyword;
                         }
+
                     }
 
                     newsContent.style.opacity = '1';
@@ -678,9 +950,11 @@
                 catch (error) {
 
                     newsContent.style.opacity = '1';
+
                     window.location.href = url;
 
                 }
+
             }
 
             function updateCategoryActive(url) {
@@ -716,6 +990,7 @@
                     );
 
                 });
+
             }
 
             document.addEventListener('click', function (event) {
@@ -765,6 +1040,7 @@
                     event.preventDefault();
 
                     const formData = new FormData(searchForm);
+
                     const params = new URLSearchParams(formData);
 
                     const url = new URL(

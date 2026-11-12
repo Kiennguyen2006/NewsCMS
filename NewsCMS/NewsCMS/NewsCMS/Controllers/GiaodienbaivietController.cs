@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NewsCMS.Data;
 using NewsCMS.Models;
-
 namespace NewsCMS.Controllers
 {
     public class GiaodienbaivietController : Controller

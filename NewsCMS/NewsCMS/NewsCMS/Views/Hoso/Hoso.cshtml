@@ -1,0 +1,89 @@
+﻿@using NewsCMS.Models
+
+@{
+    var dongtk = ViewBag.dongtk as TaiKhoanModel;
+    var dongdg = ViewBag.dongdg as DocgiaModel;
+}
+
+<div class="hoso-content">
+
+    <div class="hoso-header">
+        <i class="fas fa-user-circle"></i>
+        <div>
+            <h5>Hồ sơ cá nhân</h5>
+            <small>Thông tin tài khoản của bạn</small>
+        </div>
+    </div>
+
+    @if (dongtk != null)
+    {
+        <h6 class="hoso-title">Thông tin tài khoản</h6>
+
+        <div class="hoso-field">
+            <label>Mã tài khoản</label>
+            <input class="form-control"
+                   value="@dongtk.MaTaiKhoan" readonly />
+        </div>
+
+        <div class="hoso-field">
+            <label>Tên đăng nhập</label>
+            <input class="form-control"
+                   value="@dongtk.TenDangNhap" readonly />
+        </div>
+
+        <div class="hoso-field">
+            <label>Email</label>
+            <input class="form-control"
+                   value="@dongtk.Email" readonly />
+        </div>
+    }
+
+    <hr />
+
+    <h6 class="hoso-title">Thông tin độc giả</h6>
+
+    @if (dongdg != null)
+    {
+        <div class="hoso-field">
+            <label>Mã độc giả</label>
+            <input class="form-control"
+                   value="@dongdg.MaDocGia" readonly />
+        </div>
+
+        <div class="hoso-field">
+            <label>Họ và tên</label>
+            <input class="form-control"
+                   value="@dongdg.HoTen" readonly />
+        </div>
+
+        <div class="hoso-field">
+            <label>Ngày đăng ký</label>
+            <input class="form-control"
+                   value="@dongdg.NgayDangKy.ToString("dd/MM/yyyy")"
+                   readonly />
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-warning">
+            Không tìm thấy thông tin độc giả.
+        </div>
+    }
+
+    <hr />
+
+    <form asp-controller="Hoso"
+          asp-action="Dangxuat"
+          method="post">
+
+        @Html.AntiForgeryToken()
+
+        <button type="submit" class="hoso-logout"
+                onclick="return confirm('Bạn có chắc chắn muốn đăng xuất không?')">
+            <i class="fas fa-sign-out-alt me-1"></i>
+            Đăng xuất
+        </button>
+
+    </form>
+
+</div>
