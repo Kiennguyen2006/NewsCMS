@@ -906,7 +906,37 @@
             </div>
             <div class="welcome-decoration">NEWS</div>
         </section>
-
+                <!-- SECTION TÁCH RIÊNG: LỌC BÀI VIẾT THEO NGÀY -->
+        <section class="news-management" style="margin-bottom: 24px;">
+            <div class="management-heading" style="margin-bottom: 14px;">
+                <div>
+                    <span class="section-kicker">BỘ LỌC THỜI GIAN</span>
+                    <h2>Lọc bài viết theo ngày</h2>
+                </div>
+                <span class="management-role">Thời gian đăng</span>
+            </div>
+        
+            <form method="get" asp-action="Trangdau" id="locTheoNgay" style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+                
+                <input type="hidden" name="timkiem" value="@ViewBag.timkiem" />
+                <input type="hidden" name="maDanhMuc" value="@ViewBag.maDanhMuc" />
+        
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <label style="font-size: 13px; font-weight: 600; color: #94a3b8;">Từ ngày:</label>
+                    <input type="date" name="tuNgay" value="@ViewBag.TuNgay" style="background: #1a243d; border: 1px solid #2a3a5c; color: #f8fafc; padding: 6px 12px; border-radius: 8px; font-size: 13px; outline: none;" />
+                </div>
+        
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <label style="font-size: 13px; font-weight: 600; color: #94a3b8;">Đến ngày:</label>
+                    <input type="date" name="denNgay" value="@ViewBag.DenNgay" style="background: #1a243d; border: 1px solid #2a3a5c; color: #f8fafc; padding: 6px 12px; border-radius: 8px; font-size: 13px; outline: none;" />
+                </div>
+        
+                <div style="display: flex; gap: 8px; margin-left: auto;">
+                    <button type="submit" style="background: linear-gradient(135deg, #0284c7, #2563eb); color: white; border: none; padding: 7px 16px; border-radius: 8px; font-weight: 600; font-size: 13px; cursor: pointer;">Lọc dữ liệu</button>
+                    <a asp-action="Trangdau" asp-route-maDanhMuc="@ViewBag.maDanhMuc" style="background: #1a243d; color: #94a3b8; border: 1px solid #2a3a5c; padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center;">Đặt lại</a>
+                </div>
+            </form>
+        </section>
         @if (maTaiKhoan.HasValue && maVaiTro > 0)
         {
             <section class="news-management">
