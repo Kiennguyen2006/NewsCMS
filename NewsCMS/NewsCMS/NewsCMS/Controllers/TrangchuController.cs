@@ -28,6 +28,17 @@ namespace NewsCMS.Controllers
         {
             int sodongmuonhienthi = 10;
             ViewBag.sodongmuonhienthi = sodongmuonhienthi;
+                  //Lọc bài viết theo khoảng thời gian
+            if (tuNgay.HasValue)
+            {
+                bangchuacacbaivietdadcduyet = (IOrderedQueryable<BaiVietModel>)bangchuacacbaivietdadcduyet.Where(x => x.NgayTao >= tuNgay.Value);
+            }
+            if (denNgay.HasValue)
+            {
+                var endDate = denNgay.Value.Date.AddDays(1).AddTicks(-1);
+                bangchuacacbaivietdadcduyet = (IOrderedQueryable<BaiVietModel>)bangchuacacbaivietdadcduyet.Where(x => x.NgayTao <= endDate);
+            }
+            
             var bangchuacacbaivietdadcduyet = _context.BaiViet.Where(x => x.TrangThai == "Hoàn Thành"&& _context.DanhMuc.Any(dm =>dm.MaDanhMuc == x.MaDanhMuc && dm.TrangThai == true)).OrderByDescending(b => b.NgayTao);
             int tongsodong = bangchuacacbaivietdadcduyet.Count();
             ViewBag.soluongbaiviet = tongsodong;
