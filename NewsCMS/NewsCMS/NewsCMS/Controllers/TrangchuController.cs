@@ -24,7 +24,7 @@ namespace NewsCMS.Controllers
             _configuration = configuration;
         }
 
-        public IActionResult Trangdau(string timkiem, int trang = 1, int? maDanhMuc = null)
+        public IActionResult Trangdau(string timkiem, int trang = 1, int? maDanhMuc = null, DateTime? tuNgay = null, DateTime? denNgay = null)
         {
             int sodongmuonhienthi = 10;
             ViewBag.sodongmuonhienthi = sodongmuonhienthi;
