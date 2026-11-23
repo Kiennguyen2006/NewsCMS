@@ -155,6 +155,7 @@
         right: -45px;
         pointer-events: none;
     }
+
     .news-main {
         min-width: 0;
     }
@@ -263,6 +264,7 @@
         line-height: 1.85;
         margin-bottom: 32px;
     }
+
     .news-content {
         color: #cbd5e1;
         font-size: 16px;
@@ -375,6 +377,7 @@
             border-color: #38bdf8;
             color: #ffffff;
         }
+
     .comment-area {
         margin-top: 26px;
         padding: 34px 42px;
@@ -560,10 +563,6 @@
             transform: translateY(-8px);
         }
     }
-
-    /* =========================
-               6. RESPONSIVE
-            ========================= */
 
     @@media (max-width: 1250px) {
         .news-page-layout {
@@ -830,82 +829,85 @@
                         }
 
                     </div>
-            var danhSachGoiY = ViewBag.baivietgoiy
-            as List<BaiVietModel>
-            ?? new List<BaiVietModel>();
+                    @{
+                        var danhSachGoiY = ViewBag.baivietgoiy as List<BaiVietModel> ?? new List<BaiVietModel>();
+                    }
+                    as List<BaiVietModel>
+                    ?? new List<BaiVietModel>
+                    ();
 
-    @if (danhSachGoiY.Any())
-    {
-        <section class="related-news">
-    
-            <div class="related-heading">
-                <i class="fa-solid fa-newspaper"></i>
-                <h2>Có thể bạn quan tâm</h2>
-            </div>
-    
-            <div class="related-grid">
-    
-                @foreach (var item in danhSachGoiY)
-                {
-                    <article class="related-card">
-    
-                        <a asp-controller="Giaodienbaiviet"
-                           asp-action="ChiTiet"
-                           asp-route-id="@item.MaBaiViet">
-    
-                            @if (!string.IsNullOrWhiteSpace(item.AnhDaiDien))
-                            {
-                                <img class="related-image"
-                                     src="@Url.Content("~/images/" + item.AnhDaiDien)"
-                                     alt="@item.TieuDe"
-                                     loading="lazy" />
-                            }
-                            else
-                            {
-                                <div class="related-image-empty">
-                                    NEWS
-                                </div>
-                            }
-                        </a>
-    
-                        <div class="related-body">
-    
-                            <h3 class="related-title">
-                                <a asp-controller="Giaodienbaiviet"
-                                   asp-action="ChiTiet"
-                                   asp-route-id="@item.MaBaiViet">
-                                    @item.TieuDe
-                                </a>
-                            </h3>
-    
-                            @if (!string.IsNullOrWhiteSpace(item.TomTat))
-                            {
-                                <p class="related-summary">
-                                    @item.TomTat
-                                </p>
-                            }
-    
-                            <div class="related-footer">
-    
-                                <span class="related-date">
-                                    <i class="fa-regular fa-calendar"></i>
-                                    @item.NgayTao.ToString("dd/MM/yyyy")
-                                </span>
-    
-                                <a asp-controller="Giaodienbaiviet"
-                                   asp-action="ChiTiet"
-                                   asp-route-id="@item.MaBaiViet"
-                                   class="related-more">
-                                    Đọc tiếp →
-                                </a>
-    
+                    @if (danhSachGoiY.Any())
+                    {
+                        <section class="related-news">
+
+                            <div class="related-heading">
+                                <i class="fa-solid fa-newspaper"></i>
+                                <h2>Có thể bạn quan tâm</h2>
                             </div>
-                        </div>
-                    </article>
-                }
-            </div>
-        </section>
-    }
+
+                            <div class="related-grid">
+
+                                @foreach (var item in danhSachGoiY)
+                                {
+                                    <article class="related-card">
+
+                                        <a asp-controller="Giaodienbaiviet"
+                                           asp-action="ChiTiet"
+                                           asp-route-id="@item.MaBaiViet">
+
+                                            @if (!string.IsNullOrWhiteSpace(item.AnhDaiDien))
+                                            {
+                                                <img class="related-image"
+                                                     src="@Url.Content("~/images/" + item.AnhDaiDien)"
+                                                     alt="@item.TieuDe"
+                                                     loading="lazy" />
+                                            }
+                                            else
+                                            {
+                                                <div class="related-image-empty">
+                                                    NEWS
+                                                </div>
+                                            }
+                                        </a>
+
+                                        <div class="related-body">
+
+                                            <h3 class="related-title">
+                                                <a asp-controller="Giaodienbaiviet"
+                                                   asp-action="ChiTiet"
+                                                   asp-route-id="@item.MaBaiViet">
+                                                    @item.TieuDe
+                                                </a>
+                                            </h3>
+
+                                            @if (!string.IsNullOrWhiteSpace(item.TomTat))
+                                            {
+                                                <p class="related-summary">
+                                                    @item.TomTat
+                                                </p>
+                                            }
+
+                                            <div class="related-footer">
+
+                                                <span class="related-date">
+                                                    <i class="fa-regular fa-calendar"></i>
+                                                    @item.NgayTao.ToString("dd/MM/yyyy")
+                                                </span>
+
+                                                <a asp-controller="Giaodienbaiviet"
+                                                   asp-action="ChiTiet"
+                                                   asp-route-id="@item.MaBaiViet"
+                                                   class="related-more">
+                                                    Đọc tiếp →
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </article>
+                                }
+                            </div>
+                        </section>
+                    }
 
                 </section>
             }
@@ -970,6 +972,6 @@
 {
     <script>
         alert(@Html.Raw(System.Text.Json.JsonSerializer.Serialize(
-                                                                                    (string)ViewBag.ThongBao)));
+                                                                                                                                                                                    (string)ViewBag.ThongBao)));
     </script>
 }
