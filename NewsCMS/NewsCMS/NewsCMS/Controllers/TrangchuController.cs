@@ -1,4 +1,3 @@
-﻿
 using MailKit.Net.Smtp;
 using MailKit.Security;
 using Microsoft.AspNetCore.Mvc;
@@ -28,18 +27,18 @@ namespace NewsCMS.Controllers
         {
             int sodongmuonhienthi = 10;
             ViewBag.sodongmuonhienthi = sodongmuonhienthi;
-                  //Lọc bài viết theo khoảng thời gian
+            IQueryable<BaiVietModel> bangchuacacbaivietdadcduyet = _context.BaiViet.Where(x => x.TrangThai == "Hoàn Thành" && _context.DanhMuc.Any(dm => dm.MaDanhMuc == x.MaDanhMuc && dm.TrangThai == true));
             if (tuNgay.HasValue)
             {
-                bangchuacacbaivietdadcduyet = (IOrderedQueryable<BaiVietModel>)bangchuacacbaivietdadcduyet.Where(x => x.NgayTao >= tuNgay.Value);
+                bangchuacacbaivietdadcduyet = bangchuacacbaivietdadcduyet.Where(x => x.NgayTao >= tuNgay.Value);
             }
             if (denNgay.HasValue)
             {
                 var endDate = denNgay.Value.Date.AddDays(1).AddTicks(-1);
-                bangchuacacbaivietdadcduyet = (IOrderedQueryable<BaiVietModel>)bangchuacacbaivietdadcduyet.Where(x => x.NgayTao <= endDate);
+                bangchuacacbaivietdadcduyet = bangchuacacbaivietdadcduyet.Where(x => x.NgayTao <= endDate);
             }
-            
-            var bangchuacacbaivietdadcduyet = _context.BaiViet.Where(x => x.TrangThai == "Hoàn Thành"&& _context.DanhMuc.Any(dm =>dm.MaDanhMuc == x.MaDanhMuc && dm.TrangThai == true)).OrderByDescending(b => b.NgayTao);
+
+            bangchuacacbaivietdadcduyet = bangchuacacbaivietdadcduyet.OrderByDescending(b => b.NgayTao);
             int tongsodong = bangchuacacbaivietdadcduyet.Count();
             ViewBag.soluongbaiviet = tongsodong;
             int tongsotrang = Math.Max(1, (int)Math.Ceiling((double)tongsodong / sodongmuonhienthi));
@@ -280,7 +279,7 @@ namespace NewsCMS.Controllers
 
             foreach (var i in bang)
             {
-                if (i.Email.Equals(taiKhoan.Email)||i.TenDangNhap.Equals(taiKhoan.TenDangNhap))
+                if (i.Email.Equals(taiKhoan.Email) || i.TenDangNhap.Equals(taiKhoan.TenDangNhap))
                 {
                     a = false;
                     break;
