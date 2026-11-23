@@ -920,7 +920,18 @@
                 
                 <input type="hidden" name="timkiem" value="@ViewBag.timkiem" />
                 <input type="hidden" name="maDanhMuc" value="@ViewBag.maDanhMuc" />
-        
+                <input type="hidden" name="daLocNgay" value="1" />
+              
+                 @* bẫy lỗi   *@
+                <div id="bayLoiNgay">
+                    @if (!string.IsNullOrEmpty(ViewBag.LoiNgay as string))
+                    {
+                        <div style="margin-top: 12px; padding: 10px 14px; border-radius: 8px; background: rgba(239, 68, 68, 0.14); border: 1px solid rgba(239, 68, 68, 0.35); color: #fca5a5; font-size: 13px; font-weight: 600;">
+                            @ViewBag.LoiNgay
+                        </div>
+                    }
+                </div>
+
                 <div style="display: flex; align-items: center; gap: 8px;">
                     <label style="font-size: 13px; font-weight: 600; color: #94a3b8;">Từ ngày:</label>
                     <input type="date" name="tuNgay" value="@ViewBag.TuNgay" style="background: #1a243d; border: 1px solid #2a3a5c; color: #f8fafc; padding: 6px 12px; border-radius: 8px; font-size: 13px; outline: none;" />
