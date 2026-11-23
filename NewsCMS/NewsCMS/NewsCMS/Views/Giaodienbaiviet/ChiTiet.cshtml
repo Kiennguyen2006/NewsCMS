@@ -953,7 +953,7 @@
                             for (var i = 0; i < danhSachBinhLuanSapXep.Count; i++)
                             {
                                 var bl = danhSachBinhLuanSapXep[i];
-                                <div class="comment-item @(i >= 2 ? "comment-extra" : "")">
+                                <div class="comment-item @(i >= 3 ? "comment-extra" : "")">
 
                                     <div class="comment-avatar">
                                         <i class="fa-solid fa-user"></i>
@@ -979,10 +979,10 @@
                                 </div>
                             }
 
-                            @if (danhSachBinhLuanSapXep.Count > 2)
+                            @if (danhSachBinhLuanSapXep.Count > 3)
                             {
-                                <button type="button" class="comment-more" id="showMoreComments">
-                                    Xem thêm
+                                <button type="button" class="comment-more" id="toggleCommentsBtn">
+                                    Xem thêm (@(danhSachBinhLuanSapXep.Count - 3) bình luận)
                                 </button>
                             }
                         }
@@ -1002,12 +1002,22 @@
                     </div>
 
                     <script>
-                                        document.getElementById('showMoreComments')?.addEventListener('click', function () {
-                                            document.querySelectorAll('.comment-extra').forEach(function (comment) {
-                                                comment.style.display = 'flex';
+                                        const toggleBtn = document.getElementById('toggleCommentsBtn');
+                                        if (toggleBtn) {
+                                            let isExpanded = false;
+                                            const extraComments = document.querySelectorAll('.comment-extra');
+                                            const originalText = toggleBtn.textContent.trim();
+
+                                            toggleBtn.addEventListener('click', function () {
+                                                isExpanded = !isExpanded;
+
+                                                extraComments.forEach(function (comment) {
+                                                    comment.style.display = isExpanded ? 'flex' : 'none';
+                                                });
+
+                                                toggleBtn.textContent = isExpanded ? 'Thu gọn' : originalText;
                                             });
-                                            this.remove();
-                                        });
+                                        }
                     </script>
 
                 </section>
@@ -1152,7 +1162,6 @@
 @if (ViewBag.ThongBao != null)
 {
     <script>
-        alert(@Html.Raw(System.Text.Json.JsonSerializer.Serialize(
-                                                                                                                                                                    (string)ViewBag.ThongBao)));
+        alert(@Html.Raw(System.Text.Json.JsonSerializer.Serialize((string)ViewBag.ThongBao)));
     </script>
 }
