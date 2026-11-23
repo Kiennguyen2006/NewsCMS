@@ -27,7 +27,7 @@ namespace NewsCMS.Controllers
         {
             int sodongmuonhienthi = 10;
             ViewBag.sodongmuonhienthi = sodongmuonhienthi;
-            IQueryable<BaiVietModel> bangchuacacbaivietdadcduyet = _context.BaiViet.Where(x => x.TrangThai == "Hoàn Thành" && _context.DanhMuc.Any(dm => dm.MaDanhMuc == x.MaDanhMuc && dm.TrangThai == true));
+            IQueryable<BaiVietModel> bangchuacacbaivietdadcduyet = _context.BaiViet.Where(x => x.TrangThai == "Hoàn Thành" && _context.DanhMuc.Any(dm => dm.MaDanhMuc == x.MaDanhMuc && dm.TrangThai == true)).OrderByDescending(b => b.NgayTao);
             if (tuNgay.HasValue)
             {
                 bangchuacacbaivietdadcduyet = bangchuacacbaivietdadcduyet.Where(x => x.NgayTao >= tuNgay.Value);
