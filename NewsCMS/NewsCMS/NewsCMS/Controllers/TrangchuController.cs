@@ -23,19 +23,36 @@ namespace NewsCMS.Controllers
             _configuration = configuration;
         }
 
-        public IActionResult Trangdau(string timkiem, int trang = 1, int? maDanhMuc = null, DateTime? tuNgay = null, DateTime? denNgay = null)
+        public IActionResult Trangdau(string timkiem, int trang = 1, int? maDanhMuc = null, DateTime? tuNgay = null, DateTime? denNgay = null,string ? daLocNgay = null)
         {
             int sodongmuonhienthi = 10;
             ViewBag.sodongmuonhienthi = sodongmuonhienthi;
+             //bẫy lỗi lọc ngày
+             if (daLocNgay == "1" && !tuNgay.HasValue && !denNgay.HasValue)
+             {
+                 ViewBag.LoiNgay = "Vui lòng chọn mốc ngày để lọc bài viết.";
+             }
+             else if (daLocNgay == "1" && !tuNgay.HasValue)
+             {
+                 ViewBag.LoiNgay = "Vui lòng chọn mốc đầu để lọc bài viết.";
+             }
+             else if (tuNgay.HasValue && denNgay.HasValue && tuNgay.Value.Date > denNgay.Value.Date)
+             {
+                 ViewBag.LoiNgay = "Từ ngày không được lớn hơn Đến ngày.";
+             }
+            
             IQueryable<BaiVietModel> bangchuacacbaivietdadcduyet = _context.BaiViet.Where(x => x.TrangThai == "Hoàn Thành" && _context.DanhMuc.Any(dm => dm.MaDanhMuc == x.MaDanhMuc && dm.TrangThai == true)).OrderByDescending(b => b.NgayTao);
-            if (tuNgay.HasValue)
+           if (ViewBag.LoiNgay == null)
             {
-                bangchuacacbaivietdadcduyet = bangchuacacbaivietdadcduyet.Where(x => x.NgayTao >= tuNgay.Value);
-            }
-            if (denNgay.HasValue)
-            {
-                var endDate = denNgay.Value.Date.AddDays(1).AddTicks(-1);
-                bangchuacacbaivietdadcduyet = bangchuacacbaivietdadcduyet.Where(x => x.NgayTao <= endDate);
+                if (tuNgay.HasValue)
+                {
+                    bangchuacacbaivietdadcduyet = bangchuacacbaivietdadcduyet .Where(x => x.NgayTao >= tuNgay.Value);
+                }
+                if (denNgay.HasValue)
+                {
+                    var endDate = denNgay.Value.Date.AddDays(1).AddTicks(-1);
+                    bangchuacacbaivietdadcduyet = bangchuacacbaivietdadcduyet .Where(x => x.NgayTao <= endDate);
+                }
             }
 
             bangchuacacbaivietdadcduyet = bangchuacacbaivietdadcduyet.OrderByDescending(b => b.NgayTao);
