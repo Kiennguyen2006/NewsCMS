@@ -1,3 +1,4 @@
+
 using Microsoft.AspNetCore.Mvc;
 using NewsCMS.Data;
 using NewsCMS.Models;
@@ -18,22 +19,40 @@ namespace NewsCMS.Controllers
             _context = context;
             _configuration = configuration;
         }
+
         public IActionResult ChiTiet(int id, string binhluanthem)
         {
             if (id <= 0)
             {
                 return NotFound();
             }
+
             var dongbaiviet = _context.BaiViet.Find(id);
 
             if (dongbaiviet == null)
             {
                 return NotFound();
             }
+
             ViewBag.dongbaiviet = dongbaiviet;
-            var baivietgoiy = _context.BaiViet.Where(x =>x.MaBaiViet != id &&x.TrangThai == "Hoàn Thành").OrderByDescending(x =>x.MaDanhMuc == dongbaiviet.MaDanhMuc).ThenByDescending(x => x.NgayTao).Take(3).ToList();
+
+
+            var baivietgoiy = _context.BaiViet
+                .Where(x =>
+                    x.MaBaiViet != id &&
+                    x.TrangThai == "Hoàn Thành")
+                .OrderByDescending(x =>
+                    x.MaDanhMuc == dongbaiviet.MaDanhMuc)
+                .ThenByDescending(x => x.NgayTao)
+                .Take(3)
+                .ToList();
+
             ViewBag.baivietgoiy = baivietgoiy;
-            var binhluan = _context.Binhluan.Where(x => x.MaBaiViet == id).ToList();
+
+
+            var binhluan = _context.Binhluan
+                .Where(x => x.MaBaiViet == id)
+                .ToList();
 
             ViewBag.binhluan = binhluan;
 
@@ -50,21 +69,31 @@ namespace NewsCMS.Controllers
                     "Bạn phải đăng nhập trước khi bình luận!";
                 return View();
             }
-            var madocgia = _context.DocGia.FirstOrDefault(x => x.MaTaiKhoan == matk.Value);
+
+            var madocgia = _context.DocGia
+                .FirstOrDefault(x => x.MaTaiKhoan == matk.Value);
+
             if (madocgia == null)
             {
                 ViewBag.ThongBao =
                     "Tài khoản của bạn chưa có thông tin độc giả!";
                 return View();
             }
+
             BinhluanModel binhluanmoi = new BinhluanModel();
-            binhluanmoi.MaBinhLuan =(_context.Binhluan.Max(x =>(int?)x.MaBinhLuan) ?? 0) + 1;
+
+            binhluanmoi.MaBinhLuan =
+                (_context.Binhluan.Max(x =>
+                    (int?)x.MaBinhLuan) ?? 0) + 1;
+
             binhluanmoi.MaBaiViet = id;
             binhluanmoi.MaDocGia = madocgia.MaDocGia;
             binhluanmoi.NoiDung = binhluanthem;
             binhluanmoi.NgayBinhLuan = DateTime.Now;
+
             _context.Binhluan.Add(binhluanmoi);
             _context.SaveChanges();
+
             return RedirectToAction("ChiTiet", new { id = id });
         }
     }
