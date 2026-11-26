@@ -1,4 +1,4 @@
-﻿@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http
 @using NewsCMS.Models
 @using System.Collections.Generic
 @using System.Linq
@@ -418,414 +418,636 @@
             letter-spacing: 1.2px;
             margin: 0 0 4px 4px;
         }
+.news-ad-card {
+background: #131b2e !important;
+border: 1px solid #23314d !important;
+border-radius: 14px;
+padding: 8px;
+text-align: center;
+position: relative;
+overflow: hidden;
+transition: all 0.25s;
+min-height: 120px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
 
-        .news-ad-card {
-            background: #131b2e !important;
-            border: 1px solid #23314d !important;
-            border-radius: 14px;
-            padding: 8px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.25s;
-            min-height: 120px;
+.news-ad-card:hover {
+border-color: #38bdf8 !important;
+transform: translateY(-2px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.news-ad-card a {
+display: block;
+width: 100%;
+height: 100%;
+text-decoration: none;
+}
+
+.news-ad-card img {
+width: 100%;
+height: 140px;
+border-radius: 8px;
+display: block;
+object-fit: cover;
+}
+
+.ad-tag {
+position: absolute;
+top: 12px;
+right: 12px;
+background: rgba(15, 23, 42, 0.85);
+color: #cbd5e1;
+font-size: 9px;
+font-weight: 700;
+padding: 2px 6px;
+border-radius: 4px;
+z-index: 2;
+border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ad-placeholder {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 6px;
+color: #64748b;
+font-size: 13px;
+padding: 22px 0;
+}
+
+.ad-symbol {
+font-size: 18px;
+color: #38bdf8;
+}
+
+.news-content {
+background: #131b2e !important;
+border: 1px solid #23314d !important;
+border-radius: 18px;
+padding: 30px;
+box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+transition: opacity 0.2s ease;
+}
+
+.news-section-title {
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+margin-bottom: 24px;
+padding-bottom: 16px;
+border-bottom: 1px solid #23314d;
+}
+
+.news-section-title h2 {
+margin: 4px 0 0;
+font-size: 22px;
+font-weight: 800;
+color: #f8fafc;
+}
+
+.news-count {
+font-size: 13px;
+font-weight: 600;
+color: #94a3b8;
+background: #1a243d;
+padding: 6px 12px;
+border-radius: 8px;
+border: 1px solid #2a3a5c;
+}
+
+.news-article-list {
+display: flex;
+flex-direction: column;
+gap: 24px;
+}
+
+.news-article {
+display: flex;
+gap: 20px;
+padding-bottom: 24px;
+border-bottom: 1px solid #23314d;
+transition: transform 0.2s ease;
+}
+
+.news-article:last-child {
+border-bottom: none;
+padding-bottom: 0;
+}
+
+.news-article:hover {
+transform: translateY(-2px);
+}
+
+.article-image-link {
+flex: 0 0 240px;
+height: 150px;
+border-radius: 12px;
+overflow: hidden;
+background: #1a243d;
+border: 1px solid #2a3a5c;
+}
+
+.article-image {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+
+.news-article:hover .article-image {
+transform: scale(1.05);
+}
+
+.article-image-empty {
+display: flex;
+align-items: center;
+justify-content: center;
+color: #475569;
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 2px;
+height: 100%;
+}
+
+.article-body {
+flex: 1;
+display: flex;
+flex-direction: column;
+}
+
+.article-category {
+font-size: 11px;
+font-weight: 700;
+color: #38bdf8;
+text-transform: uppercase;
+letter-spacing: 0.8px;
+margin-bottom: 6px;
+}
+
+.article-title {
+margin: 0 0 8px;
+font-size: 18px;
+font-weight: 700;
+line-height: 1.45;
+}
+
+.article-title a {
+color: #f1f5f9;
+text-decoration: none;
+transition: color 0.2s;
+}
+
+.article-title a:hover {
+color: #38bdf8;
+}
+
+.article-summary {
+font-size: 14px;
+color: #94a3b8;
+line-height: 1.6;
+margin: 0 0 14px;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+overflow: hidden;
+}
+
+.article-footer {
+margin-top: auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 13px;
+}
+
+.article-date {
+color: #64748b;
+}
+
+.article-read-more {
+color: #38bdf8;
+font-weight: 600;
+text-decoration: none;
+transition: color 0.2s;
+}
+
+.article-read-more:hover {
+color: #7dd3fc;
+text-decoration: underline;
+}
+
+.news-empty {
+text-align: center;
+padding: 50px 20px;
+color: #94a3b8;
+}
+
+.news-empty span {
+font-size: 40px;
+display: block;
+margin-bottom: 12px;
+color: #475569;
+}
+
+.news-empty h3 {
+color: #f8fafc;
+margin-bottom: 6px;
+}
+
+.news-pagination {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 8px;
+margin-top: 35px;
+padding-top: 22px;
+border-top: 1px solid #23314d;
+}
+
+.pagination-caption {
+margin-right: 6px;
+color: #64748b;
+font-size: 14px;
+font-weight: 600;
+}
+
+.news-pagination .pagination-link {
+display: inline-flex;
+justify-content: center;
+align-items: center;
+min-width: 38px;
+height: 38px;
+padding: 0 12px;
+color: #cbd5e1;
+background: #1a243d;
+border: 1px solid #2a3a5c;
+border-radius: 8px;
+text-decoration: none;
+font-weight: 600;
+transition: all 0.2s;
+}
+
+.news-pagination .pagination-link:hover,
+.news-pagination .pagination-link.pagination-active {
+color: #ffffff;
+background: #0284c7;
+border-color: #38bdf8;
+}
+
+.btn-hoso {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+padding: 9px 16px;
+border: 1px solid #334155;
+border-radius: 20px;
+background: #1e293b;
+color: #f8fafc;
+font-size: 14px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.2s;
+}
+
+.btn-hoso:hover, .btn-hoso[aria-expanded="true"] {
+border-color: #38bdf8;
+background: #26354d;
+color: #ffffff;
+}
+
+.hoso-dropdown {
+position: absolute;
+top: calc(100% + 12px);
+right: 0;
+width: 340px;
+background: #1e293b;
+border: 1px solid #334155;
+border-radius: 14px;
+box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+z-index: 9999;
+opacity: 0;
+visibility: hidden;
+transform: translateY(-8px);
+transition: all 0.25s ease;
+color: #f1f5f9;
+}
+
+.hoso-dropdown.show {
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
+}
+
+.news-footer {
+background: #060910 !important;
+color: #94a3b8;
+padding: 60px 20px 25px;
+margin-top: 80px;
+border-top: 1px solid #1e293b;
+}
+
+.footer-container {
+max-width: 1280px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+gap: 35px;
+padding-bottom: 40px;
+border-bottom: 1px solid #1e293b;
+}
+
+.footer-col h4 {
+color: #f8fafc;
+font-size: 15px;
+font-weight: 700;
+margin-bottom: 16px;
+text-transform: uppercase;
+letter-spacing: 0.8px;
+}
+
+.footer-col p {
+font-size: 14px;
+line-height: 1.6;
+color: #64748b;
+margin-bottom: 15px;
+}
+
+.footer-links {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.footer-links li {
+margin-bottom: 10px;
+}
+
+.footer-links a {
+color: #94a3b8;
+text-decoration: none;
+font-size: 14px;
+transition: all 0.2s ease;
+}
+
+.footer-links a:hover {
+color: #38bdf8;
+padding-left: 4px;
+}
+
+.footer-bottom {
+max-width: 1280px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-top: 25px;
+font-size: 13px;
+color: #475569;
+}
+
+@@media (max-width: 768px) {
+.footer-bottom {
+flex-direction: column;
+gap: 10px;
+text-align: center;
+}
+
+.news-article {
+flex-direction: column;
+}
+
+.article-image-link {
+flex: none;
+width: 100%;
+height: 180px;
+}
+}
+
+/* === GIAO DIỆN NÚT & KHUNG CHAT AI === */
+.ai-chat-toggle {
+position: fixed;
+bottom: 80px;
+right: 20px;
+width: 56px;
+height: 56px;
+border-radius: 50%;
+background: linear-gradient(135deg, #0284c7, #2563eb);
+color: #ffffff;
+border: 2px solid #38bdf8;
+            box-shadow: 0 8px 25px rgba(2, 132, 199, 0.55);
+            font-size: 25px;
+            cursor: pointer;
+            z-index: 10000;
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: all 0.25s ease;
         }
 
-            .news-ad-card:hover {
-                border-color: #38bdf8 !important;
-                transform: translateY(-2px);
-                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            .ai-chat-toggle:hover {
+                transform: scale(1.08);
+                box-shadow: 0 10px 30px rgba(56, 189, 248, 0.8);
             }
 
-            .news-ad-card a {
-                display: block;
-                width: 100%;
-                height: 100%;
-                text-decoration: none;
-            }
-
-            .news-ad-card img {
-                width: 100%;
-                height: 140px;
-                border-radius: 8px;
-                display: block;
-                object-fit: cover;
-            }
-
-        .ad-tag {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            background: rgba(15, 23, 42, 0.85);
-            color: #cbd5e1;
-            font-size: 9px;
-            font-weight: 700;
-            padding: 2px 6px;
-            border-radius: 4px;
-            z-index: 2;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .ad-placeholder {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-            color: #64748b;
-            font-size: 13px;
-            padding: 22px 0;
-        }
-
-        .ad-symbol {
-            font-size: 18px;
-            color: #38bdf8;
-        }
-
-        .news-content {
-            background: #131b2e !important;
-            border: 1px solid #23314d !important;
+        .ai-chat-window {
+            position: fixed;
+            bottom: 146px;
+            right: 20px;
+            width: 375px;
+            max-width: calc(100vw - 40px);
+            height: 500px;
+            background: #131b2e;
+            border: 1px solid #334155;
             border-radius: 18px;
-            padding: 30px;
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
-            transition: opacity 0.2s ease;
-        }
-
-        .news-section-title {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: 24px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid #23314d;
-        }
-
-            .news-section-title h2 {
-                margin: 4px 0 0;
-                font-size: 22px;
-                font-weight: 800;
-                color: #f8fafc;
-            }
-
-        .news-count {
-            font-size: 13px;
-            font-weight: 600;
-            color: #94a3b8;
-            background: #1a243d;
-            padding: 6px 12px;
-            border-radius: 8px;
-            border: 1px solid #2a3a5c;
-        }
-
-        .news-article-list {
-            display: flex;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75);
+            z-index: 10000;
+            display: none;
             flex-direction: column;
-            gap: 24px;
-        }
-
-        .news-article {
-            display: flex;
-            gap: 20px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid #23314d;
-            transition: transform 0.2s ease;
-        }
-
-            .news-article:last-child {
-                border-bottom: none;
-                padding-bottom: 0;
-            }
-
-            .news-article:hover {
-                transform: translateY(-2px);
-            }
-
-        .article-image-link {
-            flex: 0 0 240px;
-            height: 150px;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #1a243d;
-            border: 1px solid #2a3a5c;
-        }
-
-        .article-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .news-article:hover .article-image {
-            transform: scale(1.05);
-        }
-
-        .article-image-empty {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #475569;
-            font-weight: 700;
-            font-size: 14px;
-            letter-spacing: 2px;
-            height: 100%;
-        }
-
-        .article-body {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .article-category {
-            font-size: 11px;
-            font-weight: 700;
-            color: #38bdf8;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            margin-bottom: 6px;
-        }
-
-        .article-title {
-            margin: 0 0 8px;
-            font-size: 18px;
-            font-weight: 700;
-            line-height: 1.45;
-        }
-
-            .article-title a {
-                color: #f1f5f9;
-                text-decoration: none;
-                transition: color 0.2s;
-            }
-
-                .article-title a:hover {
-                    color: #38bdf8;
-                }
-
-        .article-summary {
-            font-size: 14px;
-            color: #94a3b8;
-            line-height: 1.6;
-            margin: 0 0 14px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
             overflow: hidden;
         }
 
-        .article-footer {
-            margin-top: auto;
+            .ai-chat-window.open {
+                display: flex;
+                animation: chatSlideUp 0.25s ease;
+            }
+
+        @@keyframes chatSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .ai-chat-header {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            border-bottom: 1px solid #2a3a5c;
+            padding: 13px 16px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 13px;
         }
 
-        .article-date {
-            color: #64748b;
-        }
-
-        .article-read-more {
-            color: #38bdf8;
-            font-weight: 600;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-            .article-read-more:hover {
-                color: #7dd3fc;
-                text-decoration: underline;
-            }
-
-        .news-empty {
-            text-align: center;
-            padding: 50px 20px;
-            color: #94a3b8;
-        }
-
-            .news-empty span {
-                font-size: 40px;
-                display: block;
-                margin-bottom: 12px;
-                color: #475569;
-            }
-
-            .news-empty h3 {
-                color: #f8fafc;
-                margin-bottom: 6px;
-            }
-
-        .news-pagination {
+        .ai-chat-title {
+            font-weight: 700;
+            font-size: 15px;
+            color: #f8fafc;
             display: flex;
-            justify-content: center;
             align-items: center;
             gap: 8px;
-            margin-top: 35px;
-            padding-top: 22px;
-            border-top: 1px solid #23314d;
         }
 
-        .pagination-caption {
-            margin-right: 6px;
-            color: #64748b;
-            font-size: 14px;
-            font-weight: 600;
+        .ai-chat-status {
+            font-size: 11px;
+            color: #4ade80;
+            display: block;
+            margin-top: 2px;
         }
 
-        .news-pagination .pagination-link {
-            display: inline-flex;
-            justify-content: center;
+        .ai-header-actions {
+            display: flex;
             align-items: center;
-            min-width: 38px;
-            height: 38px;
-            padding: 0 12px;
+            gap: 8px;
+        }
+
+        .ai-chat-btn-icon {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid #334155;
             color: #cbd5e1;
-            background: #1a243d;
-            border: 1px solid #2a3a5c;
+            width: 28px;
+            height: 28px;
             border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
             transition: all 0.2s;
         }
 
-            .news-pagination .pagination-link:hover,
-            .news-pagination .pagination-link.pagination-active {
+            .ai-chat-btn-icon:hover {
+                background: #1e293b;
                 color: #ffffff;
-                background: #0284c7;
                 border-color: #38bdf8;
             }
 
-        .btn-hoso {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 9px 16px;
-            border: 1px solid #334155;
-            border-radius: 20px;
+        .ai-chat-messages {
+            flex: 1;
+            padding: 14px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 13.5px;
+            line-height: 1.55;
+        }
+
+        .ai-msg {
+            padding: 10px 14px;
+            border-radius: 14px;
+            max-width: 86%;
+            word-wrap: break-word;
+            white-space: pre-line;
+        }
+
+        .ai-msg-bot {
+            align-self: flex-start;
             background: #1e293b;
-            color: #f8fafc;
-            font-size: 14px;
-            font-weight: 600;
+            border: 1px solid #2a3a5c;
+            color: #e2e8f0;
+            border-bottom-left-radius: 4px;
+        }
+
+            .ai-msg-bot a {
+                color: #38bdf8;
+                font-weight: 600;
+                text-decoration: underline;
+            }
+
+        .ai-msg-user {
+            align-self: flex-end;
+            background: linear-gradient(135deg, #0284c7, #2563eb);
+            color: #ffffff;
+            border-bottom-right-radius: 4px;
+        }
+
+        .ai-suggestions {
+            padding: 8px 12px;
+            background: #0f172a;
+            border-top: 1px solid #1e293b;
+            display: flex;
+            gap: 6px;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+            .ai-suggestions::-webkit-scrollbar {
+                display: none;
+            }
+
+        .ai-chip {
+            background: #1a243d;
+            border: 1px solid #2a3a5c;
+            color: #93c5fd;
+            padding: 5px 10px;
+            border-radius: 14px;
+            font-size: 12px;
+            white-space: nowrap;
             cursor: pointer;
             transition: all 0.2s;
         }
 
-            .btn-hoso:hover, .btn-hoso[aria-expanded="true"] {
-                border-color: #38bdf8;
-                background: #26354d;
+            .ai-chip:hover {
+                background: #0284c7;
                 color: #ffffff;
+                border-color: #38bdf8;
             }
 
-        .hoso-dropdown {
-            position: absolute;
-            top: calc(100% + 12px);
-            right: 0;
-            width: 340px;
-            background: #1e293b;
-            border: 1px solid #334155;
-            border-radius: 14px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
-            z-index: 9999;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-8px);
-            transition: all 0.25s ease;
-            color: #f1f5f9;
+        .ai-chat-footer {
+            padding: 10px 12px;
+            background: #0f172a;
+            border-top: 1px solid #23314d;
+            display: flex;
+            gap: 8px;
         }
 
-            .hoso-dropdown.show {
-                opacity: 1;
-                visibility: visible;
-                transform: translateY(0);
+            .ai-chat-footer input {
+                flex: 1;
+                background: #1e293b;
+                border: 1px solid #334155;
+                color: #f8fafc;
+                padding: 9px 12px;
+                border-radius: 10px;
+                font-size: 13px;
+                outline: none;
             }
 
-        .news-footer {
-            background: #060910 !important;
-            color: #94a3b8;
-            padding: 60px 20px 25px;
-            margin-top: 80px;
-            border-top: 1px solid #1e293b;
-        }
-
-        .footer-container {
-            max-width: 1280px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 35px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid #1e293b;
-        }
-
-        .footer-col h4 {
-            color: #f8fafc;
-            font-size: 15px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-        }
-
-        .footer-col p {
-            font-size: 14px;
-            line-height: 1.6;
-            color: #64748b;
-            margin-bottom: 15px;
-        }
-
-        .footer-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-            .footer-links li {
-                margin-bottom: 10px;
-            }
-
-            .footer-links a {
-                color: #94a3b8;
-                text-decoration: none;
-                font-size: 14px;
-                transition: all 0.2s ease;
-            }
-
-                .footer-links a:hover {
-                    color: #38bdf8;
-                    padding-left: 4px;
+                .ai-chat-footer input:focus {
+                    border-color: #38bdf8;
                 }
 
-        .footer-bottom {
-            max-width: 1280px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 25px;
-            font-size: 13px;
-            color: #475569;
-        }
-
-        @@media (max-width: 768px) {
-            .footer-bottom {
-                flex-direction: column;
-                gap: 10px;
-                text-align: center;
+            .ai-chat-footer button {
+                background: linear-gradient(135deg, #0284c7, #2563eb);
+                color: #ffffff;
+                border: none;
+                padding: 0 16px;
+                border-radius: 10px;
+                font-weight: 600;
+                font-size: 13px;
+                cursor: pointer;
             }
 
-            .news-article {
-                flex-direction: column;
-            }
-
-            .article-image-link {
-                flex: none;
-                width: 100%;
-                height: 180px;
-            }
-        }
+                .ai-chat-footer button:disabled {
+                    opacity: 0.5;
+                    cursor: not-allowed;
+                }
     </style>
 
     <link rel="stylesheet" href="~/css/Trangdau.css" asp-append-version="true" />
@@ -922,7 +1144,6 @@
                 <input type="hidden" name="maDanhMuc" value="@ViewBag.maDanhMuc" />
                 <input type="hidden" name="daLocNgay" value="1" />
 
-                @* bẫy lỗi   *@
                 <div id="bayLoiNgay">
                     @if (!string.IsNullOrEmpty(ViewBag.LoiNgay as string))
                     {
@@ -1167,6 +1388,35 @@
         </div>
     </footer>
 </div>
+<button type="button" id="btnToggleAiChat" class="ai-chat-toggle" title="Chat với Trợ lý AI">🤖</button>
+
+<div id="aiChatWindow" class="ai-chat-window">
+    <div class="ai-chat-header">
+        <div>
+            <div class="ai-chat-title">🤖 Trợ lý AI NewsCMS</div>
+            <span class="ai-chat-status">● Trực tuyến • Hỗ trợ tìm tin</span>
+        </div>
+        <div class="ai-header-actions">
+            <button type="button" id="btnClearAiChat" class="ai-chat-btn-icon" title="Làm mới đoạn chat">↻</button>
+            <button type="button" id="btnCloseAiChat" class="ai-chat-btn-icon" title="Đóng">✕</button>
+        </div>
+    </div>
+
+    <div id="aiChatMessages" class="ai-chat-messages">
+        <div class="ai-msg ai-msg-bot">Xin chào! Mình là trợ lý AI của NewsCMS. Bạn muốn tìm bài viết mới nhất, xem gợi ý bài hay hay hỏi bất cứ chủ đề nào khác cứ chọn gợi ý bên dưới hoặc nhắn cho mình nhé!</div>
+    </div>
+
+    <div class="ai-suggestions">
+        <button type="button" class="ai-chip" data-q="Các bài viết mới nhất trên web là gì?">📰 Tin mới nhất</button>
+        <button type="button" class="ai-chip" data-q="Gợi ý cho mình vài bài viết đáng đọc hôm nay">✨ Gợi ý bài hay</button>
+        <button type="button" class="ai-chip" data-q="Có bài viết nào về công nghệ hoặc AI không?">💻 Tin công nghệ</button>
+    </div>
+
+    <div class="ai-chat-footer">
+        <input type="text" id="aiChatInput" placeholder="Nhập câu hỏi của bạn..." autocomplete="off" />
+        <button type="button" id="btnSendAiChat">Gửi</button>
+    </div>
+</div>
 
 @section Scripts {
     <script>
@@ -1234,63 +1484,180 @@
                 });
             }
 
-            if (!newsContent) return;
-
-            async function loadPage(url, addHistory = true) {
-                newsContent.style.opacity = '0.5';
-                try {
-                    const response = await fetch(url, { headers: { 'X-Requested-With': 'XMLHttpRequest' } });
-                    if (!response.ok) throw new Error('Không thể tải trang.');
-                    const html = await response.text();
-                    const parser = new DOMParser();
-                    const newDocument = parser.parseFromString(html, 'text/html');
-                    const newContent = newDocument.getElementById('newsContent');
-                    if (!newContent) { window.location.href = url; return; }
-                    newsContent.innerHTML = newContent.innerHTML;
-                    if (newDocument.title) document.title = newDocument.title;
-                    if (addHistory) window.history.pushState({}, '', url);
-                    updateCategoryActive(url);
-                    newsContent.style.opacity = '1';
-                    window.scrollTo({ top: newsContent.getBoundingClientRect().top + window.scrollY - 110, behavior: 'smooth' });
-                } catch (error) {
-                    newsContent.style.opacity = '1';
-                    window.location.href = url;
+            if (newsContent) {
+                async function loadPage(url, addHistory = true) {
+                    newsContent.style.opacity = '0.5';
+                    try {
+                        const response = await fetch(url, { headers: { 'X-Requested-With': 'XMLHttpRequest' } });
+                        if (!response.ok) throw new Error('Không thể tải trang.');
+                        const html = await response.text();
+                        const parser = new DOMParser();
+                        const newDocument = parser.parseFromString(html, 'text/html');
+                        const newContent = newDocument.getElementById('newsContent');
+                        if (!newContent) { window.location.href = url; return; }
+                        newsContent.innerHTML = newContent.innerHTML;
+                        if (newDocument.title) document.title = newDocument.title;
+                        if (addHistory) window.history.pushState({}, '', url);
+                        updateCategoryActive(url);
+                        newsContent.style.opacity = '1';
+                        window.scrollTo({ top: newsContent.getBoundingClientRect().top + window.scrollY - 110, behavior: 'smooth' });
+                    } catch (error) {
+                        newsContent.style.opacity = '1';
+                        window.location.href = url;
+                    }
                 }
-            }
 
-            function updateCategoryActive(url) {
-                const currentUrl = new URL(url, window.location.origin);
-                const currentCategory = currentUrl.searchParams.get('maDanhMuc') || '';
-                document.querySelectorAll('.news-navigation .category-link').forEach(link => {
-                    const linkUrl = new URL(link.href, window.location.origin);
-                    const linkCategory = linkUrl.searchParams.get('maDanhMuc') || '';
-                    const isHome = link.classList.contains('category-home');
-                    link.classList.toggle('category-active', isHome ? currentCategory === '' : linkCategory === currentCategory);
-                });
-            }
+                function updateCategoryActive(url) {
+                    const currentUrl = new URL(url, window.location.origin);
+                    const currentCategory = currentUrl.searchParams.get('maDanhMuc') || '';
+                    document.querySelectorAll('.news-navigation .category-link').forEach(link => {
+                        const linkUrl = new URL(link.href, window.location.origin);
+                        const linkCategory = linkUrl.searchParams.get('maDanhMuc') || '';
+                        const isHome = link.classList.contains('category-home');
+                        link.classList.toggle('category-active', isHome ? currentCategory === '' : linkCategory === currentCategory);
+                    });
+                }
 
-            document.addEventListener('click', function (event) {
-                const link = event.target.closest('.news-navigation .category-link, .news-pagination a');
-                if (!link || !link.href) return;
-                if (event.ctrlKey || event.shiftKey || event.altKey || event.metaKey || link.target === '_blank' || link.hasAttribute('download')) return;
-                const url = new URL(link.href, window.location.origin);
-                if (url.origin !== window.location.origin) return;
-                event.preventDefault();
-                loadPage(url.href);
-            });
-
-            if (searchForm) {
-                searchForm.addEventListener('submit', function (event) {
+                document.addEventListener('click', function (event) {
+                    const link = event.target.closest('.news-navigation .category-link, .news-pagination a');
+                    if (!link || !link.href) return;
+                    if (event.ctrlKey || event.shiftKey || event.altKey || event.metaKey || link.target === '_blank' || link.hasAttribute('download')) return;
+                    const url = new URL(link.href, window.location.origin);
+                    if (url.origin !== window.location.origin) return;
                     event.preventDefault();
-                    const formData = new FormData(searchForm);
-                    const params = new URLSearchParams(formData);
-                    const url = new URL(searchForm.action, window.location.origin);
-                    url.search = params.toString();
                     loadPage(url.href);
                 });
+
+                if (searchForm) {
+                    searchForm.addEventListener('submit', function (event) {
+                        event.preventDefault();
+                        const formData = new FormData(searchForm);
+                        const params = new URLSearchParams(formData);
+                        const url = new URL(searchForm.action, window.location.origin);
+                        url.search = params.toString();
+                        loadPage(url.href);
+                    });
+                }
+
+                window.addEventListener('popstate', function () { loadPage(window.location.href, false); });
             }
 
-            window.addEventListener('popstate', function () { loadPage(window.location.href, false); });
+            // === XỬ LÝ KHUNG CHAT AI ===
+            const btnToggleAiChat = document.getElementById('btnToggleAiChat');
+            const btnCloseAiChat = document.getElementById('btnCloseAiChat');
+            const btnClearAiChat = document.getElementById('btnClearAiChat');
+            const aiChatWindow = document.getElementById('aiChatWindow');
+            const aiChatMessages = document.getElementById('aiChatMessages');
+            const aiChatInput = document.getElementById('aiChatInput');
+            const btnSendAiChat = document.getElementById('btnSendAiChat');
+            const chatHistory = [];
+            if (btnToggleAiChat && aiChatWindow) {
+                btnToggleAiChat.addEventListener('click', function () {
+                    aiChatWindow.classList.toggle('open');
+                    if (aiChatWindow.classList.contains('open')) aiChatInput.focus();
+                });
+
+                btnCloseAiChat.addEventListener('click', function () {
+                    aiChatWindow.classList.remove('open');
+                });
+
+                btnClearAiChat.addEventListener('click', function () {
+                    chatHistory.length = 0;
+
+                    aiChatMessages.innerHTML =
+                        '<div class="ai-msg ai-msg-bot">Đã làm mới cuộc trò chuyện! Bạn cần mình tìm bài viết gì hay giải đáp thắc mắc nào nhỉ?</div>';
+                });
+
+                document.querySelectorAll('.ai-chip').forEach(chip => {
+                    chip.addEventListener('click', function () {
+                        guiTinNhanAi(this.dataset.q);
+                    });
+                });
+
+                aiChatInput.addEventListener('keypress', function (e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        guiTinNhanAi();
+                    }
+                });
+
+                btnSendAiChat.addEventListener('click', () => guiTinNhanAi());
+            }
+
+            function dinhDangTinNhanBot(text) {
+                const escaped = text
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;");
+                return escaped
+                    .replace(/\[[^\]]+\]\((?:https?:\/\/[^/\s)]+)?(\/Giaodienbaiviet\/ChiTiet\/\d+)\)/gi, ' <a href="$1">👉 Xem bài viết</a>')
+                    .replace(/\(?(\/Giaodienbaiviet\/ChiTiet\/\d+)\)?/gi, ' <a href="$1">👉 Xem bài viết</a>')
+                    .replace(/https?:\/\/(?:(?!&lt;|&gt;|&quot;)[^\s"')\]])+?(?=[.,;!?]*(?:\s|$|&lt;|&gt;|&quot;|[)"'\]]))/gi, url => `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`);
+            }
+
+            async function guiTinNhanAi(presetText) {
+                const text = (presetText || aiChatInput.value).trim();
+                if (!text) return;
+
+                const userDiv = document.createElement('div');
+                userDiv.className = 'ai-msg ai-msg-user';
+                userDiv.textContent = text;
+                aiChatMessages.appendChild(userDiv);
+
+                if (!presetText) aiChatInput.value = '';
+                aiChatInput.disabled = true;
+                btnSendAiChat.disabled = true;
+
+                const loadingDiv = document.createElement('div');
+                loadingDiv.className = 'ai-msg ai-msg-bot';
+                loadingDiv.textContent = 'Đang suy nghĩ...';
+                aiChatMessages.appendChild(loadingDiv);
+                aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
+
+                try {
+                    const res = await fetch('@Url.Action("HoiAI", "Chat")', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            Message: text,
+                            History: chatHistory
+                        })
+                    });
+
+                    if (!res.ok) {
+                        let errorMessage = `Máy chủ trả về lỗi HTTP ${res.status}.`;
+                        try {
+                            const errorData = await res.json();
+                            if (errorData.reply) errorMessage = errorData.reply;
+                        } catch { }
+                        loadingDiv.textContent = `⚠️ ${errorMessage}`;
+                    } else {
+                        const data = await res.json();
+                        loadingDiv.innerHTML = dinhDangTinNhanBot(data.reply || 'Không có phản hồi.');
+                        chatHistory.push({
+                            role: 'user',
+                            content: text
+                        });
+
+                        chatHistory.push({
+                            role: 'assistant',
+                            content: data.reply || ''
+                        });
+
+                        // Giữ tối đa 10 lượt gần nhất
+                        if (chatHistory.length > 20) {
+                            chatHistory.splice(0, chatHistory.length - 20);
+                        }
+                    }
+                } catch (err) {
+                    loadingDiv.textContent = '⚠️ Lỗi mạng: ' + err.message;
+                } finally {
+                    aiChatInput.disabled = false;
+                    btnSendAiChat.disabled = false;
+                    aiChatInput.focus();
+                    aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
+                }
+            }
         });
     </script>
 }
