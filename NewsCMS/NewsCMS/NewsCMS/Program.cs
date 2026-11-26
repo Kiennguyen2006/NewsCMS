@@ -1,9 +1,24 @@
 
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.DataProtection;
+using Microsoft.AspNetCore.DataProtection.KeyManagement;
+using Microsoft.AspNetCore.DataProtection.XmlEncryption;
 using Microsoft.EntityFrameworkCore;
 using NewsCMS.Data;
+using NewsCMS.Services.Chatbot;
 
 var builder = WebApplication.CreateBuilder(args);
+if (builder.Environment.IsDevelopment() &&
+    builder.Configuration.GetValue<bool>("Chatbot:UseEphemeralDataProtectionForTesting"))
+{
+    builder.Services.AddDataProtection();
+    builder.Services.Configure<KeyManagementOptions>(options =>
+    {
+        options.XmlRepository = new InMemoryDataProtectionKeyRepository();
+        options.XmlEncryptor = new NullXmlEncryptor();
+    });
+}
+
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
     ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
@@ -16,6 +31,18 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options =>
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<SourceCodeReaderService>();
+builder.Services.AddScoped<DatabaseArticleService>();
+builder.Services.AddScoped<ChatOrchestratorService>();
+
+builder.Services.AddHttpClient<OllamaService>(client =>
+{
+    client.Timeout = TimeSpan.FromSeconds(120);
+});
+builder.Services.AddHttpClient<TavilySearchService>(client =>
+{
+    client.Timeout = TimeSpan.FromSeconds(25);
+});
 builder.Services.AddDistributedMemoryCache();
 
 builder.Services.AddSession(options =>
