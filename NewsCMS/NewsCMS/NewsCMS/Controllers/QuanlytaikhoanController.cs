@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NewsCMS.Data;
@@ -100,49 +100,125 @@ namespace NewsCMS.Controllers
                 if (mavt == 2)
                 {
                     var dongdg = _context.DocGia.FirstOrDefault(x => x.MaTaiKhoan == matk);
-                    if (dongdg == null)
+                    if (dongdg != null)
                     {
-                        return NotFound();
-                    }
-                    int mabl = dongdg.MaDocGia;
-                    var bangbvcanxoa = _context.BaiViet.Where(x => x.MaNhanVienTacGia == manv).ToList();
-                    var danhsachmabv = bangbvcanxoa.Select(x => x.MaBaiViet).ToList();
-                    var cacdongbinhluancanxoa = _context.Binhluan.Where(x => x.MaDocGia == mabl || danhsachmabv.Contains(x.MaBaiViet)).ToList();
-                    _context.Binhluan.RemoveRange(cacdongbinhluancanxoa);
-                    var banglscanxoa = _context.LichSuDuyet.Where(x => danhsachmabv.Contains(x.MaBaiViet)|| x.MaNguoiDuyet == manv).ToList();
-                    _context.LichSuDuyet.RemoveRange(banglscanxoa);
-                    _context.SaveChanges();
-                    _context.BaiViet.RemoveRange(bangbvcanxoa);
-                    _context.DocGia.Remove(dongdg);
-                    _context.NhanVien.Remove(dongnv);
-                    var bangtk = _context.Taikhoan.FirstOrDefault(x => x.MaTaiKhoan == matk);
-                    _context.Taikhoan.Remove(bangtk);
-                    _context.SaveChanges();
-                    return RedirectToAction("Quanlytaikhoan", "Quanlytaikhoan");
-                }
-                else
-                    if (mavt == 3)
-                    {
-                        var dongdg = _context.DocGia.FirstOrDefault(x => x.MaTaiKhoan == matk);
-                        if (dongdg == null)
-                        {
-                            return NotFound();
-                        }
                         int mabl = dongdg.MaDocGia;
-                        var bangbvcanxoa = _context.BaiViet.Where(x => x.MaNhanVienDuyet == manv).ToList();
-                        var danhsachmabv = bangbvcanxoa.Select(x => x.MaBaiViet).ToList();
-                        var cacdongbinhluancanxoa = _context.Binhluan.Where(x => x.MaDocGia == mabl || danhsachmabv.Contains(x.MaBaiViet)).ToList();
-                        _context.Binhluan.RemoveRange(cacdongbinhluancanxoa);
-                        var banglscanxoa = _context.LichSuDuyet.Where(x => danhsachmabv.Contains(x.MaBaiViet)|| x.MaNguoiDuyet == manv).ToList();
-                        _context.LichSuDuyet.RemoveRange(banglscanxoa);
+                        var blDocGia = _context.Binhluan.Where(x => x.MaDocGia == mabl).ToList();
+                        if (blDocGia.Count > 0)
+                        {
+                            _context.Binhluan.RemoveRange(blDocGia);
+                            _context.SaveChanges();
+                        }
                         _context.DocGia.Remove(dongdg);
+                        _context.SaveChanges();
+                    }
+                    var bangbvcanxoa = _context.BaiViet.Where(x => x.MaNhanVienTacGia == manv).ToList();
+                    if (bangbvcanxoa.Count > 0)
+                    {
+                        var danhsachmabv = bangbvcanxoa.Select(x => x.MaBaiViet).ToList();
+                        var cacdongbinhluancanxoa = _context.Binhluan.Where(x => danhsachmabv.Contains(x.MaBaiViet)).ToList();
+                        if (cacdongbinhluancanxoa.Count > 0)
+                        {
+                            _context.Binhluan.RemoveRange(cacdongbinhluancanxoa);
+                            _context.SaveChanges();
+                        }
+                        var banglscanxoa = _context.LichSuDuyet.Where(x => danhsachmabv.Contains(x.MaBaiViet)).ToList();
+                        if (banglscanxoa.Count > 0)
+                        {
+                            _context.LichSuDuyet.RemoveRange(banglscanxoa);
+                            _context.SaveChanges();
+                        }
                         _context.BaiViet.RemoveRange(bangbvcanxoa);
-                        _context.NhanVien.Remove(dongnv);
-                        var bangtk = _context.Taikhoan.FirstOrDefault(x => x.MaTaiKhoan == taiKhoan.MaTaiKhoan);
+                        _context.SaveChanges();
+                    }
+                    _context.NhanVien.Remove(dongnv);
+                    _context.SaveChanges();
+                    var bangtk = _context.Taikhoan.FirstOrDefault(x => x.MaTaiKhoan == matk);
+                    if (bangtk != null)
+                    {
                         _context.Taikhoan.Remove(bangtk);
                         _context.SaveChanges();
-                        return RedirectToAction("Quanlytaikhoan", "Quanlytaikhoan");
                     }
+                    return RedirectToAction("Quanlytaikhoan", "Quanlytaikhoan");
+                }
+                else if (mavt == 3)
+                {
+                    var dongdg = _context.DocGia.FirstOrDefault(x => x.MaTaiKhoan == matk);
+                    if (dongdg != null)
+                    {
+                        int mabl = dongdg.MaDocGia;
+                        var blDocGia = _context.Binhluan.Where(x => x.MaDocGia == mabl).ToList();
+                        if (blDocGia.Count > 0)
+                        {
+                            _context.Binhluan.RemoveRange(blDocGia);
+                            _context.SaveChanges();
+                        }
+                        _context.DocGia.Remove(dongdg);
+                        _context.SaveChanges();
+                    }
+                    var bangbvcanxoa = _context.BaiViet.Where(x => x.MaNhanVienDuyet == manv).ToList();
+                    var danhsachmabv = bangbvcanxoa.Select(x => x.MaBaiViet).ToList();
+                    if (danhsachmabv.Count > 0)
+                    {
+                        var cacdongbinhluancanxoa = _context.Binhluan.Where(x => danhsachmabv.Contains(x.MaBaiViet)).ToList();
+                        if (cacdongbinhluancanxoa.Count > 0)
+                        {
+                            _context.Binhluan.RemoveRange(cacdongbinhluancanxoa);
+                            _context.SaveChanges();
+                        }
+                    }
+                    var banglscanxoa = _context.LichSuDuyet.Where(x => danhsachmabv.Contains(x.MaBaiViet) || x.MaNguoiDuyet == manv).ToList();
+                    if (banglscanxoa.Count > 0)
+                    {
+                        _context.LichSuDuyet.RemoveRange(banglscanxoa);
+                        _context.SaveChanges();
+                    }
+                    if (bangbvcanxoa.Count > 0)
+                    {
+                        _context.BaiViet.RemoveRange(bangbvcanxoa);
+                        _context.SaveChanges();
+                    }
+                    _context.NhanVien.Remove(dongnv);
+                    _context.SaveChanges();
+                    var bangtk = _context.Taikhoan.FirstOrDefault(x => x.MaTaiKhoan == matk);
+                    if (bangtk != null)
+                    {
+                        _context.Taikhoan.Remove(bangtk);
+                        _context.SaveChanges();
+                    }
+                    return RedirectToAction("Quanlytaikhoan", "Quanlytaikhoan");
+                }
+                else if (mavt == 1)
+                {
+                    var dongdg = _context.DocGia.FirstOrDefault(x => x.MaTaiKhoan == matk);
+                    if (dongdg != null)
+                    {
+                        int madg = dongdg.MaDocGia;
+                        var blDocGia = _context.Binhluan.Where(x => x.MaDocGia == madg).ToList();
+                        if (blDocGia.Count > 0)
+                        {
+                            _context.Binhluan.RemoveRange(blDocGia);
+                            _context.SaveChanges();
+                        }
+                        _context.DocGia.Remove(dongdg);
+                        _context.SaveChanges();
+                    }
+                    _context.NhanVien.Remove(dongnv);
+                    _context.SaveChanges();
+                    var bangtk = _context.Taikhoan.FirstOrDefault(x => x.MaTaiKhoan == matk);
+                    if (bangtk != null)
+                    {
+                        _context.Taikhoan.Remove(bangtk);
+                        _context.SaveChanges();
+                    }
+                    var tkDangNhap = HttpContext.Session.GetInt32("MaTaiKhoan");
+                    if (tkDangNhap != null && tkDangNhap == matk)
+                    {
+                        HttpContext.Session.Clear();
+                        return RedirectToAction("Trangdau", "Trangchu");
+                    }
+                    return RedirectToAction("Quanlytaikhoan", "Quanlytaikhoan");
+                }
             }
             else
             {
@@ -150,20 +226,24 @@ namespace NewsCMS.Controllers
                 if (dongdg != null)
                 {
                     int madg = dongdg.MaDocGia;
-                    var cacdongbinhluancanxoa = _context.Binhluan.Where(x => x.MaDocGia == madg);
-                    _context.Binhluan.RemoveRange(cacdongbinhluancanxoa);
-                    _context.DocGia.Remove(dongdg);
-                    var bangtk1 = _context.Taikhoan.Find(taiKhoan.MaTaiKhoan);
-                    if (bangtk1 != null)
+                    var cacdongbinhluancanxoa = _context.Binhluan.Where(x => x.MaDocGia == madg).ToList();
+                    if (cacdongbinhluancanxoa.Count > 0)
                     {
-                        _context.Taikhoan.Remove(bangtk1);
+                        _context.Binhluan.RemoveRange(cacdongbinhluancanxoa);
+                        _context.SaveChanges();
                     }
+                    _context.DocGia.Remove(dongdg);
+                    _context.SaveChanges();
+                }
+                var bangtk1 = _context.Taikhoan.Find(matk);
+                if (bangtk1 != null)
+                {
                     _context.Taikhoan.Remove(bangtk1);
                     _context.SaveChanges();
-                    return RedirectToAction("Quanlytaikhoan", "Quanlytaikhoan");
                 }
+                return RedirectToAction("Quanlytaikhoan", "Quanlytaikhoan");
             }
-            return View();
+            return RedirectToAction("Quanlytaikhoan", "Quanlytaikhoan");
         }
     }
 }
