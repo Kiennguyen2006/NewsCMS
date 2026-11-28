@@ -1,0 +1,263 @@
+@{
+    Layout = "~/Views/Shared/_AdminLTELayout.cshtml";
+}
+@using NewsCMS.Models
+
+@{
+    ViewData["Title"] = "Xác nhận xóa danh mục";
+    var danhmuc = ViewBag.bang as DanhMucModel;
+    int sobaiviet = ViewBag.sobaiviet ?? 0;
+}
+
+@if (danhmuc != null)
+{
+    <div class="delete-container">
+        <div class="delete-card">
+
+            <div class="delete-heading">
+                <div class="delete-icon"><i class="bi bi-exclamation-lg"></i></div>
+                <h2>Xác nhận xóa danh mục</h2>
+                <p>Bạn có chắc chắn muốn xóa danh mục này không?</p>
+            </div>
+
+            @if (sobaiviet > 0)
+            {
+                <div class="delete-warning">
+                    <i class="bi bi-exclamation-triangle-fill me-1"></i>
+                    Cảnh báo: Danh mục này đang có <strong>@sobaiviet bài viết</strong> liên kết.
+                    Khi xóa danh mục, toàn bộ bài viết, lịch sử duyệt và bình luận thuộc danh mục này cũng sẽ bị xóa vĩnh viễn.
+                </div>
+            }
+            else
+            {
+                <div class="delete-success">
+                    <i class="bi bi-check-circle-fill me-1"></i>
+                    Danh mục này hiện chưa có bài viết nào liên kết. Bạn có thể thực hiện xóa an toàn.
+                </div>
+            }
+
+            <div class="delete-content">
+
+                <div class="delete-row">
+                    <span>Mã danh mục</span>
+                    <strong style="color: #38bdf8;">#@danhmuc.MaDanhMuc</strong>
+                </div>
+
+                <div class="delete-row">
+                    <span>Tên danh mục</span>
+                    <strong>@danhmuc.TenDanhMuc</strong>
+                </div>
+
+                <div class="delete-row">
+                    <span>Mô tả</span>
+                    <p>@(string.IsNullOrWhiteSpace(danhmuc.MoTa) ? "Không có mô tả" : danhmuc.MoTa)</p>
+                </div>
+
+                <div class="delete-row">
+                    <span>Trạng thái</span>
+                    @if (danhmuc.TrangThai)
+                    {
+                        <strong style="color: #34d399;">Đang hoạt động</strong>
+                    }
+                    else
+                    {
+                        <strong style="color: #f87171;">Đang ẩn</strong>
+                    }
+                </div>
+
+            </div>
+
+            <div class="delete-actions">
+
+                <form asp-controller="Danhmuc"
+                      asp-action="Xoadm"
+                      method="post">
+
+                    <input type="hidden" name="MaDanhMuc" value="@danhmuc.MaDanhMuc" />
+
+                    <button type="submit" class="btn-delete">
+                        <i class="bi bi-trash3 me-1"></i> Xóa danh mục
+                    </button>
+                </form>
+
+                <a asp-controller="Danhmuc"
+                   asp-action="Danhmuc"
+                   class="btn-back">
+                    <i class="bi bi-arrow-left me-1"></i> Quay lại
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+}
+
+<style>
+    .delete-container {
+        max-width: 750px;
+        margin: 25px auto;
+        padding: 15px;
+    }
+
+    .delete-card {
+        background: #131b2e;
+        border: 1px solid #23314d;
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+    }
+
+    .delete-heading {
+        text-align: center;
+        padding-bottom: 22px;
+        border-bottom: 1px solid #23314d;
+    }
+
+    .delete-icon {
+        width: 52px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 14px;
+        border-radius: 50%;
+        background: rgba(239, 68, 68, 0.15);
+        border: 1px solid rgba(239, 68, 68, 0.35);
+        color: #f87171;
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    .delete-heading h2 {
+        color: #f8fafc;
+        margin: 0 0 8px;
+        font-size: 23px;
+        font-weight: 800;
+    }
+
+    .delete-heading p {
+        color: #94a3b8;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .delete-success {
+        margin-top: 20px;
+        padding: 14px 16px;
+        background: rgba(16, 185, 129, 0.12);
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        border-radius: 12px;
+        color: #34d399;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .delete-warning {
+        margin-top: 20px;
+        padding: 14px 16px;
+        background: rgba(245, 158, 11, 0.12);
+        border: 1px solid rgba(245, 158, 11, 0.3);
+        border-radius: 12px;
+        color: #fbbf24;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .delete-content {
+        margin-top: 20px;
+    }
+
+    .delete-row {
+        padding: 16px 0;
+        border-bottom: 1px solid #23314d;
+    }
+
+        .delete-row > span {
+            display: block;
+            margin-bottom: 8px;
+            color: #94a3b8;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .delete-row strong {
+            color: #f1f5f9;
+            font-size: 15px;
+            overflow-wrap: anywhere;
+        }
+
+        .delete-row p {
+            color: #cbd5e1;
+            margin: 0;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+    .delete-actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+        margin-top: 28px;
+    }
+
+        .delete-actions form {
+            margin: 0;
+        }
+
+    .btn-delete,
+    .btn-back {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 160px;
+        padding: 11px 22px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .btn-delete {
+        background: linear-gradient(135deg, #dc2626, #b91c1c);
+        border: 1px solid rgba(248, 113, 113, 0.4);
+        color: #fff;
+        box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+    }
+
+        .btn-delete:hover {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            transform: translateY(-1px);
+        }
+
+    .btn-back {
+        background: #1e293b;
+        border: 1px solid #334155;
+        color: #cbd5e1;
+    }
+
+        .btn-back:hover {
+            background: #334155;
+            color: #ffffff;
+        }
+
+    @@media (max-width: 600px) {
+        .delete-card {
+            padding: 20px;
+        }
+
+        .delete-actions {
+            flex-direction: column;
+        }
+
+            .delete-actions form,
+            .btn-delete,
+            .btn-back {
+                width: 100%;
+            }
+    }
+</style>
