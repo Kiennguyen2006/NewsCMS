@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NewsCMS.Data;
 using NewsCMS.Models;
@@ -87,7 +87,12 @@ namespace NewsCMS.Controllers
             }
             else
             {
-                var bang = _context.DanhMuc.Where(p => p.TrangThai == true).ToList();
+                var bang = _context.DanhMuc
+                    .Where(p => p.TrangThai == true)
+                    .ToList();
+
+                ViewBag.bangdm = bang;
+
                 return View("Them", baiViet);
             }
         }
@@ -256,43 +261,36 @@ namespace NewsCMS.Controllers
             return View();
         }
         [HttpPost]
-
-        public IActionResult Xoabv(BaiVietModel baiViet, int id, LichSuDuyetModel lichSuDuyet)
+        public IActionResult Xoabv(BaiVietModel baiViet)
         {
-            var dongchuabv = _context.BaiViet.FirstOrDefault(x => x.MaBaiViet==id);
-            if (dongchuabv==null)
+            int maBv;
+            maBv = baiViet.MaBaiViet;
+            var dongchuabv = _context.BaiViet.FirstOrDefault(x => x.MaBaiViet == maBv);
+            if (dongchuabv == null)
             {
                 return NotFound();
             }
-            if (dongchuabv.MaNhanVienDuyet==null)
+            if (dongchuabv.MaNhanVienDuyet == null)
             {
                 ViewBag.dongcu = dongchuabv;
-                ViewBag.thongbao = "Bài viết phải được chru biên tập duyệt trước khi xoá!!!";
+                ViewBag.thongbao = "Bài viết phải được chủ biên tập duyệt trước khi xoá!!!";
                 return View("thongbao");
             }
             else
             {
-                var donglsxoa = _context.LichSuDuyet.Where(x => x.MaBaiViet == id).ToList();
-                if (donglsxoa.Count <= 0)
-                {
-                    return NotFound();
-                }
-                else
+                var donglsxoa = _context.LichSuDuyet.Where(x => x.MaBaiViet == maBv).ToList();
+                if (donglsxoa.Count > 0)
                 {
                     _context.LichSuDuyet.RemoveRange(donglsxoa);
                     _context.SaveChanges();
                 }
-                var dongblxoa = _context.Binhluan.Where(x => x.MaBaiViet == baiViet.MaBaiViet).ToList();
-                if (dongblxoa.Count <= 0)
-                {
-                    return NotFound();
-                }
-                else
+                var dongblxoa = _context.Binhluan.Where(x => x.MaBaiViet == maBv).ToList();
+                if (dongblxoa.Count > 0)
                 {
                     _context.Binhluan.RemoveRange(dongblxoa);
                     _context.SaveChanges();
                 }
-                var dongxoa = _context.BaiViet.FirstOrDefault(x => x.MaBaiViet == id);
+                var dongxoa = _context.BaiViet.FirstOrDefault(x => x.MaBaiViet == maBv);
                 if (dongxoa == null)
                 {
                     return View("Xoa", baiViet);
@@ -305,5 +303,6 @@ namespace NewsCMS.Controllers
                 }
             }
         }
+
     }
 }
