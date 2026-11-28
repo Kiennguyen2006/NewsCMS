@@ -1,4 +1,4 @@
-﻿@{
+@{
     Layout = "~/Views/Shared/_AdminLTELayout.cshtml";
 }
 @using NewsCMS.Models
@@ -108,10 +108,10 @@
                 {
                     <form asp-controller="Quanlybaiviet"
                           asp-action="Xoabv"
-                          asp-route-id="@baiViet.MaBaiViet"
                           method="post">
 
                         @Html.AntiForgeryToken()
+                        <input type="hidden" name="MaBaiViet" value="@baiViet.MaBaiViet" />
 
                         <button type="submit" class="btn-delete">
                             <i class="bi bi-trash3 me-1"></i> Xóa bài viết
