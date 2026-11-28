@@ -1,4 +1,4 @@
-﻿@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http
 
 @{
     var maVaiTro = Context.Session.GetInt32("MaVaiTro") ?? 0;
@@ -11,6 +11,7 @@
     var laTrangLichSu = controllerHienTai == "Lichsuduyet";
     var laTrangTaiKhoan = controllerHienTai == "Quanlytaikhoan";
     var laTrangNhanVien = controllerHienTai == "Nhanvien";
+    var laTrangBinhLuan = controllerHienTai == "Binhluan";
 }
 
 <!DOCTYPE html>
@@ -293,9 +294,9 @@
                             </li>
 
                             <li class="nav-item">
-                                <a asp-controller="/Binhluan"
+                                <a asp-controller="Binhluan"
                                    asp-action="Binhluan"
-                                   class="nav-link @(laTrangTaiKhoan ? "active" : "")">
+                                   class="nav-link @(laTrangBinhLuan ? "active" : "")">
 
                                     <i class="nav-icon bi bi-chat-dots"></i>
                                     <p>Quản lý Bình luận</p>
